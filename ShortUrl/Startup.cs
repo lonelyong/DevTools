@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ShortUrl.Dal;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShortUrl
 {
@@ -22,11 +24,13 @@ namespace ShortUrl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            GetConfig();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -45,6 +49,11 @@ namespace ShortUrl
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        void GetConfig()
+        {
+            Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
         }
     }
 }
