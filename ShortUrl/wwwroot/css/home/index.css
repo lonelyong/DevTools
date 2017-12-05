@@ -64,6 +64,10 @@
     border:none;
     background-color:transparent;
 }
+.tab-body .tab-content .result{
+    color:red;
+    padding:0 0.5rem;
+}
 .tab-body .tab-content .submit {
     display:flex;
     justify-content:flex-end;

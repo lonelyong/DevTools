@@ -13,7 +13,7 @@ namespace ShortUrl.Entities
         [Key]
         [Column(TypeName = "bigint")]
         [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         [Column(TypeName = "nvarchar(max)")]
         public string Link { get; set; }

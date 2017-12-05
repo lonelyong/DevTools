@@ -16,7 +16,7 @@ namespace ShortUrl.Controllers
         public JsonResult Zip(string url) 
         {
             var _short = new Logic.Apis.ZipUrl().Zip(url);
-            return Json(_short);
+            return Json(_short, new Newtonsoft.Json.JsonSerializerSettings() { ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver()});
         }
     }
 }

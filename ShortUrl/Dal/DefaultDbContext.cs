@@ -17,9 +17,9 @@ namespace ShortUrl.Dal
 
         }
 
-        public DefaultDbContext(DbContextOptions<DefaultDbContext> options) :base( options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+            optionsBuilder.UseSqlServer(Utils.Configuration.DefaultConnectionString);
         }
     }
 }

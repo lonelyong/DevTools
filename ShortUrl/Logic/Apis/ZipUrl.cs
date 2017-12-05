@@ -13,20 +13,20 @@ namespace ShortUrl.Logic.Apis
             ZipUrlResult _result = new ZipUrlResult();
             try
             {
-                string _short = ShortUrlManagement.Default.Add(longUrl);
+                string _short = ShortUrlManagement.Default.Zip(longUrl);
                 _result.Return_Code = ResultBase.DEFAULT_RETURN_CODE_SUCCESS;
                 _result.Return_Msg = ResultBase.DEFAULT_RETURN_MSG_OK;
                 _result.Result = _short;
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
                 _result.Return_Code = ResultBase.DEFAULT_RETURN_CODE_FAIL;
-                _result.Return_Msg = "服务器内部错误";
+                _result.Return_Msg = ex.ToString();
             }
             catch (Exception ex)
             {
                 _result.Return_Code = ResultBase.DEFAULT_RETURN_CODE_FAIL;
-                _result.Return_Msg = ex.Message;
+                _result.Return_Msg = ex.Message + ex.InnerException?.ToString();
             }
             return _result;
         }

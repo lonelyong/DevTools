@@ -24,7 +24,7 @@ namespace ShortUrl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<DbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.Configure<IISOptions>(options=> options.AutomaticAuthentication = false);
         }
 
@@ -58,6 +58,7 @@ namespace ShortUrl
 
         void GetConfig()
         {
+            Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("Host");
             Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
         }
     }

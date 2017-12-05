@@ -12,6 +12,7 @@
                 <div class="input-container">
                     <input type="text" name="long" id=" long" />
                 </div>
+                <div class="result"><label>&nbsp;</label></div>
                 <div class="submit">
                     <div class="button">
                         <label>缩短网址</label>
@@ -33,14 +34,81 @@
     </div>
 </div>
 
-<script>
-    document.onreadystatechange = function () {
-        $(".tab-header").click(function () {
+<script>  
+    var _apis = (function () { 
+        function Apis() {
+            this.zipping = false;
+        }
+        Apis.prototype.zip = function (long, before, error, success) {
+            var _self = this;
+            var _code_success = "SUCCESS";
+            $.ajax({
+                url: "/api/zip",
+                type: "post",
+                data: { url: long },
+                dataType: "json",
+                beforeSend: function ()
+                {
+                    _self.zipping = true;
+                    if (typeof before == typeof $.ajax){
+                        before();
+                    }
+                },
+                error: function (err) {
 
+                    _self.zipping = false;
+                    if (typeof error == typeof $.ajax) {
+                        error(err);
+                    }
+                },
+                success: function (data)
+                {
+                    _self.zipping = false;
+                    if (typeof success == typeof $.ajax) {
+                        if (data.Return_Code == _code_success) {
+                            success(data.Result);
+                        }
+                        else {
+                            error(JSON.stringify(data));
+                        }
+                    }
+                }
+            });
+        }
+        Apis.prototype.unzip = function (short) {
+
+        }
+        return new Apis();
+    })();
+
+    function zip_before() {
+
+    }
+    function zip_error(err) {
+        _jqForwardResult.text(err);
+    }
+    function zip_success(result) {
+        _jqForwardResult.html("<a href='" + result +"'>" + result + "</a>");
+    }
+    document.onreadystatechange = function () {
+        _jqForwardText = $(".forward input");
+        _jqForwardResult = $(".forward .result");
+        _jqForwardText.change(function () { _jqForwardResult.html("<br/>"); });
+        _jqForwardText.bind("input", function () { _jqForwardResult.html("<br/>"); })
+        $(".tab-header").click(function () {
             var _ev = event || window.event;
             var _el = _ev.srcElement || _ev.target;
             $(_el).addClass("active").siblings().removeClass("active");
-            $(".tab-body").find("." + $(_el).data("target")).fadeIn().siblings().hide();
+            $(".tab-body").find("." + $(_el).data("target")).siblings().hide().siblings().show();
+        });
+        $(".forward .submit .button").click(function () { 
+            var _long = _jqForwardText.val();
+            if (!_long) {
+                _jqForwardResult.text("请输入要压缩的网址");
+                _jqForwardText.focus();
+                return;
+            }
+            _apis.zip(_long, zip_before, zip_error, zip_success);
         });
     }
 </script>

@@ -9,5 +9,7 @@ namespace ShortUrl.Utils
     {
         public static string DefaultConnectionString { get; set; }
 
+        public static string Host { get; set; }
+
     }
 }

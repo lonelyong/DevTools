@@ -14,7 +14,19 @@ namespace ShortUrl.Logic
     {
         public static ShortUrlManagement Default { get; } = new ShortUrlManagement();
 
-        public string Add(string real)
+        public ShortUrlManagement() :this(Utils.Configuration.Host)
+        {
+
+        }
+
+        public ShortUrlManagement(string host)
+        {
+            Host = host;
+        }
+
+        public string Host { get; }
+
+        public string Zip(string real)
         {
             if (string.IsNullOrWhiteSpace(real))
             {
@@ -36,7 +48,7 @@ namespace ShortUrl.Logic
                     context.Urls.Add(_url);
                     context.SaveChanges();
                 }
-                return _url.Link;
+                return string.Concat(Host, "/", _url.Id.ToNum64());
             }
         }
 
