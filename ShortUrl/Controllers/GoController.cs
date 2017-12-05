@@ -22,8 +22,7 @@ namespace ShortUrl.Controllers
                     {
                         throw new ArgumentNullException();
                     }
-                    Redirect(_real);
-                    return null;
+                    return Redirect(_real);
                 }
                 catch(ArgumentNullException)
                 {

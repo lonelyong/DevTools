@@ -90,7 +90,7 @@
     function zip_success(result) {
         _jqForwardResult.html("<a href='" + result +"'>" + result + "</a>");
     }
-    document.onreadystatechange = function () {
+    window.addEventListener("load", function () {
         _jqForwardText = $(".forward input");
         _jqForwardResult = $(".forward .result");
         _jqForwardText.change(function () { _jqForwardResult.html("<br/>"); });
@@ -101,14 +101,16 @@
             $(_el).addClass("active").siblings().removeClass("active");
             $(".tab-body").find("." + $(_el).data("target")).siblings().hide().siblings().show();
         });
-        $(".forward .submit .button").click(function () { 
+        $(".forward .submit .button").click(function () {
             var _long = _jqForwardText.val();
             if (!_long) {
                 _jqForwardResult.text("请输入要压缩的网址");
                 _jqForwardText.focus();
                 return;
             }
+            alert(1);
             _apis.zip(_long, zip_before, zip_error, zip_success);
-        });
-    }
+        })
+    } , false);
+  
 </script>
