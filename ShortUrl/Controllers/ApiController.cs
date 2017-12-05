@@ -12,5 +12,11 @@ namespace ShortUrl.Controllers
         {
             return View();
         }
+
+        public JsonResult Zip(string url) 
+        {
+            var _short = new Logic.Apis.ZipUrl().Zip(url);
+            return Json(_short);
+        }
     }
 }

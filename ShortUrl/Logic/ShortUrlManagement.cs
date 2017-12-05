@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace ShortUrl.Logic
 {
+    /// <summary>
+    /// 所有方法都是线程安全的
+    /// </summary>
     public class ShortUrlManagement
     {
         public static ShortUrlManagement Default { get; } = new ShortUrlManagement();
