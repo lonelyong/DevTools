@@ -25,6 +25,7 @@ namespace ShortUrl
         {
             services.AddMvc();
             services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.Configure<IISOptions>(options=> options.AutomaticAuthentication = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +48,11 @@ namespace ShortUrl
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{id?}",
+                    defaults: new { controller = "Go", action = "Index" });
+                routes.MapRoute(
+                    name:"route",
+                    template:"{controller}/{action}/{id?}");
             });
         }
 

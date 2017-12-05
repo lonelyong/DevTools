@@ -8,8 +8,10 @@ namespace ShortUrl.Controllers
 {
     public class GoController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
+            if (string.IsNullOrWhiteSpace(id))
+                return RedirectToAction("Index", "Home");
             return View();
         }
     }
