@@ -17,6 +17,7 @@ namespace ShortUrl.Controllers
             {
                 ViewBag.Group = _groups.First().Key;
                 ViewBag.Item = _groups.First().Value.First();
+                return RedirectToAction("doc", new { group = ViewBag.Group, item = ViewBag.Item });
             }
             else if (_groups.ContainsKey(group??"") && _groups[group].Contains(item??""))
             {
