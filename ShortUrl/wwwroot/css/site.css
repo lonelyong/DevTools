@@ -7,7 +7,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* Wrapping element */
@@ -19,15 +19,16 @@ html, body {
     width:100%;
     height:100%;
 }
-.topper{
+.topper {
     flex: 0 0 auto;
-    display:flex;  
-    justify-content:space-between;
-    align-items:center;
-    width:100%;
-    padding:0 10%;
-    height:2.8rem;
-    background-color:rgba(189, 189, 189, 0.76)
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10%;
+    height: 2.6rem;
+    background-color: rgba(186,186,186,.76);
+    color:darkgreen;
 }
 .topper .right{
     display:flex;   
@@ -53,6 +54,16 @@ html, body {
 }
 .topper a{
     text-decoration:none;
+    color:green;
+}
+.topper a:hover {
+    text-decoration:underline;
+}
+.topper a:active{
+    color:purple;
+}
+.topper a:visited{
+
 }
 .page-container{
     display:flex;

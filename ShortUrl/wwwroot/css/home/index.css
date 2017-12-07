@@ -23,13 +23,11 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:1.2rem ;
+    font-size:1.1rem ;
     font-weight:500;
     background-color:dimgray;
     color:whitesmoke;
     padding:0.5rem;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
 }
 .tab-banner .tab-header.active{
     background-color:transparent;
