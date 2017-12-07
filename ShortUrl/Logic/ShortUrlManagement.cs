@@ -57,7 +57,9 @@ namespace ShortUrl.Logic
             using (Dal.DefaultDbContext context = new Dal.DefaultDbContext())
             {
                 var _url = context.Urls.FirstOrDefault(t=>t.Id == id);
-                return _url?.Link;
+                if (_url == null)
+                    throw new Exception(string.Format("指定的短网址不存在({0})", id.ToNum64()));
+                return _url.Link;
             }
         }
 
@@ -65,15 +67,16 @@ namespace ShortUrl.Logic
         {
             if (string.IsNullOrWhiteSpace(id64))
                 throw new Exception("id不能为空");
+            long _id;
             try
             {
-                long _id = id64.FromNum64();
-                return Get(_id);
+                _id = id64.FromNum64();
             }
-            catch (Exception ex)
+            catch 
             {
-                throw new Exception("输入的短网址不合法", ex);
+                throw new Exception("输入的短网址不合法");
             }
+            return Get(_id);
         }
 
         static bool IsUrl(string url)

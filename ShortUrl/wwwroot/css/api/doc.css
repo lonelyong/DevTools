@@ -1,0 +1,85 @@
+﻿.page-content{
+    display:flex;
+    flex:1 1 auto;
+    overflow:auto;
+    padding-top:2rem;
+}
+.nav{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    width:15rem;
+    background-color:whitesmoke;
+    
+}
+.nav .group{
+    display:flex;   
+    flex-direction:column;
+    align-items:stretch;
+}
+.nav .group .title{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    height:2.5rem;
+    padding-left:1rem;
+    background-color:lightgray;
+    font-weight:500;
+}
+.nav .group .item {
+    padding-left:3rem;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    height:2.5rem;
+    cursor:pointer;
+    font-size:0.95rem;
+}
+.nav .group .item.active{
+    background-color:darkgray;
+}
+.intro{
+    flex:1 1;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    margin-left:2rem;
+    background-color:whitesmoke;
+}
+
+.intro .intro-content{
+    flex:1 1;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+.intro .item-title{
+    height:5rem;
+    /*font-size:1.1rem;*/
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.intro .section{
+    display:flex;   
+    flex-direction:column;
+    align-items:stretch;
+    margin-top:1rem;
+    border-top:dashed 1px lightgray;
+}
+.intro .section .title{
+    height:5rem;
+    display:flex;
+    align-items:center;
+}
+.intro .section .title > * {
+    border-left: solid 0.3rem green;
+    padding-left: 0.5rem;
+    font-weight: 600;
+    line-height:1rem;
+}

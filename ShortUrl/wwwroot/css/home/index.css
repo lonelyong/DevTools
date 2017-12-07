@@ -28,8 +28,6 @@
     background-color:dimgray;
     color:whitesmoke;
     padding:0.5rem;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
 }
 .tab-banner .tab-header.active{
     background-color:transparent;
@@ -54,19 +52,43 @@
 .tab-body .tab-content .input-container{
     border:dashed 1px dimgray;
     display:flex;
-    flex-direction:column;
-    align-items:stretch;
     justify-content:center;
     padding:0.5rem;
 }
+.tab-body .tab-content .input-container .host{
+    flex:0 0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:green;
+    line-height:1rem;
+    /*background-color:gray;*/
+}
 .tab-body .tab-content .input-container input{
+    flex:1;
     outline:none;
     border:none;
+    font-size:1rem;
     background-color:transparent;
 }
-.tab-body .tab-content .result{
+.tab-body .tab-content .result {
+    color:peru;
+    padding: 0 0.5rem;
+    height: 4rem;
+    overflow-y: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+.tab-body .tab-content .result.success{
+    color:forestgreen;
+    text-decoration:underline;
+    cursor:pointer
+}
+.tab-body .tab-content .result.success:hover {
+    color: darkgreen
+}
+.tab-body .tab-content .result.error{
     color:red;
-    padding:0 0.5rem;
 }
 .tab-body .tab-content .submit {
     display:flex;

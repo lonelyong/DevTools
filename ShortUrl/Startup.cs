@@ -31,7 +31,7 @@ namespace ShortUrl
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            GetConfig();
+            GetConfig(env);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -56,10 +56,18 @@ namespace ShortUrl
             });
         }
 
-        void GetConfig()
+        void GetConfig(IHostingEnvironment env)
         {
-            Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("Host");
-            Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
+            if (env.IsDevelopment())
+            {
+                Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("DevHost");
+                Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DevConnection");
+            }
+            else
+            {
+                Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("Host");
+                Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
+            }
         }
     }
 }
