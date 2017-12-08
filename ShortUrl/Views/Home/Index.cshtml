@@ -12,7 +12,7 @@
                 <div class="input-container">
                     <input type="text" name="long" id=" long" />
                 </div>
-                <div class="result"><label>&nbsp;</label></div>
+                <div class="result" onclick="go()"></div>
                 <div class="submit">
                     <div class="button">
                         <label>缩短网址</label>
@@ -22,9 +22,13 @@
             <div class="reverse tab-content">
                 <div class="title"><label>请输入短网址</label></div>
                 <div class="input-container">
-                    <input type="text" name="long" id=" long" />
+                    <div class="host"><label>@ShortUrl.Utils.Configuration.Host/</label></div><input type="text" name="long" id=" long" />
                 </div>
+<<<<<<< HEAD
                 <div class="result"><label>&nbsp;</label></div>
+=======
+                <div class="result" onclick="go()"></div>
+>>>>>>> a5998828ba12fd296cb70903ba768bf3d92eb282
                 <div class="submit">
                     <div class="button">
                         <label>还原网址</label>
@@ -37,12 +41,19 @@
 
 <script>  
     var _apis = (function () { 
+        var _code_success = "SUCCESS";
         function Apis() {
             this.zipping = false;
+            this.unzipping = false;
         }
         Apis.prototype.zip = function (long, before, error, success) {
             var _self = this;
-            var _code_success = "SUCCESS";
+            if (_self.zipping) {
+                if (typeof error == typeof $.ajax) {
+                    error("正在缩短URL，请等待当前任务完成！");
+                    return;
+                }
+            }
             $.ajax({
                 url: "/api/zip",
                 type: "post",
@@ -70,32 +81,91 @@
                             success(data.Result);
                         }
                         else {
-                            error(JSON.stringify(data));
+                            error(data.Return_Msg);
                         }
                     }
                 }
             });
         }
-        Apis.prototype.unzip = function (short) {
-
+        Apis.prototype.unzip = function (short, before, error, success) {
+            var _self = this;
+            if (_self.zipping) {
+                if (typeof error == typeof $.ajax) {
+                    error("正在还原URL，请等待当前任务完成！");
+                    return;
+                }
+            }
+            $.ajax({
+                url: "/api/unzip",
+                type: "post",
+                data: { surl: short },
+                dataType: "json",
+                beforeSend: function () {
+                    _self.unzipping = true;
+                    if (typeof before == typeof $.ajax) {
+                        before();
+                    }
+                },
+                error: function (err) {
+                    _self.unzipping = false;
+                    if (typeof error == typeof $.ajax) {
+                        error(err);
+                    }
+                },
+                success: function (data) {
+                    _self.unzipping = false;
+                    if (typeof success == typeof $.ajax) {
+                        if (data.Return_Code == _code_success) {
+                            success(data.Result);
+                        }
+                        else {
+                            error(data.Return_Msg);
+                        }
+                    }
+                }
+            });
         }
         return new Apis();
     })();
 
     function zip_before() {
-
+        _jqForwardResult.text("请稍后...").removeClass("success").removeClass("error");
     }
     function zip_error(err) {
-        _jqForwardResult.text(err);
+        _jqForwardResult.text(err).addClass("error").removeClass("success");
     }
     function zip_success(result) {
-        _jqForwardResult.html("<a href='" + result +"'>" + result + "</a>");
+        _jqForwardResult.text(result).addClass("success").removeClass("error");
+    }
+    function unzip_before() {
+
+        _jqReverseResult.text("请稍后...").removeClass("success").removeClass("error");
+    }
+    function unzip_error(err) {
+        _jqReverseResult.text(err).addClass("error").removeClass("success");
+    }
+    function unzip_success(result) {
+        _jqReverseResult.text(result).addClass("success").removeClass("error");
+    }
+
+    function go() {
+        var _ev = event || window.event;
+        var _el = _ev.target || _ev.srcElement;
+        var _rst = $(_el).text();
+        if (_rst && $(_el).hasClass("success")) {
+            window.open(_rst);
+        }
+
     }
     window.addEventListener("load", function () {
         _jqForwardText = $(".forward input");
         _jqForwardResult = $(".forward .result");
-        _jqForwardText.change(function () { _jqForwardResult.html("<br/>"); });
-        _jqForwardText.bind("input", function () { _jqForwardResult.html("<br/>"); })
+        _jqForwardText.change(function () { _jqForwardResult.html(""); });
+        _jqForwardText.bind("input", function () { _jqForwardResult.html(""); })
+        _jqReverseText = $(".reverse input");
+        _jqReverseResult = $(".reverse .result");
+        _jqReverseText.change(function () { _jqReverseResult.html(""); });
+        _jqReverseText.bind("input", function () { _jqReverseResult.html(""); })
         $(".tab-header").click(function () {
             var _ev = event || window.event;
             var _el = _ev.srcElement || _ev.target;
@@ -110,7 +180,15 @@
                 return;
             }
             _apis.zip(_long, zip_before, zip_error, zip_success);
+        });
+        $(".reverse .submit .button").click(function () {
+            var _short = _jqReverseText.val();
+            if (!_short) {
+                _jqReverseResult.text("请输入要解压的网址");
+                _jqReverseText.focus();
+                return;
+            }
+            _apis.unzip(_short, unzip_before, unzip_error, unzip_success);
         })
-    } , false);
-  
+    }, false); 
 </script>

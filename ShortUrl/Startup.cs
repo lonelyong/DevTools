@@ -60,6 +60,7 @@ namespace ShortUrl
         {
             if (env.IsDevelopment())
             {
+<<<<<<< HEAD
                 Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("Dev");
                 Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("Host");
             }
@@ -67,6 +68,15 @@ namespace ShortUrl
             {
                 Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("Dev");
                 Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("DevHost");
+=======
+                Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("DevHost");
+                Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DevConnection");
+            }
+            else
+            {
+                Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("Host");
+                Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
+>>>>>>> a5998828ba12fd296cb70903ba768bf3d92eb282
             }
         }
     }

@@ -21,6 +21,7 @@ html, body {
 }
 .topper {
     flex: 0 0 auto;
+<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +30,15 @@ html, body {
     height: 2.6rem;
     background-color: rgba(186,186,186,.76);
     color:darkgreen;
+=======
+    display:flex;  
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    padding:0 10%;
+    height:2.6rem;
+    background-color:rgba(189, 189, 189, 0.76)
+>>>>>>> a5998828ba12fd296cb70903ba768bf3d92eb282
 }
 .topper .right{
     display:flex;   
@@ -53,6 +63,7 @@ html, body {
     margin-left:0;
 }
 .topper a{
+    color:green;
     text-decoration:none;
     color:green;
 }
@@ -65,10 +76,14 @@ html, body {
 .topper a:visited{
 
 }
+.topper a:hover{
+    text-decoration:underline;
+}
 .page-container{
     display:flex;
     flex:1 1 auto;
     overflow:auto;
+    padding:0 10%;
 }
 
 .footer{
