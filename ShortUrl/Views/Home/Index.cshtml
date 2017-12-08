@@ -24,11 +24,7 @@
                 <div class="input-container">
                     <div class="host"><label>@ShortUrl.Utils.Configuration.Host/</label></div><input type="text" name="long" id=" long" />
                 </div>
-<<<<<<< HEAD
-                <div class="result"><label>&nbsp;</label></div>
-=======
                 <div class="result" onclick="go()"></div>
->>>>>>> a5998828ba12fd296cb70903ba768bf3d92eb282
                 <div class="submit">
                     <div class="button">
                         <label>还原网址</label>
@@ -89,7 +85,7 @@
         }
         Apis.prototype.unzip = function (short, before, error, success) {
             var _self = this;
-            if (_self.zipping) {
+            if (_self.unzipping) {
                 if (typeof error == typeof $.ajax) {
                     error("正在还原URL，请等待当前任务完成！");
                     return;
