@@ -21,7 +21,6 @@ html, body {
 }
 .topper {
     flex: 0 0 auto;
-<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,15 +29,6 @@ html, body {
     height: 2.6rem;
     background-color: rgba(186,186,186,.76);
     color:darkgreen;
-=======
-    display:flex;  
-    justify-content:space-between;
-    align-items:center;
-    width:100%;
-    padding:0 10%;
-    height:2.6rem;
-    background-color:rgba(189, 189, 189, 0.76)
->>>>>>> a5998828ba12fd296cb70903ba768bf3d92eb282
 }
 .topper .right{
     display:flex;   
@@ -51,13 +41,13 @@ html, body {
     align-items:center;
 }
 .topper .right a{
-    margin-right:1rem;
+    margin-right:1.5rem;
 }
 .topper .right a:last-child{
     margin-right:0;
 }
 .topper .left a{
-    margin-left:1rem;
+    margin-left:1.5rem;
 }
 .topper .left a:first-child{
     margin-left:0;
@@ -104,6 +94,7 @@ html, body {
     display:flex;
     justify-content:center;
     align-items:center;
+    padding-top:0.3rem;
 }
 .footer .linkbar a{
     padding:0 1rem;

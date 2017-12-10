@@ -8,7 +8,9 @@ namespace ShortUrl.Controllers
 {
     public class ApiController : Controller
     {
-        static Dictionary<string, string[]> _groups = new Dictionary<string, string[]>() { { "api", new string[] { "zip", "unzip" } } };
+        static Dictionary<string, string[]> _groups = new Dictionary<string, string[]>() {
+            { "api", new string[] { "zip", "unzip" } },
+            { "rules", new string[]{ "intro", "api"} } };
 
         public IActionResult Doc(string group, string item) 
         {

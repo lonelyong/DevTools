@@ -3,10 +3,29 @@
     ViewData["Title"] = "接口文档";
 }
 <link href="~/css/api/doc.css" rel="stylesheet" />
+<environment include="Development">
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+</environment>
+<environment exclude="Development">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</environment>
 <div class="page-content">
     <div class="nav">
+        <div class="group" data-id="rules">
+            <div class="title">
+                <i class="fa fa-caret-down">&nbsp;</i>
+                <label>细则</label>
+            </div>
+            <div class="item" data-id="intro">
+                <a>文档说明</a>
+            </div>
+            <div class="item" data-id="api">
+                <a>接口规则</a>
+            </div>
+        </div>
         <div class="group" data-id="api">
             <div class="title">
+                <i class="fa fa-caret-down">&nbsp;</i>
                 <label>Api列表</label>
             </div>
             <div class="item" data-id="zip">
@@ -17,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div class="intro">
+    <div class="detail">
         @Html.Partial((string)ViewBag.Partial)
     </div>
     <script>

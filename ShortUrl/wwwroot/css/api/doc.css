@@ -1,7 +1,7 @@
 ﻿.page-content{
     display:flex;
     flex:1 1 auto;
-    overflow:auto;
+    overflow-y:auto;
     padding-top:2rem;
 }
 .nav{
@@ -10,7 +10,7 @@
     align-items:stretch;
     width:15rem;
     background-color:whitesmoke;
-    
+    flex-shrink:0;
 }
 .nav .group{
     display:flex;   
@@ -23,7 +23,7 @@
     align-items:center;
     height:2.5rem;
     padding-left:1rem;
-    background-color:lightgray;
+    /*background-color:lightgray;*/
     font-weight:500;
 }
 .nav .group .item {
@@ -34,11 +34,18 @@
     height:2.5rem;
     cursor:pointer;
     font-size:0.95rem;
+    border-left:solid 5px transparent;
+}
+.nav .group .item:hover{
+    border-left:solid 5px lightgray;
 }
 .nav .group .item.active{
-    background-color:darkgray;
+    /*background-color:lightgray;*/
+    border-left:solid 5px green;
 }
-.intro{
+
+
+.detail{
     flex:1 1;
     display:flex;
     flex-direction:column;
@@ -46,10 +53,9 @@
     align-items:stretch;
     margin-left:2rem;
     background-color:whitesmoke;
+    overflow-y:auto;
 }
-
-.intro .intro-content{
-    flex:1 1;
+.detail .detail-content{
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
@@ -57,29 +63,70 @@
     padding-left:1rem;
     padding-right:1rem;
 }
-.intro .item-title{
-    height:5rem;
+.detail .item-title{
+    flex-shrink:0;
+    padding-top:1rem;
+    height:4rem;
     /*font-size:1.1rem;*/
     display:flex;
     justify-content:flex-start;
     align-items:center;
 }
 
-.intro .section{
+.detail .section{
     display:flex;   
     flex-direction:column;
     align-items:stretch;
     margin-top:1rem;
     border-top:dashed 1px lightgray;
+    flex-shrink:0;
 }
-.intro .section .title{
-    height:5rem;
-    display:flex;
-    align-items:center;
-}
-.intro .section .title > * {
+.detail .section .title {
+        padding-top:1rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        color: green;
+    }
+.detail .section .title > * {
     border-left: solid 0.3rem green;
-    padding-left: 0.5rem;
-    font-weight: 600;
+    padding-left: 0.3rem;
+    font-weight: 500;
     line-height:1rem;
+}
+.detail .section .content{
+}
+
+.detail .section table{
+    background-color:white;
+    border-color:whitesmoke;
+    border-spacing:0;
+
+}
+.detail .section thead{
+     background-color:lightgray
+ }
+.detail .section td{
+     padding-left:1rem;
+     padding-right:1rem;
+ }
+.detail .section tbody td{
+     padding-top:1rem;
+     padding-bottom:1rem;
+ }
+
+.detail .section thead td:first-child{
+    width:15%;
+}
+.detail .section thead td:nth-child(2) {
+    width: 10%;
+}
+.detail .section thead td:nth-child(3) {
+    width: 10%;
+}
+.detail .section thead td:nth-child(4) {
+    width: 45%;
+}
+.detail .section thead td:last-child {
+    width: 20%;
 }

@@ -1,4 +1,7 @@
-﻿<link href="~/css/home/index.css" rel="stylesheet" />
+﻿@{
+    ViewData["Title"] = "首页";
+}
+<link href="~/css/home/index.css" rel="stylesheet" />
 
 <div class="page-content">
     <div class="box">
@@ -8,9 +11,9 @@
         </div>
         <div class="tab-body">
             <div class="forward tab-content">
-                <div class="title"><label>请输入要缩短的网址</label></div>
+                <div class="title"><label>请输入要缩短的网址(最长1024字符)</label></div>
                 <div class="input-container">
-                    <input type="text" name="long" id=" long" />
+                    <input type="text" name="long" id=" long" maxlength="1024" />
                 </div>
                 <div class="result" onclick="go()"></div>
                 <div class="submit">
@@ -22,7 +25,7 @@
             <div class="reverse tab-content">
                 <div class="title"><label>请输入短网址</label></div>
                 <div class="input-container">
-                    <div class="host"><label>@ShortUrl.Utils.Configuration.Host/</label></div><input type="text" name="long" id=" long" />
+                    <div class="host"><label>@ShortUrl.Utils.Configuration.Host/</label></div><input type="text" name="long" id=" long" maxlength="8" />
                 </div>
                 <div class="result" onclick="go()"></div>
                 <div class="submit">
@@ -34,9 +37,12 @@
         </div>
     </div>
 </div>
-
-<script>  
-    var _apis = (function () { 
+@section Scripts{
+    <script src="http://cdn.codezone.link/jquery.utils/latest/js/utils.core.js"></script>
+    <script src="http://cdn.codezone.link/jquery.utils/latest/js/utils.Regex.js"></script>
+}
+<script>
+    var _apis = (function () {
         var _code_success = "SUCCESS";
         function Apis() {
             this.zipping = false;
@@ -55,10 +61,9 @@
                 type: "post",
                 data: { url: long },
                 dataType: "json",
-                beforeSend: function ()
-                {
+                beforeSend: function () {
                     _self.zipping = true;
-                    if (typeof before == typeof $.ajax){
+                    if (typeof before == typeof $.ajax) {
                         before();
                     }
                 },
@@ -69,8 +74,7 @@
                         error(err);
                     }
                 },
-                success: function (data)
-                {
+                success: function (data) {
                     _self.zipping = false;
                     if (typeof success == typeof $.ajax) {
                         if (data.Return_Code == _code_success) {
@@ -123,7 +127,7 @@
         }
         return new Apis();
     })();
-
+    var _regShort = /^[0-9a-zA-Z]{1,8}$/;
     function zip_before() {
         _jqForwardResult.text("请稍后...").removeClass("success").removeClass("error");
     }
@@ -143,7 +147,6 @@
     function unzip_success(result) {
         _jqReverseResult.text(result).addClass("success").removeClass("error");
     }
-
     function go() {
         var _ev = event || window.event;
         var _el = _ev.target || _ev.srcElement;
@@ -153,6 +156,10 @@
         }
 
     }
+    function isShort(surl) {
+        return _regShort.test(surl);
+    }
+
     window.addEventListener("load", function () {
         _jqForwardText = $(".forward input");
         _jqForwardResult = $(".forward .result");
@@ -162,6 +169,8 @@
         _jqReverseResult = $(".reverse .result");
         _jqReverseText.change(function () { _jqReverseResult.html(""); });
         _jqReverseText.bind("input", function () { _jqReverseResult.html(""); })
+            .bind("keyup", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w\.\/]/ig,"")); })
+            .bind("afterpaste", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w\.\/]/ig,"")); });
         $(".tab-header").click(function () {
             var _ev = event || window.event;
             var _el = _ev.srcElement || _ev.target;
@@ -175,6 +184,12 @@
                 _jqForwardText.focus();
                 return;
             }
+            if (!$.utils.Regex.isHttp(_long)
+                && !$.utils.Regex.isHttps(_long)) {
+                _jqForwardResult.text("您输入的网址不合法，仅支持http与https");
+                _jqForwardText.focus();
+                return;
+            }
             _apis.zip(_long, zip_before, zip_error, zip_success);
         });
         $(".reverse .submit .button").click(function () {
@@ -184,7 +199,12 @@
                 _jqReverseText.focus();
                 return;
             }
+            if (!isShort(_short)) {
+                _jqReverseResult.text("您输入的短网址不合法，只能是英文字母（区分大小写）与数字");
+                _jqReverseText.focus();
+                return;
+            }
             _apis.unzip(_short, unzip_before, unzip_error, unzip_success);
-        })
-    }, false); 
+        });
+    }, false);
 </script>
