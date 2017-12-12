@@ -127,7 +127,7 @@
         }
         return new Apis();
     })();
-    var _regShort = /^[0-9a-zA-Z]{1,8}$/;
+    var _regShort = /^[0-9a-zA-Z]{1,8}$/gi;
     function zip_before() {
         _jqForwardResult.text("请稍后...").removeClass("success").removeClass("error");
     }
@@ -169,8 +169,8 @@
         _jqReverseResult = $(".reverse .result");
         _jqReverseText.change(function () { _jqReverseResult.html(""); });
         _jqReverseText.bind("input", function () { _jqReverseResult.html(""); })
-            .bind("keyup", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w\.\/]/ig,"")); })
-            .bind("afterpaste", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w\.\/]/ig,"")); });
+            .bind("keyup", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w]/ig,"")); })
+            .bind("afterpaste", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w]/ig,"")); });
         $(".tab-header").click(function () {
             var _ev = event || window.event;
             var _el = _ev.srcElement || _ev.target;
