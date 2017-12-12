@@ -48,7 +48,7 @@
             this.zipping = false;
             this.unzipping = false;
         }
-        Apis.prototype.zip = function (long, before, error, success) {
+        Apis.prototype.zip = function (long, before, error, success, complete) {
             var _self = this;
             if (_self.zipping) {
                 if (typeof error == typeof $.ajax) {
@@ -84,10 +84,15 @@
                             error(data.Return_Msg);
                         }
                     }
+                },
+                complete: function () {
+                    if (typeof complete == typeof $.ajax) {
+                        complete();
+                    }
                 }
             });
         }
-        Apis.prototype.unzip = function (short, before, error, success) {
+        Apis.prototype.unzip = function (short, before, error, success, complete) {
             var _self = this;
             if (_self.unzipping) {
                 if (typeof error == typeof $.ajax) {
@@ -122,13 +127,19 @@
                             error(data.Return_Msg);
                         }
                     }
+                },
+                complete: function () {
+                    if (typeof complete == typeof $.ajax) {
+                        complete();
+                    }
                 }
             });
         }
         return new Apis();
     })();
-    var _regShort = /^[0-9a-zA-Z]{1,8}$/gi;
+    var _regShort = /^[0-9a-zA-Z]{1,8}$/;
     function zip_before() {
+        _jqForwardText.attr("readonly", "readonly");
         _jqForwardResult.text("请稍后...").removeClass("success").removeClass("error");
     }
     function zip_error(err) {
@@ -137,8 +148,11 @@
     function zip_success(result) {
         _jqForwardResult.text(result).addClass("success").removeClass("error");
     }
+    function zip_complete() {
+        _jqForwardText.removeAttr("readonly");
+    }
     function unzip_before() {
-
+        _jqReverseText.attr("readonly", "readonly");
         _jqReverseResult.text("请稍后...").removeClass("success").removeClass("error");
     }
     function unzip_error(err) {
@@ -146,6 +160,9 @@
     }
     function unzip_success(result) {
         _jqReverseResult.text(result).addClass("success").removeClass("error");
+    }
+    function unzip_complete() {
+        _jqReverseText.removeAttr("readonly");
     }
     function go() {
         var _ev = event || window.event;
@@ -190,7 +207,7 @@
                 _jqForwardText.focus();
                 return;
             }
-            _apis.zip(_long, zip_before, zip_error, zip_success);
+            _apis.zip(_long, zip_before, zip_error, zip_success, zip_complete);
         });
         $(".reverse .submit .button").click(function () {
             var _short = _jqReverseText.val();
@@ -204,7 +221,7 @@
                 _jqReverseText.focus();
                 return;
             }
-            _apis.unzip(_short, unzip_before, unzip_error, unzip_success);
+            _apis.unzip(_short, unzip_before, unzip_error, unzip_success, unzip_complete);
         });
     }, false);
 </script>
