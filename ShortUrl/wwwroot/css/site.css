@@ -78,9 +78,7 @@ html, body {
 
 .footer{
     flex:0 0 auto;
-    height:3rem;
-    width:100%;
-    padding:0 10%;
+    padding:1rem 10%;
     display:flex;   
     flex-direction:column;
     justify-content:center;
@@ -90,13 +88,21 @@ html, body {
     width:100%;
     border-top:dashed 1px dimgray;
 }
-.footer .linkbar{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding-top:0.3rem;
+    .footer .linkbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.3rem;
+        font-size: 12px;
+    }
+.footer .linkbar a {
+    padding: 0 1rem;
+    color: #515151;
+    text-decoration:none;
+    font-size: 12px;
 }
-.footer .linkbar a{
-    padding:0 1rem;
+.footer .linkbar a:hover{
+    color:brown;
+    text-decoration:underline;
 }
 
