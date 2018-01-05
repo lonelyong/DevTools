@@ -1,8 +1,10 @@
-﻿.page-content{
-    display:flex;
-    flex:1 1 auto;
-    overflow-y:auto;
+﻿body{
+    height:100%;
+    width:100%;
+}
+.body-content{
     padding-top:2rem;
+    flex-direction:row;
 }
 .nav{
     display:flex;

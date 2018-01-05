@@ -3,35 +3,33 @@
 }
 <link href="~/css/home/index.css" rel="stylesheet" />
 
-<div class="page-content">
-    <div class="box">
-        <div class="tab-banner">
-            <div class="tab-header forward active" data-target="forward"><label>正转</label></div>
-            <div class="tab-header reverse" data-target="reverse"><label>逆转</label></div>
-        </div>
-        <div class="tab-body">
-            <div class="forward tab-content">
-                <div class="title"><label>请输入要缩短的网址(最长1024字符)</label></div>
-                <div class="input-container">
-                    <input type="text" name="long" id=" long" maxlength="1024" />
-                </div>
-                <div class="result" onclick="go()"></div>
-                <div class="submit">
-                    <div class="button">
-                        <label>缩短网址</label>
-                    </div>
+<div class="box">
+    <div class="tab-banner">
+        <div class="tab-header forward active" data-target="forward"><label>正转</label></div>
+        <div class="tab-header reverse" data-target="reverse"><label>逆转</label></div>
+    </div>
+    <div class="tab-body">
+        <div class="forward tab-content">
+            <div class="title"><label>请输入要缩短的网址(最长1024字符)</label></div>
+            <div class="input-container">
+                <input type="text" name="long" id=" long" maxlength="1024" />
+            </div>
+            <div class="result" onclick="go()"></div>
+            <div class="submit">
+                <div class="button">
+                    <label>缩短网址</label>
                 </div>
             </div>
-            <div class="reverse tab-content">
-                <div class="title"><label>请输入短网址</label></div>
-                <div class="input-container">
-                    <div class="host"><label>@ShortUrl.Utils.Configuration.Host/</label></div><input type="text" name="long" id=" long" maxlength="8" />
-                </div>
-                <div class="result" onclick="go()"></div>
-                <div class="submit">
-                    <div class="button">
-                        <label>还原网址</label>
-                    </div>
+        </div>
+        <div class="reverse tab-content">
+            <div class="title"><label>请输入短网址</label></div>
+            <div class="input-container">
+                <div class="host"><label>@ShortUrl.Utils.Configuration.Host/</label></div><input type="text" name="long" id=" long" maxlength="8" />
+            </div>
+            <div class="result" onclick="go()"></div>
+            <div class="submit">
+                <div class="button">
+                    <label>还原网址</label>
                 </div>
             </div>
         </div>
@@ -186,8 +184,8 @@
         _jqReverseResult = $(".reverse .result");
         _jqReverseText.change(function () { _jqReverseResult.html(""); });
         _jqReverseText.bind("input", function () { _jqReverseResult.html(""); })
-            .bind("keyup", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w]/ig,"")); })
-            .bind("afterpaste", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w]/ig,"")); });
+            .bind("keyup", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w]/ig, "")); })
+            .bind("afterpaste", function () { _jqReverseText.val(_jqReverseText.val().replace(/[^\w]/ig, "")); });
         $(".tab-header").click(function () {
             var _ev = event || window.event;
             var _el = _ev.srcElement || _ev.target;

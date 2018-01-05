@@ -1,7 +1,4 @@
-﻿.page-content{
-    flex:1 1;
-    display:flex;
-    flex-direction:column;
+﻿.body-content{
     align-items:center;
     padding-top:3rem;
 }

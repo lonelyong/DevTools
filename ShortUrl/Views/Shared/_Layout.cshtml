@@ -13,36 +13,33 @@
     </environment>
 </head>
 <body>
-    <div class="container body-content">
-        <div class="topper">
-            <div class="left">
-                <a asp-action="index" asp-controller="home">首页</a>
-                <a asp-action="doc" asp-controller="api">APIs</a>
-            </div>
-            <div class="right">
-                <a>分享</a>
-                <a asp-action="about" asp-controller="home">关于</a>
-            </div>
+    <div class="topper">
+        <div class="left">
+            <a asp-action="index" asp-controller="home">首页</a>
+            <a asp-action="doc" asp-controller="api">APIs</a>
         </div>
-        <div class="page-container">
-            @RenderBody()
-        </div>
-        <div class="footer">
-            <div class="line"></div>
-            <div class="linkbar">
-                <a href="http://www.codezone.link">EazyCode</a>|
-                <a href="http://jquery-utils.codezone.link">Jquery-utils</a>|
-                <a href="http://github.com">Github</a>|
-                <a href="http://google.com">谷歌</a>|
-                <a href="http://bootcdn.com">BootCDN</a>
-            </div>
-            <div class="linkbar">
-                <a asp-action="contact" asp-controller="home">联系</a>
-                <a asp-action="about" asp-controller="home">关于</a>
-            </div>
+        <div class="right">
+            <a>分享</a>
+            <a asp-action="about" asp-controller="home">关于</a>
         </div>
     </div>
-
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <div class="line"></div>
+        <div class="linkbar">
+            <a href="http://www.codezone.link">EazyCode</a>|
+            <a href="http://jquery-utils.codezone.link">Jquery-utils</a>|
+            <a href="http://github.com">Github</a>|
+            <a href="http://google.com">谷歌</a>|
+            <a href="http://bootcdn.com">BootCDN</a>
+        </div>
+        <div class="linkbar">
+            <a asp-action="contact" asp-controller="home">联系</a>
+            <a asp-action="about" asp-controller="home">关于</a>
+        </div>
+    </div>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>

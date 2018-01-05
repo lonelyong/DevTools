@@ -9,37 +9,36 @@
 <environment exclude="Development">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </environment>
-<div class="page-content">
-    <div class="nav">
-        <div class="group" data-id="rules">
-            <div class="title">
-                <i class="fa fa-caret-down">&nbsp;</i>
-                <label>细则</label>
-            </div>
-            <div class="item" data-id="intro">
-                <a>文档说明</a>
-            </div>
-            <div class="item" data-id="api">
-                <a>接口规则</a>
-            </div>
+<div class="nav">
+    <div class="group" data-id="rules">
+        <div class="title">
+            <i class="fa fa-caret-down">&nbsp;</i>
+            <label>细则</label>
         </div>
-        <div class="group" data-id="api">
-            <div class="title">
-                <i class="fa fa-caret-down">&nbsp;</i>
-                <label>Api列表</label>
-            </div>
-            <div class="item" data-id="zip">
-                <a>缩短URL</a>
-            </div>
-            <div class="item" data-id="unzip">
-                <a>还原URL</a>
-            </div>
+        <div class="item" data-id="intro">
+            <a>文档说明</a>
+        </div>
+        <div class="item" data-id="api">
+            <a>接口规则</a>
         </div>
     </div>
-    <div class="detail">
-        @Html.Partial((string)ViewBag.Partial)
+    <div class="group" data-id="api">
+        <div class="title">
+            <i class="fa fa-caret-down">&nbsp;</i>
+            <label>Api列表</label>
+        </div>
+        <div class="item" data-id="zip">
+            <a>缩短URL</a>
+        </div>
+        <div class="item" data-id="unzip">
+            <a>还原URL</a>
+        </div>
     </div>
-    <script>
+</div>
+<div class="detail">
+    @Html.Partial((string)ViewBag.Partial)
+</div>
+<script>
         var _group = '@ViewBag.Group'.toLowerCase();
         var _item = '@ViewBag.Item'.toLowerCase();
         window.addEventListener("load", function () {
@@ -55,6 +54,5 @@
                 window.location.href = "/api/doc?group=" + _jqGroup.data("id") + "&item=" + _jqItem.data("id");
              });
         },false);
-    </script>
-</div>
+</script>
 
