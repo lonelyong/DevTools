@@ -8,29 +8,27 @@
         <div class="tab-header forward active" data-target="forward"><label>正转</label></div>
         <div class="tab-header reverse" data-target="reverse"><label>逆转</label></div>
     </div>
-    <div class="tab-body">
-        <div class="forward tab-content">
-            <div class="title"><label>请输入要缩短的网址(最长1024字符)</label></div>
-            <div class="input-container">
-                <input type="text" name="long" id=" long" maxlength="1024" />
-            </div>
-            <div class="result" onclick="go()"></div>
-            <div class="submit">
-                <div class="button">
-                    <label>缩短网址</label>
-                </div>
+    <div class="forward tab-body">
+        <div class="title"><label>请输入要缩短的网址(最长1024字符)</label></div>
+        <div class="input-container">
+            <input type="text" name="long" id=" long" maxlength="1024" />
+        </div>
+        <div class="result" onclick="go()"></div>
+        <div class="submit">
+            <div class="button">
+                <label>缩短网址</label>
             </div>
         </div>
-        <div class="reverse tab-content">
-            <div class="title"><label>请输入短网址</label></div>
-            <div class="input-container">
-                <div class="host"><label>@ShortUrl.Utils.Configuration.Host/</label></div><input type="text" name="long" id=" long" maxlength="8" />
-            </div>
-            <div class="result" onclick="go()"></div>
-            <div class="submit">
-                <div class="button">
-                    <label>还原网址</label>
-                </div>
+    </div>
+    <div class="reverse tab-body">
+        <div class="title"><label>请输入短网址</label></div>
+        <div class="input-container">
+            <div class="host"><label>@ShortUrl.Utils.Configuration.Host/</label></div><input type="text" name="long" id=" long" maxlength="8" />
+        </div>
+        <div class="result" onclick="go()"></div>
+        <div class="submit">
+            <div class="button">
+                <label>还原网址</label>
             </div>
         </div>
     </div>
@@ -190,7 +188,7 @@
             var _ev = event || window.event;
             var _el = _ev.srcElement || _ev.target;
             $(_el).addClass("active").siblings().removeClass("active");
-            $(".tab-body").find("." + $(_el).data("target")).siblings().hide().siblings().show();
+            $(".tab-body").hide().filter(`.${$(_el).data("target")}`).show();
         });
         $(".forward .submit .button").click(function () {
             var _long = _jqForwardText.val();
