@@ -20,12 +20,12 @@
 }
 @media(max-width:768px) and (min-width:480px){
     .nav {
-        width:13rem;
+        width:12rem;
     }
 }
 @media(max-width:480px) {
     .nav {
-        width: 11rem;
+        width: 10rem;
     }
 }
 .nav .group{
