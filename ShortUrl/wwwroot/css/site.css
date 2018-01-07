@@ -9,6 +9,7 @@ html, body {
 html{
     height:100%;
     width:100%;
+    min-width:240px;
 }
 body{
     min-height:100%;
@@ -25,7 +26,6 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 10%;
     height: 2.6rem;
     background-color: rgba(186,186,186,.76);
     color:darkgreen;
@@ -72,13 +72,35 @@ body{
 
 .body-content {
     flex: 1 1 auto;
-    padding: 0 10%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     overflow:auto;
 }
-
+@media(min-width:900px){
+    .topper,
+    .body-content,
+    .footer
+    {
+        width:100%;
+        padding:0 10%;
+    }
+}
+@media(max-width:900px) and (min-width:480px) {
+    .topper,
+    .body-content,
+    .footer {
+        width:100%;
+        padding:0 5%;
+    }
+}
+@media(max-width:480px){
+    .topper,
+    .body-content,
+    .footer {
+        width:100%;
+        padding:1rem;
+    }
+}
 .footer{
     flex:0 0 auto;
     padding:1rem 10%;
