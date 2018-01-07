@@ -110,7 +110,7 @@
     background-color:white;
     border-color:whitesmoke;
     border-spacing:0;
-
+    width:100%;
 }
 .detail .section thead{
      background-color:lightgray
@@ -118,6 +118,7 @@
 .detail .section td{
      padding-left:1rem;
      padding-right:1rem;
+     word-break:break-word;
  }
 .detail .section tbody td{
      padding-top:1rem;
