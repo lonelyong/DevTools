@@ -40,6 +40,12 @@
     background-color:transparent;
     color:black;
 }
+.tab-banner .tab-header:first-child{
+    border-top-left-radius:5px;
+}
+.tab-banner .tab-header:last-child{
+    border-top-right-radius:5px;
+}
 .tab-body{
     display:flex;   
     flex-direction:column;
@@ -108,6 +114,6 @@
 .tab-body  .submit .button:hover {
     background-color:black;
 }
-.tab-body.reverse{
+.tab-body.unzip{
     display:none;
 }
