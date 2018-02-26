@@ -24,7 +24,7 @@ namespace ShortUrl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.Configure<IISOptions>(options=> options.AutomaticAuthentication = false);
             
         }
