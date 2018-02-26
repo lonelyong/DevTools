@@ -10,6 +10,13 @@ namespace ShortUrl.Controllers
 {
     public class HomeController : Controller
     {
+        //private readonly Data.DefaultDbContext _context;
+
+        //public HomeController(Data.DefaultDbContext defaultDbContext)
+        //{
+        //    _context = defaultDbContext;
+        //}
+
         public IActionResult Index()
         {
             return View();

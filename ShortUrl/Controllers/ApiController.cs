@@ -14,7 +14,6 @@ namespace ShortUrl.Controllers
 
         public IActionResult Doc(string group, string item) 
         {
-       
             if (!Request.Query.ContainsKey("group") && !Request.Query.ContainsKey("item"))
             {
                 ViewBag.Group = _groups.First().Key;

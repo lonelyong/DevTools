@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ShortUrl.Logic
 {
@@ -37,12 +38,14 @@ namespace ShortUrl.Logic
             {
                 throw new Exception("指定的网址不符合规范");
             }
-            using (Dal.DefaultDbContext context = new Dal.DefaultDbContext())
+            using (var scope = Program.Host.Services.CreateScope())
             {
+                var context = scope.ServiceProvider.GetRequiredService<Data.DefaultDbContext>();
                 Url _url = context.Urls.FirstOrDefault(t => t.Link == real);
                 if (_url == null)
                 {
-                    _url = new Url() {
+                    _url = new Url()
+                    {
                         Link = real
                     };
                     context.Urls.Add(_url);
@@ -54,8 +57,9 @@ namespace ShortUrl.Logic
 
         public string Get(long id)
         {
-            using (Dal.DefaultDbContext context = new Dal.DefaultDbContext())
+            using (var scope = Program.Host.Services.CreateScope())
             {
+                var context = scope.ServiceProvider.GetRequiredService<Data.DefaultDbContext>();
                 var _url = context.Urls.FirstOrDefault(t=>t.Id == id);
                 if (_url == null)
                     throw new Exception(string.Format("指定的短网址不存在({0})", id.ToNum64()));

@@ -7,7 +7,7 @@
     Apis.prototype.zip = function (long, before, error, success, complete) {
         var _self = this;
         if (_self.zipping) {
-            if (typeof error == typeof $.ajax) {
+            if (typeof error === typeof $.ajax) {
                 error("正在缩短URL，请等待当前任务完成！");
                 return;
             }
@@ -19,21 +19,21 @@
             dataType: "json",
             beforeSend: function () {
                 _self.zipping = true;
-                if (typeof before == typeof $.ajax) {
+                if (typeof before === typeof $.ajax) {
                     before();
                 }
             },
             error: function (err) {
 
                 _self.zipping = false;
-                if (typeof error == typeof $.ajax) {
+                if (typeof error === typeof $.ajax) {
                     error(err);
                 }
             },
             success: function (data) {
                 _self.zipping = false;
-                if (typeof success == typeof $.ajax) {
-                    if (data.Return_Code == _code_success) {
+                if (typeof success === typeof $.ajax) {
+                    if (data.Return_Code === _code_success) {
                         success(data.Result);
                     }
                     else {
@@ -42,16 +42,16 @@
                 }
             },
             complete: function () {
-                if (typeof complete == typeof $.ajax) {
+                if (typeof complete === typeof $.ajax) {
                     complete();
                 }
             }
         });
-    }
+    };
     Apis.prototype.unzip = function (short, before, error, success, complete) {
         var _self = this;
         if (_self.unzipping) {
-            if (typeof error == typeof $.ajax) {
+            if (typeof error === typeof $.ajax) {
                 error("正在还原URL，请等待当前任务完成！");
                 return;
             }
@@ -63,20 +63,20 @@
             dataType: "json",
             beforeSend: function () {
                 _self.unzipping = true;
-                if (typeof before == typeof $.ajax) {
+                if (typeof before === typeof $.ajax) {
                     before();
                 }
             },
             error: function (err) {
                 _self.unzipping = false;
-                if (typeof error == typeof $.ajax) {
+                if (typeof error === typeof $.ajax) {
                     error(err);
                 }
             },
             success: function (data) {
                 _self.unzipping = false;
-                if (typeof success == typeof $.ajax) {
-                    if (data.Return_Code == _code_success) {
+                if (typeof success === typeof $.ajax) {
+                    if (data.Return_Code === _code_success) {
                         success(data.Result);
                     }
                     else {
@@ -85,22 +85,22 @@
                 }
             },
             complete: function () {
-                if (typeof complete == typeof $.ajax) {
+                if (typeof complete === typeof $.ajax) {
                     complete();
                 }
             }
         });
-    }
+    };
     return new Apis();
 })();
 var _regShort = /^[0-9a-zA-Z]{1,8}$/;
 
 $.fn.extend({
     enter: function (callback) {
-        if (typeof callback == typeof $.noop) {
+        if (typeof callback === typeof $.noop) {
             this.bind("keydown", function (e) {
                 e = e || window.event;
-                if (e.keyCode == 13) {
+                if (e.keyCode === 13) {
                     return callback();
                 }
             });
@@ -136,7 +136,9 @@ function unzip_complete() {
     _$unzipText.removeAttr("readonly");
 }
 function go() {
-    window.open(this.innerHTML);
+    if ($.utils.Regex.isUrl(this.innerHTML)) {
+        window.open(this.innerHTML);
+    }
 }
 function isShort(surl) {
     return _regShort.test(surl);

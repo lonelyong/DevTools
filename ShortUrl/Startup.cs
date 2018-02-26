@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ShortUrl.Dal;
+using ShortUrl.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace ShortUrl
@@ -24,8 +24,9 @@ namespace ShortUrl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.AddDbContext<DbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
             services.Configure<IISOptions>(options=> options.AutomaticAuthentication = false);
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

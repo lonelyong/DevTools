@@ -12,9 +12,12 @@ namespace ShortUrl
 {
     public class Program
     {
+        public static IWebHost Host { get; private set; }
+
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            Host = BuildWebHost(args);
+            Host.Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
