@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShortUrl.Entities
 {
-    [Table("TShortUrl")]
+    [Table("tb_short_url")]
     public class Url
     {
         [Key]
