@@ -7,7 +7,7 @@
     flex-direction:row;
 }
 .nav {
-    flex:1 0 auto;
+    flex:0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -17,7 +17,7 @@
     .nav{
         width:15rem;
     }
-    .detail{
+    .doc-body{
         margin-left:2rem;
     }
 }
@@ -25,7 +25,7 @@
     .nav {
         width:12rem;
     }
-    .detail{
+    .doc-body{
         margin-left:1rem;
     }
 }
@@ -33,7 +33,7 @@
     .nav {
         width: 10rem;
     }
-    .detail{
+    .doc-body{
         margin-left:0.5rem;
     }
 }
@@ -70,7 +70,7 @@
 }
 
 
-.detail{
+.doc-body{
     flex:2 1 auto;
     display:flex;
     flex-direction:column;
@@ -80,7 +80,7 @@
     background-color:whitesmoke;
     overflow-y:auto;
 }
-.detail .item-title{
+.doc-body .doc-title{
     flex-shrink:0;
     padding-top:1rem;
     height:4rem;
@@ -90,7 +90,7 @@
     align-items:center;
 }
 
-.detail .section{
+.doc-body .section{
     display:flex;   
     flex-direction:column;
     align-items:stretch;
@@ -98,52 +98,52 @@
     border-top:dashed 1px lightgray;
     flex-shrink:0;
 }
-.detail .section .title {
+.doc-body .section .title {
         padding-top:1rem;
         height: 4rem;
         display: flex;
         align-items: center;
         color: green;
     }
-.detail .section .title > * {
+.doc-body .section .title > * {
     border-left: solid 0.3rem green;
     padding-left: 0.3rem;
     font-weight: 500;
     line-height:1rem;
 }
-.detail .section .content{
+.doc-body .section .content{
 }
 
-.detail .section table{
+.doc-body .section table{
     background-color:white;
     border-color:whitesmoke;
     border-spacing:0;
     width:100%;
 }
-.detail .section thead{
+.doc-body .section thead{
      background-color:lightgray
  }
-.detail .section td{
+.doc-body .section td{
      padding-left:1rem;
      padding-right:1rem;
      word-break:break-word;
  }
-.detail .section tbody td{
+.doc-body .section tbody td{
      padding-top:1rem;
      padding-bottom:1rem;
  }
-.detail .section thead td:first-child{
+.doc-body .section thead td:first-child{
     width:15%;
 }
-.detail .section thead td:nth-child(2) {
+.doc-body .section thead td:nth-child(2) {
     width: 10%;
 }
-.detail .section thead td:nth-child(3) {
+.doc-body .section thead td:nth-child(3) {
     width: 10%;
 }
-.detail .section thead td:nth-child(4) {
+.doc-body .section thead td:nth-child(4) {
     width: 45%;
 }
-.detail .section thead td:last-child {
+.doc-body .section thead td:last-child {
     width: 20%;
 }
