@@ -11,6 +11,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ShortUrl.Api.Data;
 using ShortUrl.Api.App;
+using Swashbuckle.AspNetCore.SwaggerUI;
+using Swashbuckle.AspNetCore.Swagger;
+using System.IO;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace ShortUrl.Api
 {
@@ -26,9 +30,26 @@ namespace ShortUrl.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "ShortUrl接口文档",
+                    Description = "RESTful API for ShortUrl",
+                    TermsOfService = "None",
+                    Contact = new Contact { Name = "Lonelyong", Email = "778652286@qq.com", Url = "" }
+                });
+
+                //Set the comments path for the swagger json and ui.
+                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                var xmlPath = Path.Combine(basePath, "ShortUrl.Api.Xml");
+                c.IncludeXmlComments(xmlPath);
+            });
+
             services.AddMvc( options => {
                 options.Filters.Add(new ExceptionFilter());
-                options.Filters.Add(new App.ActionFilter());
+                options.Filters.Add(new ActionFilter());
             });
 #if DEBUG
             services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
@@ -47,7 +68,17 @@ namespace ShortUrl.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseMvc();
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShortUrl API V1");
+            });
+            app.UseMvc(routes =>
+            {
+             
+            });
             app.UseCors(t=>t.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
         }
     }

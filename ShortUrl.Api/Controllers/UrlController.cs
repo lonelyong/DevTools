@@ -8,6 +8,9 @@ using ShortUrl.Api.Models;
 
 namespace ShortUrl.Api.Controllers
 {
+    /// <summary>
+    /// 链接压缩与解压
+    /// </summary>
     [Route("url")]
     public class UrlController : ControllerBase
     {
@@ -22,8 +25,8 @@ namespace ShortUrl.Api.Controllers
         /// <summary>
         /// 将短链接还原为长链接
         /// </summary>
-        /// <param name="llink"></param>
-        /// <returns></returns>
+        /// <param name="llink">长链接</param>
+        /// <returns>短链接</returns>
         [HttpPost]
         [Route("zip")]
         public IActionResult Zip([FromBody]string llink)
@@ -35,8 +38,8 @@ namespace ShortUrl.Api.Controllers
         /// <summary>
         /// 将长链接压缩为短链接
         /// </summary>
-        /// <param name="slink"></param>
-        /// <returns></returns>
+        /// <param name="slink">短链接</param>
+        /// <returns>长链接</returns>
         [HttpGet]
         [Route("unzip")]
         public IActionResult Unzip(string slink)
