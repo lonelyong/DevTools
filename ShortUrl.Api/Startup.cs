@@ -77,7 +77,13 @@ namespace ShortUrl.Api
             });
             app.UseMvc(routes =>
             {
-             
+                routes.MapRoute(
+                       name: "default",
+                       template: "{id?}",
+                       defaults: new { controller = "url" });
+                routes.MapRoute(
+                 name: "route",
+                 template: "{controller}/{action}/{id?}");
             });
             app.UseCors(t=>t.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
         }

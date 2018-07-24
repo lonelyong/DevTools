@@ -21,6 +21,7 @@ namespace ShortUrl.Api
             WebHost.CreateDefaultBuilder(args)
                 .UseIISIntegration()
                 .UseKestrel()
+                .UseUrls("http://localhost:5001")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();
