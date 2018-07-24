@@ -8,7 +8,7 @@ using ShortUrl.Api.Models;
 
 namespace ShortUrl.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("url")]
     public class UrlController : ControllerBase
     {
         private UnZipUrl _apiUnZipUrl;
