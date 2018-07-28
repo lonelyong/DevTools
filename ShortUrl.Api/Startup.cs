@@ -15,6 +15,7 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 using Swashbuckle.AspNetCore.Swagger;
 using System.IO;
 using Microsoft.Extensions.PlatformAbstractions;
+using ShortUrl.Api.Models;
 
 namespace ShortUrl.Api
 {
@@ -22,10 +23,8 @@ namespace ShortUrl.Api
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            App.Configuration.AppSettings = configuration.Get<AppSettings>();
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -52,7 +51,7 @@ namespace ShortUrl.Api
                 options.Filters.Add(new ActionFilter());
             });
 #if DEBUG
-            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(App.Configuration.AppSettings.ConnectionStrings.DefaultConnection));
 #else
             services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 #endif 

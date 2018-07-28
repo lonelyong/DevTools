@@ -19,12 +19,10 @@ namespace ShortUrl.Api.Core
     public class ShortUrlManagement
     {
         private DefaultDbContext _dbContext;
-        private IConfiguration _configuration;
 
-        public ShortUrlManagement(DefaultDbContext dbContext, IConfiguration configuration) 
+        public ShortUrlManagement(DefaultDbContext dbContext) 
         {
             _dbContext = dbContext;
-            _configuration = configuration;
         }
 
         public string Zip(string llink)
@@ -48,7 +46,7 @@ namespace ShortUrl.Api.Core
                 _dbContext.Urls.Add(_url);
                 _dbContext.SaveChanges();
             }
-            return string.Concat(_configuration.GetValue<Settings>("Settings").Host, "/", _url.Id.ToNum64());
+            return string.Concat(Configuration.AppSettings.Settings.Host, "/", _url.Id.ToNum64());
         }
 
         public string Get(long id)
