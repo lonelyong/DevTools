@@ -3,11 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ShortUrl.Logic.Apis;
 
 namespace ShortUrl.Controllers
 {
     public class ApiController : Controller
     {
+        private ZipUrl _zipUrl;
+
+        private UnZipUrl _unzipUrl;
+
+        public ApiController(ZipUrl zip, UnZipUrl unzip)
+        {
+            _zipUrl = zip;
+            _unzipUrl = unzip;
+        }
+
         static Dictionary<string, string[]> _groups = new Dictionary<string, string[]>() {
             { "api", new string[] { "zip", "unzip" } },
             { "rules", new string[]{ "intro", "api"} } };
@@ -36,13 +47,13 @@ namespace ShortUrl.Controllers
 
         public JsonResult Zip(string url) 
         {
-            var _short = new Logic.Apis.ZipUrl().Zip(url);
+            var _short = _zipUrl.Zip(url);
             return Json(_short, new Newtonsoft.Json.JsonSerializerSettings() { ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver()});
         }
 
         public JsonResult UnZip(string surl) 
         {
-            var _long = new Logic.Apis.UnZipUrl().UnZip(surl); 
+            var _long = _unzipUrl.UnZip(surl); 
             return Json(_long, new Newtonsoft.Json.JsonSerializerSettings() { ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver() });
         }
     }

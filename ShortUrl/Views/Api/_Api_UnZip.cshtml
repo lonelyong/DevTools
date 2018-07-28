@@ -14,7 +14,7 @@
         <label>接口链接</label>
     </div>
     <div class="content">
-        @ShortUrl.Utils.Configuration.Host/api/unzip
+        @ShortUrl.Utils.Configs.Default.Settings.Host/api/unzip
     </div>
 </div>
 <div class="section">
@@ -37,8 +37,8 @@
                     <td>surl</td>
                     <td>String(32)</td>
                     <td>是</td>
-                    <td>要解压的短网址，必须是 @ShortUrl.Utils.Configuration.Host 开头，不支持其他协议的网址，并且网址在格式上必须是合法的。</td>
-                    <td>@ShortUrl.Utils.Configuration.Host/srtgn<br />@ShortUrl.Utils.Configuration.Host/Duoyh</td>
+                    <td>要解压的短网址，必须是 @ShortUrl.Utils.Configs.Default.Settings.Host 开头，不支持其他协议的网址，并且网址在格式上必须是合法的。</td>
+                    <td>@ShortUrl.Utils.Configs.Default.Settings.Host/srtgn<br />@ShortUrl.Utils.Configs.Default.Settings.Host/Duoyh</td>
                 </tr>
                 <tr>
                     <td>accesskey</td>
@@ -86,7 +86,7 @@
                     <td>String(32)</td>
                     <td>是</td>
                     <td>若Return_Code为SUCCESS，则返回压缩后的结果，若Return_Code为Fail则返回空字符串</td>
-                    <td>http://ourl.link/Ld8Dc</td>
+                    <td>@ShortUrl.Utils.Configs.Default.Settings.Host/1</td>
                 </tr>
             </tbody>
         </table>

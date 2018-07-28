@@ -7,6 +7,6 @@ namespace ShortUrl.Logic.Apis
 {
     public abstract class ApiBase<TResult> where TResult:ResultBase, new()
     {
-
+        protected ShortUrlManagement UrlManagement { get; set; }
     }
 }

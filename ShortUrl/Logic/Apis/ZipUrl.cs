@@ -8,12 +8,17 @@ namespace ShortUrl.Logic.Apis
 {
     public class ZipUrl : ApiBase<ZipUrlResult>
     {
+        public ZipUrl(ShortUrlManagement urlManagement)
+        {
+            UrlManagement = urlManagement;
+        }
+
         public ZipUrlResult Zip(string longUrl)
         {
             ZipUrlResult _result = new ZipUrlResult();
             try
             {
-                string _short = ShortUrlManagement.Default.Zip(longUrl);
+                string _short = UrlManagement.Zip(longUrl);
                 _result.Return_Code = ResultBase.DEFAULT_RETURN_CODE_SUCCESS;
                 _result.Return_Msg = ResultBase.DEFAULT_RETURN_MSG_OK;
                 _result.Result = _short;

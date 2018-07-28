@@ -36,9 +36,9 @@ namespace ShortUrl.Api
                 {
                     Version = "v1",
                     Title = "ShortUrl接口文档",
-                    Description = "RESTful API for ShortUrl",
-                    TermsOfService = "None",
-                    Contact = new Contact { Name = "Lonelyong", Email = "778652286@qq.com", Url = "" }
+                    //Description = "RESTful API for ShortUrl",
+                    //TermsOfService = "None",
+                    //Contact = new Contact { Name = "Lonelyong", Email = "778652286@qq.com", Url = "" }
                 });
 
                 //Set the comments path for the swagger json and ui.
@@ -80,10 +80,10 @@ namespace ShortUrl.Api
                 routes.MapRoute(
                        name: "default",
                        template: "{id?}",
-                       defaults: new { controller = "url" });
+                       defaults: new { controller = "Home", action="Index"});
                 routes.MapRoute(
-                 name: "route",
-                 template: "{controller}/{action}/{id?}");
+                     name: "route",
+                     template: "{controller=Home}/{action=Index}/{id?}");
             });
             app.UseCors(t=>t.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
         }

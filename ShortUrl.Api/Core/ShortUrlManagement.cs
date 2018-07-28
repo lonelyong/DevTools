@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using ShortUrl.Api.Data;
 using ShortUrl.Api.App;
+using Microsoft.Extensions.Configuration;
+using ShortUrl.Api.Models;
 
 namespace ShortUrl.Api.Core
 {
@@ -17,34 +19,36 @@ namespace ShortUrl.Api.Core
     public class ShortUrlManagement
     {
         private DefaultDbContext _dbContext;
+        private IConfiguration _configuration;
 
-        public ShortUrlManagement(DefaultDbContext dbContext) 
+        public ShortUrlManagement(DefaultDbContext dbContext, IConfiguration configuration) 
         {
             _dbContext = dbContext;
+            _configuration = configuration;
         }
 
-        public string Zip(string real)
+        public string Zip(string llink)
         {
-            if (string.IsNullOrWhiteSpace(real))
+            if (string.IsNullOrWhiteSpace(llink))
             {
                 throw new Exception("网址不能为空");
             }
-            real = real.Trim();
-            if (!IsUrl(real))
+            llink = llink.Trim();
+            if (!IsUrl(llink))
             {
                 throw new Exception("指定的网址不符合规范");
             }
-            Url _url = _dbContext.Urls.FirstOrDefault(t => t.Link == real);
+            Url _url = _dbContext.Urls.FirstOrDefault(t => t.Link == llink);
             if (_url == null)
             {
                 _url = new Url()
                 {
-                    Link = real
+                    Link = llink
                 };
                 _dbContext.Urls.Add(_url);
                 _dbContext.SaveChanges();
             }
-            return string.Concat(Configuration.Host, "/", _url.Id.ToNum64());
+            return string.Concat(_configuration.GetValue<Settings>("Settings").Host, "/", _url.Id.ToNum64());
         }
 
         public string Get(long id)

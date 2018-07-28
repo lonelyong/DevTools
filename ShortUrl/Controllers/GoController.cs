@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ShortUrl.Logic;
 using ShortUrl.Utils;
 
 namespace ShortUrl.Controllers
 {
     public class GoController : Controller
     {
+        private ShortUrlManagement _urlManagement;
+
+        public GoController(ShortUrlManagement urlManagement)
+        {
+            _urlManagement = urlManagement;
+        }
+
         public IActionResult Index(string id)
         {
             if (string.IsNullOrWhiteSpace(id))
@@ -17,7 +25,7 @@ namespace ShortUrl.Controllers
             {
                 try
                 {
-                    var _real = Logic.ShortUrlManagement.Default.Get(id.FromNum64());
+                    var _real =_urlManagement.Get(id.FromNum64());
                     if (string.IsNullOrWhiteSpace(_real))
                     {
                         throw new ArgumentNullException();

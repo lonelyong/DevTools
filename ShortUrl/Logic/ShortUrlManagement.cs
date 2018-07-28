@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using ShortUrl.Data;
+using ShortUrl.Models;
 
 namespace ShortUrl.Logic
 {
@@ -13,19 +16,12 @@ namespace ShortUrl.Logic
     /// </summary>
     public class ShortUrlManagement
     {
-        public static ShortUrlManagement Default { get; } = new ShortUrlManagement();
+        private DefaultDbContext _dbContext;
 
-        public ShortUrlManagement() :this(Utils.Configuration.Host)
+        public ShortUrlManagement(DefaultDbContext dbContext) 
         {
-
+            _dbContext = dbContext;
         }
-
-        public ShortUrlManagement(string host)
-        {
-            Host = host;
-        }
-
-        public string Host { get; }
 
         public string Zip(string real)
         {
@@ -38,21 +34,17 @@ namespace ShortUrl.Logic
             {
                 throw new Exception("指定的网址不符合规范");
             }
-            using (var scope = Program.Host.Services.CreateScope())
+            Url _url = _dbContext.Urls.FirstOrDefault(t => t.Link == real);
+            if (_url == null)
             {
-                var context = scope.ServiceProvider.GetRequiredService<Data.DefaultDbContext>();
-                Url _url = context.Urls.FirstOrDefault(t => t.Link == real);
-                if (_url == null)
+                _url = new Url()
                 {
-                    _url = new Url()
-                    {
-                        Link = real
-                    };
-                    context.Urls.Add(_url);
-                    context.SaveChanges();
-                }
-                return string.Concat(Host, "/", _url.Id.ToNum64());
+                    Link = real
+                };
+                _dbContext.Urls.Add(_url);
+                _dbContext.SaveChanges();
             }
+            return string.Concat(Configs.Default.Settings.Host, "/", _url.Id.ToNum64());
         }
 
         public string Get(long id)

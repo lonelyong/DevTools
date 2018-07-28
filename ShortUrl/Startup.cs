@@ -9,14 +9,24 @@ using Microsoft.Extensions.DependencyInjection;
 using ShortUrl.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.HttpOverrides;
+using ShortUrl.Logic;
+using ShortUrl.Logic.Apis;
+using ShortUrl.Models;
 
 namespace ShortUrl
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+               .SetBasePath(env.ContentRootPath)
+               .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+               .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+               .AddEnvironmentVariables();
+            Configuration = builder.Build();
+            Utils.Configs.Default= Configuration.Get<Utils.Configs>();
+
         }
 
         public IConfiguration Configuration { get; }
@@ -27,13 +37,14 @@ namespace ShortUrl
             services.AddMvc();
             services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.Configure<IISOptions>(options=> options.AutomaticAuthentication = false);
-            
+            services.AddScoped<ShortUrlManagement>();
+            services.AddScoped<UnZipUrl>();
+            services.AddScoped<ZipUrl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            GetConfig(env);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -60,20 +71,6 @@ namespace ShortUrl
                     name:"route",
                     template:"{controller}/{action}/{id?}");
             });
-        }
-
-        void GetConfig(IHostingEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DevConnection");
-                Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("DevHost");
-            }
-            else
-            {
-                Utils.Configuration.Host = Configuration.GetSection("Settings").GetValue<string>("Host");
-                Utils.Configuration.DefaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
-            }
         }
     }
 }
