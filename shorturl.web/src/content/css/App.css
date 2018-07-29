@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-size: 14px;
+}
+html{
+    height:100%;
+    width:100%;
+    min-width:240px;
+}
+body{
+    height:100%;
+    width:100%;
+}
+#root{
+    height:100%;
+    width:100%;
+}
+#router-root{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topper {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2.6rem;
+    background-color: rgba(186,186,186,.76);
+    color:darkgreen;
+}
+.topper .right{
+    display:flex;   
+    justify-content:flex-end;
+    align-items:center;
+}
+.topper .left{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+.topper .right a{
+    margin-right:1.5rem;
+}
+.topper .right a:last-child{
+    margin-right:0;
+}
+.topper .left a{
+    margin-left:1.5rem;
+}
+.topper .left a:first-child{
+    margin-left:0;
+}
+.topper a{
+    color:green;
+    text-decoration:none;
+    color:green;
+}
+.topper a:hover {
+    text-decoration:underline;
+}
+.topper a:active{
+    color:purple;
+}
+.topper a:visited{
+
+}
+.topper a:hover{
+    text-decoration:underline;
+}
+
+.body-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+}
+@media(min-width:768px){
+    .topper,
+    .body-content,
+    .footer
+    {
+        width:100%;
+        padding:0 10%;
+    }
+}
+@media(max-width:768px) and (min-width:480px) {
+    .topper,
+    .body-content,
+    .footer {
+        width:100%;
+        padding:0 5%;
+    }
+}
+@media(max-width:480px){
+    .topper,
+    .body-content,
+    .footer {
+        width:100%;
+        padding:1rem;
+    }
+}
+.footer{
+    flex:0 0 auto;
+    padding:1rem 10%;
+    width:100%;
+    display:flex;   
+    flex-direction:column;
+    align-items:center;
+}
+.footer .line{
+    width:100%;
+    border-top:dashed 1px dimgray;
+}
+.footer .linkbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.3rem;
+    font-size: 12px;
+}
+.footer .linkbar a {
+    padding: 0 1rem;
+    color: #515151;
+    text-decoration:none;
+    font-size: 12px;
+}
+.footer .linkbar a:hover{
+    color:brown;
+    text-decoration:underline;
+}
+
