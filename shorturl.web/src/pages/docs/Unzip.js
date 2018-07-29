@@ -1,7 +1,13 @@
 import React from 'react';
 import Configs from '../../content/js/Configuration';
-
+const setTitle = ()=> document.title = '文档-还原链接';
 class Unzip extends React.Component{
+    componentDidMount() {
+        setTitle();
+    }
+    componentDidUpdate() {
+        setTitle()
+    }
     render(){
         return(
             <div className='doc-body'>

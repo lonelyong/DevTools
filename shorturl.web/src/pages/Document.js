@@ -3,9 +3,12 @@ import {
     BrowserRouter as Router,
     Route,
     Link,
-    NavLink
+    NavLink,
+    Redirect,
+    Switch
   } from 'react-router-dom';
   import '../content/css/Document.css';
+  import Err404 from './errs/Err404.js';
   import Intro from './docs/Intro.js';
   import Rule from './docs/Rule.js';
   import Zip from './docs/Zip.js';
@@ -40,10 +43,14 @@ class Document extends React.Component{
                         </NavLink>
                     </div>
                 </div>
-                <Route path="/docs/intro" component={Intro}/>
-                <Route path="/docs/rule" component={Rule}/>
-                <Route path="/docs/zip" component={Zip}/>
-                <Route path="/docs/unzip" component={Unzip}/>
+                <Switch>
+                    <Route path="/docs/intro" component={Intro}/>
+                    <Route path="/docs/rule" component={Rule}/>
+                    <Route path="/docs/zip" component={Zip}/>
+                    <Route path="/docs/unzip" component={Unzip}/>
+                    <Redirect exact from='/docs' to={{pathname:'/docs/intro'}}/>
+                    <Route path="/docs/*" component={Err404}/>
+                </Switch>
             </div>           
         );
     }

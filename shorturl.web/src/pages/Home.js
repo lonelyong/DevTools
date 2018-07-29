@@ -8,7 +8,14 @@ const tab = {
     zip:'zip',
     unzip:'unzip'
 };
+const setTitle = ()=> document.title = '短链接';
 class Home extends React.Component{
+    componentDidMount() {
+        setTitle();
+    }
+    componentDidUpdate() {
+        setTitle()
+    }
     constructor(){
         super();
         this.state={

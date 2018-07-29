@@ -1,6 +1,13 @@
 import React from 'react';
 import Configs from '../../content/js/Configuration';
+const setTitle = ()=> document.title = '文档-链接缩短';
 class Zip extends React.Component{
+    componentDidMount() {
+        setTitle();
+    }
+    componentDidUpdate() {
+        setTitle()
+    }
     render(){
         return(
             <div className='doc-body'>

@@ -1,6 +1,13 @@
 import React from 'react';
 import '../content/css/Contact.css';
+const setTitle = ()=> document.title = '联系';
 class Contact extends React.Component{
+    componentDidMount() {
+        setTitle();
+    }
+    componentDidUpdate() {
+        setTitle()
+    }
     render(){
         return(
             <div id='Contact' className='container body-content'>

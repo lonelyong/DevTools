@@ -1,6 +1,14 @@
 import React from 'react';
 import '../content/css/About.css';
+const setTitle = ()=> document.title = '关于';
 class About extends React.Component{
+    
+    componentDidMount() {
+        setTitle();
+    }
+    componentDidUpdate() {
+        setTitle()
+    }
     render(){
         return(
             <div id='About' className='container body-content'>

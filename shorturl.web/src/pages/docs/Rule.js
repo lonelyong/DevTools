@@ -1,6 +1,12 @@
 import React from 'react';
-
+const setTitle = ()=> document.title = '文档-接口规则';
 class Rule extends React.Component{
+    componentDidMount() {
+        setTitle();
+    }
+    componentDidUpdate() {
+        setTitle()
+    }
     render(){
         return(
             <div className='doc-body'>
