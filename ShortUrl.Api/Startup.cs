@@ -19,14 +19,25 @@ using ShortUrl.Api.Models;
 
 namespace ShortUrl.Api
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             App.Configuration.AppSettings = configuration.Get<AppSettings>();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
@@ -45,21 +56,21 @@ namespace ShortUrl.Api
                 var xmlPath = Path.Combine(basePath, "ShortUrl.Api.Xml");
                 c.IncludeXmlComments(xmlPath);
             });
-
+            services.AddCors();
             services.AddMvc( options => {
                 options.Filters.Add(new ExceptionFilter());
                 options.Filters.Add(new ActionFilter());
             });
-#if DEBUG
-            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(App.Configuration.AppSettings.ConnectionStrings.DefaultConnection));
-#else
-            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-#endif 
-
+            services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.AppSettings.ConnectionStrings.DefaultConnection));
             services.Configure<IISOptions>(options => options.AutomaticAuthentication = false);
             services.AddServices();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -67,6 +78,7 @@ namespace ShortUrl.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors(t => t.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
             app.UseSwagger();
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
@@ -84,7 +96,7 @@ namespace ShortUrl.Api
                      name: "route",
                      template: "{controller=Home}/{action=Index}/{id?}");
             });
-            app.UseCors(t=>t.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
+
         }
     }
 }
