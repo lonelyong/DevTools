@@ -1,7 +1,11 @@
 import HttpMethod from './HttpMethod';
 import Configs from './Configuration';
 const successCode = 'SUCCESS';
-const headers = new Headers({'Content-Type': 'application/json'});
+const headers = new Headers({
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT, DELETE',});
 
 
 const sendRequest=(url, method, params, before, success, error, complete)=>{

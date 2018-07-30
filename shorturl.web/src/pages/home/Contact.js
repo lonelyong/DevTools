@@ -1,5 +1,5 @@
 import React from 'react';
-import '../content/css/Contact.css';
+import '../../content/css/home/Contact.css';
 const setTitle = ()=> document.title = '联系';
 class Contact extends React.Component{
     componentDidMount() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../content/css/About.css';
+import '../../content/css/home/About.css';
 const setTitle = ()=> document.title = '关于';
 class About extends React.Component{
     

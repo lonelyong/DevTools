@@ -1,8 +1,8 @@
 import React from 'react';
-import '../content/css/Home.css';
-import APIs from '../content/js/Apis';
-import Configs from '../content/js/Configuration';
-import RegexUtil from '../content/js/RegexUtil';
+import '../../content/css/home/Index.css';
+import APIs from '../../content/js/Apis';
+import Configs from '../../content/js/Configuration';
+import RegexUtil from '../../content/js/RegexUtil';
 const dataTarget = 'data-target';
 const tab = {
     zip:'zip',
