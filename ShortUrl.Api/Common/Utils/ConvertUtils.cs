@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ShortUrl.Api.Common.Utils
 {
-    public static class Converter
+    public static class ConvertUtils
     {
-        const string _base = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        const string _base = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         private static int exponent = _base.Length;//幂数
 

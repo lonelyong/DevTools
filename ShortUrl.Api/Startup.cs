@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using ShortUrl.Api.Data;
+using Microsoft.Extensions.PlatformAbstractions;
 using ShortUrl.Api.App;
-using Swashbuckle.AspNetCore.SwaggerUI;
+using ShortUrl.Api.Data;
+using ShortUrl.Api.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using System.IO;
-using Microsoft.Extensions.PlatformAbstractions;
-using ShortUrl.Api.Models;
 
 namespace ShortUrl.Api
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public class Startup
+	/// <summary>
+	/// 
+	/// </summary>
+	public class Startup
     {
         /// <summary>
         /// 
@@ -53,13 +46,14 @@ namespace ShortUrl.Api
 
                 //Set the comments path for the swagger json and ui.
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-                var xmlPath = Path.Combine(basePath, "ShortUrl.Api.Xml");
+                var xmlPath = Path.Combine(basePath, "ShortUrl.Api.xml");
                 c.IncludeXmlComments(xmlPath);
             });
             services.AddCors();
             services.AddMvc( options => {
                 options.Filters.Add(new ExceptionFilter());
                 options.Filters.Add(new ActionFilter());
+				options.Filters.Add(new AuthoriztionFilter());
             });
             services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.AppSettings.ConnectionStrings.DefaultConnection));
             services.Configure<IISOptions>(options => options.AutomaticAuthentication = false);

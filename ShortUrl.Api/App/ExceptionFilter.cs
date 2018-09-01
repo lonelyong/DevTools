@@ -10,13 +10,17 @@ using System.Threading.Tasks;
 
 namespace ShortUrl.Api.App
 {
+	/// <summary>
+	/// 全局异常过滤器
+	/// </summary>
     public class ExceptionFilter : IExceptionFilter
     {
         public void OnException(ExceptionContext context)
         {
             if(context.Exception is ApiException)
             {
-                context.Result = new JsonResult(TReponse<string>.Error(context.Exception.Message), JsonHelper.LowerCaseSerializerSettings);
+				context.ExceptionHandled = true;
+				context.Result = new JsonResult(TReponse<string>.Error(context.Exception.Message), JsonUtils.LowerCaseSerializerSettings);
             }
         }
     }
