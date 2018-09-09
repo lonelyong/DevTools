@@ -48,5 +48,5 @@ namespace ShortUrl.Api.Controllers
             var llink = _apiUnZipUrl.UnZip(input.SLink);
             return Json(TReponse<string>.Ok(llink));
         }
-    }
+	}
 }

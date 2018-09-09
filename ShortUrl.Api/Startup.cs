@@ -9,6 +9,7 @@ using ShortUrl.Api.Data;
 using ShortUrl.Api.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using System.IO;
+using System.Reflection;
 
 namespace ShortUrl.Api
 {
@@ -46,7 +47,7 @@ namespace ShortUrl.Api
 
                 //Set the comments path for the swagger json and ui.
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-                var xmlPath = Path.Combine(basePath, "ShortUrl.Api.xml");
+                var xmlPath = Path.Combine(basePath, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
                 c.IncludeXmlComments(xmlPath);
             });
             services.AddCors();
@@ -79,6 +80,8 @@ namespace ShortUrl.Api
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShortUrl API V1");
+				c.HeadContent = "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">";
+				c.DocumentTitle = "ShortUrl接口文档";
             });
             app.UseMvc(routes =>
             {
