@@ -72,4 +72,3 @@ def iterCreater(n):
 xiter = iterCreater(10)
 for var in xiter:
     print(var)
->>>>>>> e291418a87b32ef1ee2844d41d4416ba150b0e90
