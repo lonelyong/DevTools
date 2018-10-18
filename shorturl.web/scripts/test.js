@@ -1,27 +1,38 @@
-'use strict';
-
-// Do this as the first thing so that any code reading it knows the right env.
-process.env.BABEL_ENV = 'test';
-process.env.NODE_ENV = 'test';
-process.env.PUBLIC_URL = '';
-
-// Makes the script crash on unhandled rejections instead of silently
-// ignoring them. In the future, promise rejections that are not handled will
-// terminate the Node.js process with a non-zero exit code.
-process.on('unhandledRejection', err => {
-  throw err;
-});
-
-// Ensure environment variables are read.
-require('../config/env');
-
-const jest = require('jest');
-let argv = process.argv.slice(2);
-
-// Watch unless on CI or in coverage mode
-if (!process.env.CI && argv.indexOf('--coverage') < 0) {
-  argv.push('--watch');
-}
-
-
-jest.run(argv);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var A = /** @class */ (function () {
+    function A(iname) {
+        /**
+         * print hello world
+         */
+        this.hi = function () {
+            console.log(name + " hi");
+        };
+        this.name = iname;
+    }
+    A.prototype.say = function () {
+        console.log("i am " + this.name);
+    };
+    return A;
+}());
+var B = /** @class */ (function (_super) {
+    __extends(B, _super);
+    function B(iname) {
+        var _this = _super.call(this, iname) || this;
+        _this.hi = function () {
+            _super.prototype.say.call(_this);
+        };
+        return _this;
+    }
+    return B;
+}(A));
+var b = new B("tom");
+b.hi();

@@ -8,7 +8,7 @@ using ShortUrl.Api.App;
 
 namespace ShortUrl.Api.Controllers
 {
-    [Service]
+    //[Service]
     public class ControllerBase : Controller
     {
         public override JsonResult Json(object data)

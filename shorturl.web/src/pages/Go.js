@@ -1,8 +1,8 @@
 import React from 'react';
-const setTitle = ()=> document.title = '正在跳转...';
 import '../content/css/Go.css';
 import APIs from '../content/js/Apis';
 import RegexUtil from '../content/js/RegexUtil';
+const setTitle = ()=> document.title = '正在跳转...';
 class Go extends React.Component{
     constructor(){
         super();
