@@ -11,7 +11,6 @@ import Document from './pages/Document';
 import About from './pages/home/About';
 import Contact from './pages/home/Contact';
 import './content/css/App.css';
-import Apis from './content/js/Apis';
 import Err404 from './pages/errs/Err404';
 import Go from './pages/Go';
 class App extends Component {
@@ -44,7 +43,7 @@ class App extends Component {
             <div className="line"></div>
             <div className="linkbar">
                 <a href="http://pm.tianxia.ink" target="_blank">Spm</a>|
-                <a href="http://jquery-utils.hicode.net" target="_blank">Jquery-utils</a>|
+                <a href="http://jsutils.hicode.net" target="_blank">jsutils</a>|
                 <a href="http://github.com" target="_blank">Github</a>|
                 <a href="http://google.com" target="_blank">谷歌</a>|
                 <a href="http://bootcdn.com" target="_blank">BootCDN</a>

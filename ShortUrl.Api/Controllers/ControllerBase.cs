@@ -13,7 +13,7 @@ namespace ShortUrl.Api.Controllers
     {
         public override JsonResult Json(object data)
         {
-            return base.Json(data, JsonHelper.LowerCaseSerializerSettings);
+            return base.Json(data, JsonUtils.LowerCaseSerializerSettings);
         }
     }
 }
