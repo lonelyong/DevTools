@@ -21,9 +21,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/ShortUrl/bin/Debug/netcoreapp2.0/ShortUrl.dll",
+            "program": "${workspaceFolder}/ShortUrl.Api/bin/Debug/netcoreapp2.1/ShortUrl.Api.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/ShortUrl",
+            "cwd": "${workspaceFolder}/ShortUrl.Api",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
@@ -44,7 +44,7 @@
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
+                "/Views": "${workspaceFolder}/ShortUrl.Api/Views"
             }
         },
         {

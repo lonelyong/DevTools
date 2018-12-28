@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/ShortUrl/ShortUrl.csproj"
+                "${workspaceFolder}/ShortUrl.Api/ShortUrl.Api.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

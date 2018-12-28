@@ -25,6 +25,7 @@ function average([double[]]$args) {
     $args | foreach{$sum += $_}
     Write-Host ($sum / $args.Length)
 }
+average(1,2,3)
 $obj = New-Object -TypeName System.DateTime
 Write-Host $obj.ToString("yyyy-MM-dd hh:mm:ss")
 $sb = New-Object -TypeName System.Text.StringBuilder
@@ -34,7 +35,14 @@ Write-Host ([System.Text.RegularExpressions.Regex]::IsMatch("123","\d"))
 [System.Text.RegularExpressions.Regex].GetConstructors() | foreach{Write-Host $_ }
 [System.DateTime] | Get-Member -MemberType method -Static | foreach{Write-Host $_ }
 $chrome = Get-Process -Name chrome
-$chrome | foreach{Write-Host $_.CPU }
+$chrome | foreach { Write-Host $_.CPU }
 Get-Command -Name "get-*"
 Get-Alias | % {$_ -eq "?"; Write-Host $_}
 Get-Alias | where {$_.Name -eq "ac"}|foreach{Write-Host $_.GetType().Name}
+Get-FileHash -Path "C:\kamo\WxPaycert\1336019501.p12" -Algorithm MD5
+Get-Variable
+New-Variable num -Value 100 -Force -Option readonly
+#variable:虚拟驱动器
+Test-Path variable:$_
+ls variable:
+$false
