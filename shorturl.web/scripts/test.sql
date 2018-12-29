@@ -1,1 +1,2 @@
-select * from tb_short_url;
+use surveyprojmgr;
+select * FROM tb_project;
