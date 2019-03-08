@@ -34,7 +34,7 @@ $dgv.Height=380
 $dgv.Parent=$form
 
 $sql="select * from tb_short_url";
-$con=New-Object -TypeName "System.Data.SqlClient.SqlConnection" -ArgumentList "server=wetest.fun;database=sharing;user=sa;pwd=lucky"
+$con=New-Object -TypeName "System.Data.SqlClient.SqlConnection" -ArgumentList "server=wetest.fun;database=sharing;user=utest;pwd=123456"
 $sqlcmd=New-Object -TypeName "System.Data.SqlClient.SqlCommand" -ArgumentList $sql,$con
 $sqldataAdapter = New-Object -TypeName "System.Data.SqlClient.SqlDataAdapter" -ArgumentList $sqlcmd
 $datatable = New-Object -TypeName "System.Data.DataTable"

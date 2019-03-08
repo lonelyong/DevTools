@@ -72,8 +72,6 @@ def iterCreater(n):
 xiter = iterCreater(10)
 for var in xiter:
     print(var)
-<<<<<<< HEAD
+    
 #import re
 print(re.match("(?P<gn>\\d)", "123456"))
-=======
->>>>>>> 3dc5d5dfccf135b282ccbddb0a1bc2da9fc59190

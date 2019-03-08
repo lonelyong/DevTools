@@ -20,17 +20,5 @@ namespace ShortUrl.Api.Controllers
         {
             return Redirect("/swagger");
         }
-		/// <summary>
-		/// 跳转地址
-		/// </summary>
-		/// <param name="input">短地址</param>
-		/// <returns></returns>
-		[Route("/go/{SLink}")]
-		[HttpGet]
-		public IActionResult Go([FromRoute]UnzipInputModel input)
-		{
-			var llink = _apiUnZipUrl.UnZip(input.SLink);
-			return Redirect(llink);
-		}
 	}
 }

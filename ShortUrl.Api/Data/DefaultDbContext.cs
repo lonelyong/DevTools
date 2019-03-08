@@ -7,21 +7,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using ShortUrl.Api.Models;
+using Microsoft.Extensions.Options;
 
 namespace ShortUrl.Api.Data
 {
     public class DefaultDbContext : DbContext
     {
+        private readonly AppSettings _appSettings;
+
         public DbSet<Entities.Url> Urls { get; set; }
 
-        public DefaultDbContext(DbContextOptions<DefaultDbContext> options):base(options)
+        public DefaultDbContext(DbContextOptions<DefaultDbContext> options, IOptions<AppSettings> appSettings):base(options)
         {
-
+            this._appSettings = appSettings.Value;
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer(Utils.Configuration.DefaultConnectionString);
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(_appSettings.ConnectionStrings.DefaultConnection);
+        }
     }
 }

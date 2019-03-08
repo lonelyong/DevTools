@@ -10,6 +10,7 @@ using ShortUrl.Api.App;
 using Microsoft.Extensions.Configuration;
 using ShortUrl.Api.Models;
 using ShortUrl.Api.Exceptions;
+using Microsoft.Extensions.Options;
 
 namespace ShortUrl.Api.Core
 {
@@ -19,15 +20,17 @@ namespace ShortUrl.Api.Core
     [Service(ServiceLifetime.Scoped)]
     public class ShortUrlManagement
     {
-        private DefaultDbContext _dbContext;
+        private readonly DefaultDbContext _dbContext;
 
+        private readonly AppSettings _appSettings;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="dbContext"></param>
-        public ShortUrlManagement(DefaultDbContext dbContext) 
+        public ShortUrlManagement(DefaultDbContext dbContext, IOptions<AppSettings> appSettings) 
         {
             _dbContext = dbContext;
+            _appSettings = appSettings.Value;
         }
 
         /// <summary>
@@ -56,7 +59,7 @@ namespace ShortUrl.Api.Core
                 _dbContext.Urls.Add(_url);
                 _dbContext.SaveChanges();
             }
-            return string.Concat(Configuration.AppSettings.Settings.Host, "/", _url.Id.ToNum64());
+            return string.Concat(_appSettings.Settings.Host, "/", _url.Id.ToNum64());
         }
 
         /// <summary>
