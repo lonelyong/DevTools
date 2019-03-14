@@ -85,5 +85,19 @@ namespace ShortUrl.Api.Models
                 Return_Msg = msg
             };
         }
-    }
+
+		/// <summary>
+		/// 返回失败，result为null
+		/// </summary>
+		/// <param name="msg"></param>
+		/// <returns></returns>
+		public static TReponse<T> Error(Exception exception)
+		{
+			return new TReponse<T>()
+			{
+				Return_Code = DEFAULT_RETURN_CODE_FAIL,
+				Return_Msg = exception.ToString()
+			};
+		}
+	}
 }

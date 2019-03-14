@@ -15,6 +15,11 @@ namespace ShortUrl.Api.App
 	/// </summary>
     public class ExceptionFilter : IExceptionFilter
     {
+
+        public ExceptionFilter(){
+            
+        }
+
         public void OnException(ExceptionContext context)
         {
             if(context.Exception is ApiException)
@@ -22,6 +27,11 @@ namespace ShortUrl.Api.App
 				context.ExceptionHandled = true;
 				context.Result = new JsonResult(TReponse<string>.Error(context.Exception.Message), JsonUtils.LowerCaseSerializerSettings);
             }
+			else
+			{
+				context.ExceptionHandled = true;
+				context.Result = new JsonResult(TReponse<string>.Error(context.Exception), JsonUtils.LowerCaseSerializerSettings);
+			}
         }
     }
 }
