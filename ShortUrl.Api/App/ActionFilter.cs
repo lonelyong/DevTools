@@ -21,7 +21,7 @@ namespace ShortUrl.Api.App
             var ctr = context.Controller as Controller;
             if (!ctr.ModelState.IsValid)
             {
-				context.Result = new JsonResult(TReponse<string>.Error(string.Join("", ctr.ModelState.Values.SelectMany(t => t.Errors).Select(t => t.ErrorMessage))), JsonUtils.LowerCaseSerializerSettings);
+				context.Result = new JsonResult(TResponse<string>.Error(string.Join("", ctr.ModelState.Values.SelectMany(t => t.Errors).Select(t => t.ErrorMessage))), JsonUtils.LowerCaseSerializerSettings);
             }
         }
     }

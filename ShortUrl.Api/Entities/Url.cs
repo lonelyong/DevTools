@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ShortUrl.Api.Entities
 {
     [Table("tb_short_url")]
-    public class Url
+    public class Url : EntityBase
     {
         [Key]
         [Column(TypeName = "bigint")]

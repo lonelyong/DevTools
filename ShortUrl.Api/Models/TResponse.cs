@@ -13,7 +13,7 @@ namespace ShortUrl.Api.Models
 	/// <typeparam name="T"></typeparam>
     [Serializable]
     [XmlRoot(ElementName = "xml")]
-    public class TReponse<T>
+    public class TResponse<T>
     {
         public const string DEFAULT_RETURN_CODE_SUCCESS = "SUCCESS";
 
@@ -43,7 +43,7 @@ namespace ShortUrl.Api.Models
 		/// 返回成功，Result为T的默认值
 		/// </summary>
 		/// <returns></returns>
-        public static TReponse<T> Ok()
+        public static TResponse<T> Ok()
         {
             return Ok(default(T));
         }
@@ -52,7 +52,7 @@ namespace ShortUrl.Api.Models
 		/// </summary>
 		/// <param name="result"></param>
 		/// <returns></returns>
-        public static TReponse<T> Ok(T result)
+        public static TResponse<T> Ok(T result)
         {
             return Ok(result, DEFAULT_RETURN_MSG_OK);
         }
@@ -62,9 +62,9 @@ namespace ShortUrl.Api.Models
 		/// <param name="result"></param>
 		/// <param name="msg"></param>
 		/// <returns></returns>
-        public static TReponse<T> Ok(T result, string msg)
+        public static TResponse<T> Ok(T result, string msg)
         {
-            return new TReponse<T>()
+            return new TResponse<T>()
             {
                 Return_Code = DEFAULT_RETURN_CODE_SUCCESS,
 
@@ -78,9 +78,9 @@ namespace ShortUrl.Api.Models
 		/// </summary>
 		/// <param name="msg"></param>
 		/// <returns></returns>
-        public static TReponse<T> Error(string msg)
+        public static TResponse<T> Error(string msg)
         {
-            return new TReponse<T>() {
+            return new TResponse<T>() {
                 Return_Code = DEFAULT_RETURN_CODE_FAIL,
                 Return_Msg = msg
             };
@@ -91,9 +91,9 @@ namespace ShortUrl.Api.Models
 		/// </summary>
 		/// <param name="msg"></param>
 		/// <returns></returns>
-		public static TReponse<T> Error(Exception exception)
+		public static TResponse<T> Error(Exception exception)
 		{
-			return new TReponse<T>()
+			return new TResponse<T>()
 			{
 				Return_Code = DEFAULT_RETURN_CODE_FAIL,
 				Return_Msg = exception.ToString()

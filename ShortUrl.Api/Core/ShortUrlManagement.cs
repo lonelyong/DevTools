@@ -11,6 +11,11 @@ using Microsoft.Extensions.Configuration;
 using ShortUrl.Api.Models;
 using ShortUrl.Api.Exceptions;
 using Microsoft.Extensions.Options;
+using ShortUrl.Api.Models.Configuration;
+using Microsoft.Extensions.Caching;
+using Microsoft.Extensions.Caching.Redis;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text;
 
 namespace ShortUrl.Api.Core
 {
@@ -23,13 +28,16 @@ namespace ShortUrl.Api.Core
         private readonly DefaultDbContext _dbContext;
 
         private readonly AppSettings _appSettings;
+
+		private readonly IRedisClient _redisClient;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="dbContext"></param>
-        public ShortUrlManagement(DefaultDbContext dbContext, IOptions<AppSettings> appSettings) 
+        public ShortUrlManagement(DefaultDbContext dbContext, IRedisClient redisClient, IOptions<AppSettings> appSettings) 
         {
             _dbContext = dbContext;
+			_redisClient = redisClient;
             _appSettings = appSettings.Value;
         }
 
@@ -69,10 +77,18 @@ namespace ShortUrl.Api.Core
         /// <returns></returns>
         public string Get(long id)
         {
-            var _url = _dbContext.Urls.FirstOrDefault(t => t.Id == id);
-            if (_url == null)
+			var _url = _redisClient.GetString(id.ToString());
+			if (string.IsNullOrEmpty(_url))
+			{
+				_url = _dbContext.Urls.FirstOrDefault(t => t.Id == id)?.Link;
+				if (!string.IsNullOrEmpty(_url))
+				{
+					_redisClient.SetString(id.ToString(), _url, new DistributedCacheEntryOptions() { SlidingExpiration = TimeSpan.FromMinutes(1) });
+				}
+			}
+            if (string.IsNullOrEmpty(_url))
                 throw new ApiException(string.Format("指定的短网址不存在({0})", id.ToNum64()));
-            return _url.Link;
+            return _url;
         }
 
         /// <summary>

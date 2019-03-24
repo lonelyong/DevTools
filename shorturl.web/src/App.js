@@ -10,10 +10,28 @@ import Index from './pages/home/Index';
 import Document from './pages/Document';
 import About from './pages/home/About';
 import Contact from './pages/home/Contact';
+import Login from './pages/home/Login';
 import './content/css/App.css';
 import Err404 from './pages/errs/Err404';
 import Go from './pages/Go';
+import AccountInfo from './content/js/AccountInfo';
 class App extends Component {
+
+  constructor(){
+    super();
+    this.updateSelf.bind(this);
+    AccountInfo.loginedCallbacks.push(this.updateSelf);
+  }
+
+  logout = ()=>{
+    AccountInfo.logout();
+    this.forceUpdate();
+  }
+
+  updateSelf = ()=>{
+    this.forceUpdate();
+  };
+
   render() {
     return (      
       <Router>
@@ -24,6 +42,11 @@ class App extends Component {
                 <Link to='/docs'>APIs</Link>
             </div>
             <div className="right">
+                {
+                  AccountInfo.isLogined() ?
+                  (<a onClick={this.logout}>注销（{AccountInfo.username()}）</a>):
+                  (<Link to='/home/login'>登录</Link>)
+                }
                 <a>分享</a>
                 <Link to='/home/about'>关于</Link>
             </div>
@@ -32,6 +55,7 @@ class App extends Component {
             <Route path="/home/index" component={Index}/>
             <Route path="/home/about" component={About}/>
             <Route path="/home/contact" component={Contact}/>
+            <Route path="/home/login" component={Login}/>
             <Route path="/docs" component={Document}/>
             <Redirect exact from='' to={{pathname:'/home/index'}}/>
             <Redirect exact from='/' to={{pathname:'/home/index'}}/>
