@@ -2,25 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShortUrl.Api.Entities
+namespace ShortUrl.Api.Models.ViewModels.Account
 {
 	/// <summary>
-	/// 用户表
+	/// 注册提交数据
 	/// </summary>
-	[Table("tb_user")]
-	public class User : EntityBase
+	public class SignupInputModel : ViewModelBase
 	{
-		/// <summary>
-		/// 主键
-		/// </summary>
-		[Key()]
-		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-		public int Id { get; set; }
-
 		/// <summary>
 		/// 用户名
 		/// </summary>
@@ -45,7 +36,7 @@ namespace ShortUrl.Api.Entities
 		[MinLength(6)]
 		[Required]
 		[EmailAddress]
-		public string Email { get;set;}
+		public string Email { get; set; }
 
 		/// <summary>
 		/// 固定电话号码
@@ -53,7 +44,7 @@ namespace ShortUrl.Api.Entities
 		[MaxLength(11)]
 		[MinLength(7)]
 		[Phone]
-		public string Telephone { get;set;}
+		public string Telephone { get; set; }
 
 		/// <summary>
 		/// 移动电话号码
@@ -69,30 +60,5 @@ namespace ShortUrl.Api.Entities
 		[MaxLength(8)]
 		[MinLength(1)]
 		public string NickName { get; set; }
-
-		/// <summary>
-		/// 角色类型
-		/// </summary>
-		[Required]
-		public UserRoleType RoleType { get; set; } = UserRoleType.Regular;
-
-		/// <summary>
-		/// 创建时间
-		/// </summary>
-		[Required]
-		public long CreationTime { get; set; }
-
-		/// <summary>
-		/// 状态
-		/// </summary>
-		[Required]
-		public UserStatusCode StatusCode { get; set; } = UserStatusCode.Normal;
-
-		/// <summary>
-		/// 是否删除
-		/// </summary>
-		[Required]
-		public bool IsDeleted { get; set; } = false;
-
 	}
 }

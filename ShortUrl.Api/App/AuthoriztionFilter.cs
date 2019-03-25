@@ -11,7 +11,7 @@ namespace ShortUrl.Api.App
 	{
 		public void OnAuthorization(AuthorizationFilterContext context)
 		{
-			
+
 		}
 	}
 }

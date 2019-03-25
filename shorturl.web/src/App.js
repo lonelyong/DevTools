@@ -11,6 +11,7 @@ import Document from './pages/Document';
 import About from './pages/home/About';
 import Contact from './pages/home/Contact';
 import Login from './pages/home/Login';
+import Signup from './pages/home/Signup';
 import './content/css/App.css';
 import Err404 from './pages/errs/Err404';
 import Go from './pages/Go';
@@ -20,7 +21,7 @@ class App extends Component {
   constructor(){
     super();
     this.updateSelf.bind(this);
-    AccountInfo.loginedCallbacks.push(this.updateSelf);
+    AccountInfo.regesterLogined(this.updateSelf);
   }
 
   logout = ()=>{
@@ -47,6 +48,9 @@ class App extends Component {
                   (<a onClick={this.logout}>注销（{AccountInfo.username()}）</a>):
                   (<Link to='/home/login'>登录</Link>)
                 }
+                {
+                  !AccountInfo.isLogined() && <Link to='/home/signup'>注册</Link>
+                }
                 <a>分享</a>
                 <Link to='/home/about'>关于</Link>
             </div>
@@ -56,6 +60,7 @@ class App extends Component {
             <Route path="/home/about" component={About}/>
             <Route path="/home/contact" component={Contact}/>
             <Route path="/home/login" component={Login}/>
+            <Route path="/home/signup" component={Signup}/>
             <Route path="/docs" component={Document}/>
             <Redirect exact from='' to={{pathname:'/home/index'}}/>
             <Redirect exact from='/' to={{pathname:'/home/index'}}/>

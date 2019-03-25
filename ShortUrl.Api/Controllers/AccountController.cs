@@ -9,6 +9,7 @@ using Microsoft.Extensions.Options;
 using NgNet.Net;
 using ShortUrl.Api.App;
 using ShortUrl.Api.Common.Utils;
+using ShortUrl.Api.Core.Account;
 using ShortUrl.Api.Data;
 using ShortUrl.Api.Entities;
 using ShortUrl.Api.Models;
@@ -25,15 +26,26 @@ namespace ShortUrl.Api.Controllers
 
 		private readonly AppSettings _appSettings;
 
-		public AccountController(Repository<User> users, IOptions<AppSettings> appSettings)
+		private readonly AccountService _accountService;
+
+		public AccountController(Repository<User> users, IOptions<AppSettings> appSettings, AccountService accountService)
 		{
 			_users = users.Value;
 			_appSettings = appSettings.Value;
+			_accountService = accountService;
 		}
 
 		/// <summary>
 		/// 登录
 		/// </summary>
+		/// <remarks>
+		/// /account/login 提交数据{username:'tom', password:'123456'}
+		/// </remarks>
+		/// <example>
+		/// 暂无示例
+		/// </example>
+		/// <see cref="https://link.hicode.net"/>
+		/// <exception cref="ShortUrl.Api.Exceptions.ApiException">
 		/// <param name="input"></param>
 		/// <returns></returns>
 		[HttpPost]
@@ -41,24 +53,11 @@ namespace ShortUrl.Api.Controllers
 		[AllowAnonymous]
 		public ActionResult<LoginOutputModel> Login([FromBody]LoginInputModel input)
 		{
-			var user = _users.Single(t=>t.UserName == input.UserName);
-			if(user == null)
-			{
-				return Json(TResponse<string>.Error("此用户不存在"));
-			}
-			if(NgNet.Security.HashHelper.StringSHA512(input.Password) == user.Password)
-			{
-				var token = SecurityUtils.IssueToken(_appSettings, user);
-				return Json(TResponse<LoginOutputModel>.Ok(new LoginOutputModel()
-				{
-					AccessToken = token,
-					UserName = user.UserName
-				}));
-			}
-			else
-			{
-				return Json(TResponse<string>.Error("用户名或密码错误"));
-			}
+			var _user = _accountService.Login(input, out string token);
+			var _output = NgNet.MappingUtils.MapPropertiesTo<LoginOutputModel>(_user);
+			_output.AccessToken = token;
+			_output.UserId = _user.Id;
+			return Json(TResponse<LoginOutputModel>.Ok(_output));
 		}
 
 		/// <summary>
@@ -69,9 +68,12 @@ namespace ShortUrl.Api.Controllers
 		[HttpPost]
 		[Route("[action]")]
 		[AllowAnonymous]
-		public ActionResult<SignInOutputModel> SignIn([FromBody]SignInInputModel input)
+		public ActionResult<SignupOutputModel> Signup([FromBody]SignupInputModel input)
 		{
-			return Json(TResponse<SignInOutputModel>.Ok(new SignInOutputModel() { }));
+			var _user = _accountService.Signup(input);
+			var _output = NgNet.MappingUtils.MapPropertiesTo<SignupOutputModel>(_user);
+			_output.UserId = _user.Id;
+			return Json(TResponse<SignupOutputModel>.Ok(_output));
 		}
 
 		/// <summary>

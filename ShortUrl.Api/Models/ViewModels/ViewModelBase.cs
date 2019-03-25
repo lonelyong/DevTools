@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShortUrl.Api.Models.ViewModels.Account
+namespace ShortUrl.Api.Models.ViewModels
 {
-	public class SignInInputModel
+	public class ViewModelBase
 	{
 
 	}

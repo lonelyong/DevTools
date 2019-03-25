@@ -5,7 +5,11 @@ using System.Threading.Tasks;
 
 namespace ShortUrl.Api.Models.ViewModels.Account
 {
+	/// <summary>
+	/// 获取账户信息返回数据信息
+	/// </summary>
 	public class IndexOutputModel
 	{
+
 	}
 }

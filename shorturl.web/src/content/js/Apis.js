@@ -80,6 +80,7 @@ class ApiCollection{
      zipUrl = (params, before, success, error, complete)=>sendRequest("/url/zip", HttpMethod.POST, params, before, success, error, complete);
      unzipUrl =(params, before, success, error, complete)=>sendRequest("/url/unzip", HttpMethod.GET, params, before, success, error, complete);
      login =(params, before, success, error, complete)=>sendRequest("/account/login", HttpMethod.POST, params, before, success, error, complete);
+     signup =(params, before, success, error, complete)=>sendRequest("/account/signup", HttpMethod.POST, params, before, success, error, complete);
      isOk(rep){
         if(rep){
             return rep.return_code===successCode;
