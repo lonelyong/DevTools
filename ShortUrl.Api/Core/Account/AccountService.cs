@@ -21,11 +21,11 @@ namespace ShortUrl.Api.Core.Account
 	[Service(Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped)]
 	public class AccountService
 	{
-		private readonly DefaultDbContext _db;
+		private readonly MssqlDbContext _db;
 
 		private readonly AppSettings _appSettings;
 
-		public AccountService(DefaultDbContext dbContext, IOptions<AppSettings> appSettings)
+		public AccountService(MssqlDbContext dbContext, IOptions<AppSettings> appSettings)
 		{
 			_db = dbContext;
 			_appSettings = appSettings.Value;

@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace ShortUrl.Api.Models.Configuration
 {
-	public class RedisSettingCollection
+	public class Connections
 	{
-		public RedisSettings Default { get; set; }
+		public RedisSettings Redis { get; set; }
 	}
 }

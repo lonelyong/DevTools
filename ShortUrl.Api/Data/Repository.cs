@@ -12,7 +12,7 @@ namespace ShortUrl.Api.Data
 	{
 		public DbSet<T> Value { get; }
 
-		public Repository(DefaultDbContext dbContext)
+		public Repository(MssqlDbContext dbContext)
 		{
 			Value = dbContext.Set<T>();
 		}

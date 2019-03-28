@@ -7,7 +7,7 @@ using ShortUrl.Api.Data;
 
 namespace ShortUrl.Api.Migrations
 {
-    [DbContext(typeof(DefaultDbContext))]
+    [DbContext(typeof(MssqlDbContext))]
     partial class DefaultDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

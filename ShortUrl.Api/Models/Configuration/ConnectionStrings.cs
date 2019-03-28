@@ -13,6 +13,16 @@ namespace ShortUrl.Api.Models.Configuration
         /// <summary>
         /// 
         /// </summary>
-        public string DefaultConnection { get; set; }
+        public string SqlServer { get; set; }
+
+		public string Redis { get; set; }
+
+		public string MongoDB { get; set; }
+
+		public string Zookeeper { get; set; }
+
+		public string RabbitMQ { get; set; }
+
+		public string Oracle { get; set; }
     }
 }

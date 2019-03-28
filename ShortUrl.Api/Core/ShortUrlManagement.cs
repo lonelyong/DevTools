@@ -25,7 +25,7 @@ namespace ShortUrl.Api.Core
     [Service(ServiceLifetime.Scoped)]
     public class ShortUrlManagement
     {
-        private readonly DefaultDbContext _dbContext;
+        private readonly MssqlDbContext _dbContext;
 
         private readonly AppSettings _appSettings;
 
@@ -34,7 +34,7 @@ namespace ShortUrl.Api.Core
         /// 
         /// </summary>
         /// <param name="dbContext"></param>
-        public ShortUrlManagement(DefaultDbContext dbContext, IRedisClient redisClient, IOptions<AppSettings> appSettings) 
+        public ShortUrlManagement(MssqlDbContext dbContext, IRedisClient redisClient, IOptions<AppSettings> appSettings) 
         {
             _dbContext = dbContext;
 			_redisClient = redisClient;

@@ -12,7 +12,7 @@ using Microsoft.Extensions.Options;
 
 namespace ShortUrl.Api.Data
 {
-    public class DefaultDbContext : DbContext
+    public class MssqlDbContext : DbContext
     {
 		//private readonly AppSettings _appSettings;
 		/*
@@ -24,7 +24,7 @@ namespace ShortUrl.Api.Data
 
 		public DbSet<Entities.User> Users { get; set; }
 
-        public DefaultDbContext(DbContextOptions<DefaultDbContext> options/*, IOptions<AppSettings> appSettings*/) :base(options)
+        public MssqlDbContext(DbContextOptions<MssqlDbContext> options/*, IOptions<AppSettings> appSettings*/) :base(options)
         {
             //this._appSettings = appSettings.Value;
         }

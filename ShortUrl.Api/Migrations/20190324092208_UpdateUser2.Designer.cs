@@ -8,7 +8,7 @@ using ShortUrl.Api.Data;
 
 namespace ShortUrl.Api.Migrations
 {
-    [DbContext(typeof(DefaultDbContext))]
+    [DbContext(typeof(MssqlDbContext))]
     [Migration("20190324092208_UpdateUser2")]
     partial class UpdateUser2
     {

@@ -22,7 +22,7 @@ namespace ShortUrl.Api
             WebHost.CreateDefaultBuilder(args)
                 .UseIISIntegration()
                 .UseKestrel()
-                .UseUrls("http://localhost:5001")
+                .UseUrls("http://localhost:61003")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();

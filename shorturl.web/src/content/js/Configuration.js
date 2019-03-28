@@ -6,7 +6,7 @@ class DevelopmentConfiguration{
     apiHost='http://localhost:5001';
     host='http://localhost:3000'
 }
-const isDevelopment = true;
+const isDevelopment = false;
 const Configs = isDevelopment ? new DevelopmentConfiguration() : new ProductionConfiguration();
 
 export default Configs;

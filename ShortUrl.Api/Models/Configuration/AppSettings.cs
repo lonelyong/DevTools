@@ -11,8 +11,9 @@ namespace ShortUrl.Api.Models.Configuration
 
         public ConnectionStrings ConnectionStrings { get; set; }
 
-		public RedisSettings Redis { get; set; }
+		public Connections Connections { get; set; }
 
 		public AuthenticationSettings Authentication { get; set; }
+
     }
 }

@@ -24,6 +24,9 @@ using Microsoft.IdentityModel.Tokens;
 using ShortUrl.Api.Common.Consts;
 using System;
 using System.Collections.Generic;
+using MongoDB.Driver.Core;
+using MySql.Data.EntityFrameworkCore;
+using Devart.Data.Oracle.Entity;
 
 namespace ShortUrl.Api
 {
@@ -124,12 +127,19 @@ namespace ShortUrl.Api
                 options.Filters.Add(new ActionFilter());
 				options.Filters.Add(new AuthoriztionFilter());
             });
-            services.AddDbContext<DefaultDbContext>(options=> {
-				options.UseSqlServer(/*_config["ConnectionStrings:DefaultConnection"]*/ _config.GetConnectionString("DefaultConnection"));
+            services.AddDbContext<MssqlDbContext>(options=> {
+				options.UseSqlServer(/*_config["ConnectionStrings:DefaultConnection"]*/ _config.GetConnectionString("SqlServer"));
 			}, ServiceLifetime.Scoped);
+			services.AddDbContext<MySqlDbContext>(options => {
+				options.UseMySQL(_config.GetConnectionString("MySql"));
+			}, ServiceLifetime.Scoped);
+			services.AddDbContext<OracleDbContext>(options=> {
+				options.UseOracle(_appSettings.ConnectionStrings.Oracle, opts=> {
+				});
+			});
 			services.AddDistributedRedisCache(options=> {
-				options.Configuration = _config["Redis:Default:Configuration"];
-				options.InstanceName = _config["Redis:Default:Instancename"];
+				options.Configuration = _config["ConnectionStrings:Redis"];
+				options.InstanceName = _config["Connections:Redis:InstanceName"];
 				//options.ConfigurationOptions = new StackExchange.Redis.ConfigurationOptions() {
 				//	ChannelPrefix = _config["Redis:Default:ChannelPrefix"],
 				//	Password = _config["Redis:Default:Password"],
@@ -138,23 +148,23 @@ namespace ShortUrl.Api
 			});
 			services.AddStackExchangeRedisCache(
 				options=> {
-				options.Password = _config["Redis:Default:Password"];
-				options.ClientName = _config["Redis:Default:ClientName"];
-				options.ConnectRetry = _config.GetValue<int>("Redis:Default:ConnectRetry");
-				options.ConnectTimeout = _config.GetValue<int>("Redis:Default:ConnectTimeout");
-				options.DefaultDatabase = _config.GetValue<int>("Redis:Default:DefaultDatabase");
-				options.EndPoints.Add(_config["Redis:Default:EndPoint"]);
-				options.ChannelPrefix = _config["Redis:Default:ChannelPrefix"];
+				options.Password = _config["Connections:Redis:Password"];
+				options.ClientName = _config["Connections:Redis:ClientName"];
+				options.ConnectRetry = _config.GetValue<int>("Connections:Redis:ConnectRetry");
+				options.ConnectTimeout = _config.GetValue<int>("Connections:Redis:ConnectTimeout");
+				options.DefaultDatabase = _config.GetValue<int>("Connections:Redis:DefaultDatabase");
+				options.EndPoints.Add(_config["Connections:Redis:EndPoint"]);
+				options.ChannelPrefix = _config["Connections:Redis:ChannelPrefix"];
 			}, 
 				customOptions=> {
-					customOptions.Prefix = _config["Redis:Default:Prefix"];
+					customOptions.Prefix = _config["Connections:Redis:Prefix"];
 			});
 			services.Configure<IISOptions>(options => 
 			{
 				options.AutomaticAuthentication = false;
 			});
             services.AddServices();
-        }
+		}
 
         /// <summary>
         /// 
