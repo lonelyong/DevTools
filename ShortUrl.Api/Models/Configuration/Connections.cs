@@ -8,5 +8,7 @@ namespace ShortUrl.Api.Models.Configuration
 	public class Connections
 	{
 		public RedisSettings Redis { get; set; }
+
+		public RabbitMQSettings RabbitMQ { get; set; }
 	}
 }

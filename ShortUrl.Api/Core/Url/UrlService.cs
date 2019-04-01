@@ -16,29 +16,40 @@ using Microsoft.Extensions.Caching;
 using Microsoft.Extensions.Caching.Redis;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text;
+using Microsoft.Extensions.Logging;
 
-namespace ShortUrl.Api.Core
+namespace ShortUrl.Api.Core.Url
 {
     /// <summary>
     /// 所有方法都是线程安全的
     /// </summary>
     [Service(ServiceLifetime.Scoped)]
-    public class ShortUrlManagement
+    public class UrlService
     {
         private readonly MssqlDbContext _dbContext;
 
         private readonly AppSettings _appSettings;
 
 		private readonly IRedisClient _redisClient;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dbContext"></param>
-        public ShortUrlManagement(MssqlDbContext dbContext, IRedisClient redisClient, IOptions<AppSettings> appSettings) 
+
+		private readonly MQManagement _mqManagement;
+
+		private readonly ILogger _logger;
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="dbContext"></param>
+		/// <param name="redisClient"></param>
+		/// <param name="appSettings"></param>
+		/// <param name="mqManagement"></param>
+		/// <param name="logger"></param>
+		public UrlService(MssqlDbContext dbContext, IRedisClient redisClient, IOptions<AppSettings> appSettings, MQManagement mqManagement, ILogger<UrlService> logger) 
         {
             _dbContext = dbContext;
 			_redisClient = redisClient;
             _appSettings = appSettings.Value;
+			_mqManagement = mqManagement;
+			_logger = logger;
         }
 
         /// <summary>
@@ -57,16 +68,17 @@ namespace ShortUrl.Api.Core
             {
                 throw new ApiException("指定的网址不符合规范");
             }
-            Url _url = _dbContext.Urls.FirstOrDefault(t => t.Link == llink);
+			Entities.Url _url = _dbContext.Urls.FirstOrDefault(t => t.Link == llink);
             if (_url == null)
             {
-                _url = new Url()
+                _url = new Entities.Url()
                 {
                     Link = llink
                 };
                 _dbContext.Urls.Add(_url);
                 _dbContext.SaveChanges();
             }
+			_logger.LogInformation($"添加新地址:ID={_url.Id}");
             return string.Concat(_appSettings.Settings.Host, "/", _url.Id.ToNum64());
         }
 
@@ -88,7 +100,11 @@ namespace ShortUrl.Api.Core
 			}
             if (string.IsNullOrEmpty(_url))
                 throw new ApiException(string.Format("指定的短网址不存在({0})", id.ToNum64()));
-            return _url;
+			_logger.LogInformation($"解压地址:ID={id}");
+			_logger.LogDebug($"解压地址:ID={id}");
+			_logger.LogTrace($"解压地址:ID={id}");
+			_mqManagement.TestMQ.Push($"{id}={_url}");
+			return _url;
         }
 
         /// <summary>
@@ -96,7 +112,7 @@ namespace ShortUrl.Api.Core
         /// </summary>
         /// <param name="id64"></param>
         /// <returns></returns>
-        public string Get(string id64)
+        public string UnZip(string id64)
         {
             if (string.IsNullOrWhiteSpace(id64))
                 throw new ApiException("id不能为空");

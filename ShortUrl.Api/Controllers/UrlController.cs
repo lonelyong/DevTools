@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using ShortUrl.Api.Core.Apis;
+using ShortUrl.Api.Core;
+using ShortUrl.Api.Core.Url;
 using ShortUrl.Api.Models;
 using ShortUrl.Api.Models.ViewModels.Url;
 
@@ -16,12 +17,10 @@ namespace ShortUrl.Api.Controllers
 	[Route("[controller]")]
 	public class UrlController : ControllerBase
     {
-        private UnZipUrl _apiUnZipUrl;
-        private ZipUrl _apiZipUrl;
-        public UrlController(UnZipUrl unZipUrl, ZipUrl zipUrl)
+		private readonly UrlService _urlService;
+        public UrlController(UrlService urlService)
         {
-            this._apiUnZipUrl = unZipUrl;
-            this._apiZipUrl = zipUrl;
+			this._urlService = urlService;
         }
 
         /// <summary>
@@ -34,7 +33,7 @@ namespace ShortUrl.Api.Controllers
         [Route("[action]")]
         public ActionResult<string> Zip([FromBody]ZipInputModel input)
         {
-            var slink = _apiZipUrl.Zip(input.LLink);
+            var slink = _urlService.Zip(input.LLink);
             return Json(TResponse<string>.Ok(slink));
         }
 
@@ -48,7 +47,7 @@ namespace ShortUrl.Api.Controllers
 		[Route("[action]")]
         public ActionResult<string> Unzip([FromQuery]UnzipInputModel input)
         {
-            var llink = _apiUnZipUrl.UnZip(input.SLink);
+            var llink = _urlService.UnZip(input.SLink);
             return Json(TResponse<string>.Ok(llink));
         }
 
@@ -61,7 +60,7 @@ namespace ShortUrl.Api.Controllers
         [HttpGet]
         public IActionResult Go([FromRoute]UnzipInputModel input)
         {
-            var llink = _apiUnZipUrl.UnZip(input.SLink);
+            var llink = _urlService.UnZip(input.SLink);
             return Redirect(llink);
         }
     }

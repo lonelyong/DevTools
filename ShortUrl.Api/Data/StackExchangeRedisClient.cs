@@ -40,12 +40,11 @@ namespace ShortUrl.Api.Data
 			return _connectionMultiplexer.GetDatabase();
 		}
 
-
 		public byte[] Get(string key)
 		{
 			var db = GetDatabase();
 			var value = db.StringGet(_customOptions.Prefix + key);
-			return value.HasValue ? Encoding.UTF8.GetBytes(value) : null;
+			return value.HasValue ? Encoding.UTF8.GetBytes(value) : null; 
 		}
 
 		public async Task<byte[]> GetAsync(string key, CancellationToken token = default)
@@ -118,6 +117,35 @@ namespace ShortUrl.Api.Data
 					expire = options.SlidingExpiration.Value;
 				}
 				db.StringSet(_customOptions.Prefix + key, value, expire);
+			}
+		}
+
+		public void ListLeftPush<T>(string key, T value)
+		{
+			if (typeof(T) == typeof(string) || typeof(T) == typeof(DateTime) || typeof(T) == typeof(Guid) || typeof(T).IsValueType)
+			{
+				GetDatabase().ListLeftPush(key, value?.ToString());
+			}
+			else
+			{
+				GetDatabase().ListLeftPush(key, Newtonsoft.Json.JsonConvert.SerializeObject(value));
+			}
+		}
+
+		public T ListRightPop<T>(string key) 
+		{
+			var v = GetDatabase().ListRightPop(key);
+			if(v.IsNullOrEmpty)
+			{
+				return default(T);
+			}
+			if(typeof(T) == typeof(string) || typeof(T) == typeof(DateTime) || typeof(T) == typeof(Guid) || typeof(T).IsValueType)
+			{
+				return (T)Convert.ChangeType(v, typeof(T));
+			}
+			else
+			{
+				return string.IsNullOrEmpty(v) ? default(T) : Newtonsoft.Json.JsonConvert.DeserializeObject<T>(v);
 			}
 		}
 	}

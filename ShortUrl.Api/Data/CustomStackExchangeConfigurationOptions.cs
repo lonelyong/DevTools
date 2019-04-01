@@ -1,4 +1,5 @@
-﻿using StackExchange.Redis;
+﻿using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,10 @@ namespace ShortUrl.Api.Data
 		/// key的前缀
 		/// </summary>
 		public string Prefix { get; set; }
+
+		public CustomStackExchangeConfigurationOptions()
+		{
+
+		}
 	}
 }

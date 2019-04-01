@@ -28,5 +28,19 @@ namespace Microsoft.Extensions.DependencyInjection
 			((ICollection<ServiceDescriptor>)services).Add(ServiceDescriptor.Singleton<IRedisClient, StackExchangeRedisClient>());
 			return services;
 		}
+
+		public static IServiceCollection AddMq(this IServiceCollection services, Action<MQBuilder> setupAction)
+		{
+			OptionsServiceCollectionExtensions.AddOptions(services);
+			setupAction(new MQBuilder(services));
+			services.AddSingleton<MQManagement>();
+			return services;
+		}
+
+		public static IServiceCollection AddDistributedLocker(this IServiceCollection services, Action<LockerBuilder> setupAction)
+		{
+			setupAction(new LockerBuilder(services));
+			return services;
+		}
 	}
 }

@@ -27,6 +27,9 @@ using System.Collections.Generic;
 using MongoDB.Driver.Core;
 using MySql.Data.EntityFrameworkCore;
 using Devart.Data.Oracle.Entity;
+using log4net;
+using NLog.Web;
+using NLog.Extensions.Logging;
 
 namespace ShortUrl.Api
 {
@@ -53,10 +56,12 @@ namespace ShortUrl.Api
         public void ConfigureServices(IServiceCollection services)
         {
 			var _appSettings = _config.Get<AppSettings>();
-            services.Configure<AppSettings>(_config);
 			services.AddLogging(options=> {
-				
+				//options.AddProvider();
+				//options.AddNLog();
+				//options.ConfigureNLog("");
 			});
+            services.Configure<AppSettings>(_config);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info
@@ -163,18 +168,26 @@ namespace ShortUrl.Api
 			{
 				options.AutomaticAuthentication = false;
 			});
+			services.AddMq(options=> {
+				options.UseRabbitMQ();
+			});
+			services.AddDistributedLocker(options=> {
+				options.UseZookeeper();
+			});
             services.AddServices();
 		}
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="app"></param>
-        /// <param name="env"></param>
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env/*, ILoggerFactory loggerFactory*/)
-        {
-            if (env.IsDevelopment())
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="app"></param>
+		/// <param name="env"></param>
+		/// <param name="loggerFactory"></param>
+		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+		{
+			// env.ConfigureNLog("nlog.config");
+			if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
 				app.UseDatabaseErrorPage();

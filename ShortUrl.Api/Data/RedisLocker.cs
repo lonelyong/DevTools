@@ -2,19 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using org.apache.zookeeper;
 
 namespace ShortUrl.Api.Data
 {
-	public class ZookeeperClient : IDistributedLocker
+	public class RedisLocker : IDistributedLocker
 	{
-		private ZooKeeper _zk;
-
-		public ZookeeperClient()
-		{
-
-		}
-
 		public object GetLock(string lockName)
 		{
 			throw new NotImplementedException();
