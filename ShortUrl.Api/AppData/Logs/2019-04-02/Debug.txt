@@ -1,0 +1,39 @@
+2019-04-02 23:36:36.4286 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-02 23:36:36.4399 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-02 23:36:36.4537 | The request path  does not match the path filter 
+2019-04-02 23:36:36.4537 | Request successfully matched the route with name '(null)' and template 'Url/Unzip' 
+2019-04-02 23:36:36.4720 | Execution plan of authorization filters (in the following order): ShortUrl.Api.App.AuthoriztionFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter 
+2019-04-02 23:36:36.4720 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-02 23:36:36.4720 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), ShortUrl.Api.App.ActionFilter 
+2019-04-02 23:36:36.4825 | Execution plan of exception filters (in the following order): ShortUrl.Api.App.ExceptionFilter 
+2019-04-02 23:36:36.4825 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-02 23:36:36.5029 | Attempting to bind parameter 'input' of type 'ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel' ... 
+2019-04-02 23:36:36.5029 | Attempting to bind model of type 'ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel' using the name '' in request data ... 
+2019-04-02 23:36:36.5029 | Attempting to bind property 'ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel.SLink' of type 'System.String' using the name 'SLink' in request data ... 
+2019-04-02 23:36:36.5029 | Done attempting to bind property 'ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel.SLink' of type 'System.String'. 
+2019-04-02 23:36:36.5148 | Done attempting to bind model of type 'ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel' using the name ''. 
+2019-04-02 23:36:36.5148 | Done attempting to bind parameter 'input' of type 'ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel'. 
+2019-04-02 23:36:36.6439 | Opening connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-02 23:36:36.6439 | Opened connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-02 23:36:36.6625 | Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-02 23:36:36.7092 | A data reader was disposed. 
+2019-04-02 23:36:36.7170 | Closing connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-02 23:36:36.7170 | Closed connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-02 23:36:36.7170 | Context 'MssqlDbContext' started tracking 'Url' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2019-04-02 23:36:36.7479 | 解压地址:ID=1 
+2019-04-02 23:36:36.9884 | Connection id "0HLLNG2VFG2HU" completed keep alive response. 
+2019-04-02 23:36:36.9978 | 'MssqlDbContext' disposed. 
+2019-04-02 23:43:02.8974 | Hosting starting 
+2019-04-02 23:43:03.0288 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-02 23:43:03.0288 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-02 23:43:03.0476 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-02 23:43:03.0903 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-02 23:43:03.0927 | Decrypting secret element using Windows DPAPI. 
+2019-04-02 23:43:03.0927 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-02 23:43:03.0927 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-02 23:43:03.0927 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-02 23:43:03.1070 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-02 23:43:03.1070 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 

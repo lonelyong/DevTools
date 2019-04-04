@@ -33,7 +33,7 @@ namespace Microsoft.Extensions.DependencyInjection
 		{
 			OptionsServiceCollectionExtensions.AddOptions(services);
 			setupAction(new MQBuilder(services));
-			services.AddSingleton<MQManagement>();
+			services.AddSingleton<MQManger>();
 			return services;
 		}
 

@@ -18,21 +18,25 @@ namespace ShortUrl.Api
         public static void Main(string[] args)
         {
 			NLog.Web.NLogBuilder.ConfigureNLog("nlog.config");
-            BuildWebHost(args).Run();
+			var webHost = BuildWebHost(args);
+            webHost.Run();
         }
 
 		public static IWebHost BuildWebHost(string[] args) =>
 			WebHost.CreateDefaultBuilder(args)
 				.UseIISIntegration()
-				.UseKestrel()
+				//.UseKestrel()
 				.UseUrls("http://localhost:61003")
-				.UseContentRoot(Directory.GetCurrentDirectory())
+				//.UseContentRoot(Directory.GetCurrentDirectory())
 				.UseStartup<Startup>()
 				//.ConfigureLogging(options=> {
 				//	options.ClearProviders();
 				//	options.AddDebug();
 				//	options.AddConsole();
 				//})
+				.ConfigureAppConfiguration(options=> {
+					
+				})
 				.UseNLog()
                 .Build();
     }

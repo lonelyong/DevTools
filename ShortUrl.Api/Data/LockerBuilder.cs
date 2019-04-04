@@ -22,7 +22,7 @@ namespace ShortUrl.Api.Data
 
 		public void UseRedis()
 		{
-			_services.AddTransient(typeof(IDistributedLocker), typeof(RedisLocker));
+			_services.AddTransient(typeof(IDistributedLocker), typeof(RedisLockerClient));
 		}
 	}
 }

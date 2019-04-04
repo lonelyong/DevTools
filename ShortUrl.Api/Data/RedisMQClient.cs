@@ -9,7 +9,7 @@ using ShortUrl.Api.Models.Mq;
 
 namespace ShortUrl.Api.Data
 {
-	public class RedisMQ<TMessageData> : IMessageQuery<TMessageData>
+	public class RedisMQClient<TMessageData> : IMessageQuery<TMessageData>
 	{
 		private readonly IRedisClient _redisClient;
 
@@ -21,7 +21,7 @@ namespace ShortUrl.Api.Data
 
 		public Action<TMessageData> OnMessage { get; set; }
 
-		public RedisMQ(IRedisClient redisClient)
+		public RedisMQClient(IRedisClient redisClient)
 		{
 			_redisClient = redisClient;
 		}

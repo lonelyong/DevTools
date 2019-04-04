@@ -1,0 +1,504 @@
+2019-04-03 02:32:06.3809 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 02:33:25.8398 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 02:33:26.0985 | Route matched with {action = "Index", controller = "Home"}. Executing action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) 
+2019-04-03 02:33:26.1876 | Executing action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) - Validation state: Valid 
+2019-04-03 02:33:26.1876 | Executed action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.3043ms. 
+2019-04-03 02:33:26.2112 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-03 02:33:26.2238 | Executed action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) in 109.437ms 
+2019-04-03 02:33:26.2312 | Request finished in 398.6177ms 302  
+2019-04-03 02:33:26.2312 | Request starting HTTP/1.1 GET http://localhost:61003/swagger   
+2019-04-03 02:33:26.2488 | Request finished in 9.8002ms 301  
+2019-04-03 02:33:26.2488 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 02:33:26.4252 | Request finished in 174.4545ms 200 text/html 
+2019-04-03 02:33:26.4472 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/swagger-ui.css   
+2019-04-03 02:33:26.4495 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/swagger-ui-bundle.js   
+2019-04-03 02:33:26.4912 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/swagger-ui-standalone-preset.js   
+2019-04-03 02:33:26.5744 | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2019-04-03 02:33:26.5744 | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2019-04-03 02:33:26.5744 | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2019-04-03 02:33:26.5931 | Request finished in 150.7027ms 200 text/css 
+2019-04-03 02:33:26.5931 | Request finished in 107.3329ms 200 application/javascript 
+2019-04-03 02:33:26.5931 | Request finished in 143.6631ms 200 application/javascript 
+2019-04-03 02:33:26.7852 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 02:33:26.8141 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-03 02:33:26.8258 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-03 02:33:26.8258 | Request finished in 17.3309ms 200 image/png 
+2019-04-03 02:33:26.9818 | Request finished in 196.394ms 200 application/json;charset=utf-8 
+2019-04-03 02:34:19.4150 | Request starting HTTP/1.1 POST http://localhost:61003/Account/Login application/json-patch+json 51 
+2019-04-03 02:34:19.4333 | CORS policy execution successful. 
+2019-04-03 02:34:19.4568 | Route matched with {action = "Login", controller = "Account"}. Executing action ShortUrl.Api.Controllers.AccountController.Login (ShortUrl.Api) 
+2019-04-03 02:34:19.8692 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 02:34:20.0027 | Executing action method ShortUrl.Api.Controllers.AccountController.Login (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Account.LoginInputModel) - Validation state: Valid 
+2019-04-03 02:34:20.4645 | Executed DbCommand (87ms) [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-03 02:34:20.5695 | Executed action method ShortUrl.Api.Controllers.AccountController.Login (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 564.4789ms. 
+2019-04-03 02:34:20.5858 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[ShortUrl.Api.Models.ViewModels.Account.LoginOutputModel, ShortUrl.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2019-04-03 02:34:20.6036 | Executed action ShortUrl.Api.Controllers.AccountController.Login (ShortUrl.Api) in 1128.961ms 
+2019-04-03 02:34:20.6064 | Request finished in 1198.6317ms 200 application/json; charset=utf-8 
+2019-04-03 02:34:40.5269 | Request starting HTTP/1.1 GET http://localhost:61003/Url/Unzip?SLink=1   
+2019-04-03 02:34:40.5644 | Successfully validated the token. 
+2019-04-03 02:34:40.5764 | Route matched with {action = "Unzip", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) 
+2019-04-03 02:34:40.6115 | Authorization was successful. 
+2019-04-03 02:34:41.0815 | Executing action method ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 02:34:41.1318 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 02:34:41.2184 | Executed DbCommand (45ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 02:34:41.2818 | 解压地址:ID=1 
+2019-04-03 02:34:41.4858 | Executed action method ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 385.2336ms. 
+2019-04-03 02:34:41.5056 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 02:34:41.5210 | Executed action ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) in 919.3215ms 
+2019-04-03 02:34:41.5296 | Request finished in 1002.464ms 200 application/json; charset=utf-8 
+2019-04-03 02:34:54.1707 | Request starting HTTP/1.1 GET http://localhost:61003/Url/Unzip?SLink=1   
+2019-04-03 02:34:54.1707 | Successfully validated the token. 
+2019-04-03 02:34:54.1856 | Route matched with {action = "Unzip", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) 
+2019-04-03 02:34:54.2001 | Authorization was successful. 
+2019-04-03 02:34:54.2632 | Executing action method ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 02:34:54.2813 | 解压地址:ID=1 
+2019-04-03 02:34:54.4668 | Executed action method ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 195.2373ms. 
+2019-04-03 02:34:54.4872 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 02:34:54.5012 | Executed action ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) in 295.3534ms 
+2019-04-03 02:34:54.5012 | Request finished in 337.0949ms 200 application/json; charset=utf-8 
+2019-04-03 02:34:57.0229 | Request starting HTTP/1.1 GET http://localhost:61003/Url/Unzip?SLink=1   
+2019-04-03 02:34:57.0278 | Successfully validated the token. 
+2019-04-03 02:34:57.0278 | Route matched with {action = "Unzip", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) 
+2019-04-03 02:34:57.0639 | Authorization was successful. 
+2019-04-03 02:34:57.1160 | Executing action method ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 02:34:57.1337 | 解压地址:ID=1 
+2019-04-03 02:34:57.2900 | Executed action method ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 166.2674ms. 
+2019-04-03 02:34:57.3102 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 02:34:57.3102 | Executed action ShortUrl.Api.Controllers.UrlController.Unzip (ShortUrl.Api) in 265.3228ms 
+2019-04-03 02:34:57.3273 | Request finished in 307.4183ms 200 application/json; charset=utf-8 
+2019-04-03 15:58:13.7464 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 16:48:31.8915 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:33:42.0832 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:34:02.5042 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 17:34:02.6436 | Request finished in 138.8407ms 500  
+2019-04-03 17:34:12.5346 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 17:34:12.5346 | Request finished in 9.8489ms 500  
+2019-04-03 17:34:14.6307 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 17:34:14.6400 | Request finished in 9.2469ms 500  
+2019-04-03 17:37:41.7801 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:37:43.8709 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 17:39:56.0037 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:40:57.2616 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:42:49.3468 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:42:58.1950 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 17:42:58.2823 | Request finished in 85.846ms 500  
+2019-04-03 17:42:59.3747 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 17:42:59.3747 | Request finished in 9.665ms 500  
+2019-04-03 17:43:13.3974 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:45:17.4231 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:45:29.3008 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:46:14.9473 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:49:04.2125 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:49:34.6125 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:49:42.4090 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 17:49:42.7036 | Request finished in 304.0733ms 500 text/html; charset=utf-8 
+2019-04-03 17:49:42.8051 | Request starting HTTP/1.1 GET http://localhost:61003/favicon.ico   
+2019-04-03 17:49:43.1671 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 17:49:44.0190 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 17:49:44.1665 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 976.5993ms 
+2019-04-03 17:49:44.1705 | Request finished in 1370.6399ms 200 application/json; charset=utf-8 
+2019-04-03 17:50:22.4527 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 17:51:10.5869 | Request finished in 48136.6824ms 500 text/html; charset=utf-8 
+2019-04-03 17:51:10.6074 | Request starting HTTP/1.1 GET http://localhost:61003/favicon.ico   
+2019-04-03 17:51:12.4424 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 17:51:12.5229 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 17:51:12.5386 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 75.4102ms 
+2019-04-03 17:51:15.5480 | Request finished in 4943.683ms 200 application/json; charset=utf-8 
+2019-04-03 17:51:53.0138 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:51:56.2065 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 17:52:05.1406 | Request finished in 8940.7186ms 500 plain/text 
+2019-04-03 17:52:05.2737 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 17:52:07.5419 | Request finished in 2271.3169ms 500 plain/text 
+2019-04-03 17:52:12.5692 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 17:52:27.3715 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:52:48.0434 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 17:52:57.1483 | Request finished in 9102.0649ms 200 plain/text 
+2019-04-03 17:53:35.4170 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 17:53:49.8521 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 17:53:53.8287 | Request finished in 3975.5006ms 200 text/plain 
+2019-04-03 17:53:53.8861 | Request starting HTTP/1.1 GET http://localhost:61003/favicon.ico   
+2019-04-03 17:53:57.1992 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 17:53:57.9734 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 17:53:58.1070 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 886.6773ms 
+2019-04-03 17:53:58.1070 | Request finished in 4228.1819ms 200 application/json; charset=utf-8 
+2019-04-03 17:54:03.6789 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 17:54:06.7115 | Request finished in 3035.1501ms 200 text/plain 
+2019-04-03 17:54:06.7454 | Request starting HTTP/1.1 GET http://localhost:61003/favicon.ico   
+2019-04-03 17:54:06.8599 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 17:54:06.9371 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 17:54:06.9521 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 68.1195ms 
+2019-04-03 17:54:06.9521 | Request finished in 213.6168ms 200 application/json; charset=utf-8 
+2019-04-03 18:05:39.8286 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:05:49.5554 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 18:05:49.8234 | Route matched with {action = "Index", controller = "Home"}. Executing action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) 
+2019-04-03 18:05:49.9186 | Executing action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) - Validation state: Valid 
+2019-04-03 18:05:49.9279 | Executed action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.5113ms. 
+2019-04-03 18:05:49.9525 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-03 18:05:49.9525 | Executed action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) in 124.6325ms 
+2019-04-03 18:05:49.9741 | Request finished in 425.9035ms 302  
+2019-04-03 18:05:49.9855 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 18:05:50.1727 | Request finished in 185.8518ms 200 text/html 
+2019-04-03 18:05:50.5083 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 18:05:50.6730 | Request finished in 169.7594ms 200 application/json;charset=utf-8 
+2019-04-03 18:05:56.0776 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 18:05:56.1583 | Request finished in 89.8509ms 500  
+2019-04-03 18:05:58.7330 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 18:05:58.7572 | Request finished in 28.9305ms 500  
+2019-04-03 18:05:59.4027 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 18:05:59.4243 | Request finished in 26.0643ms 500  
+2019-04-03 18:05:59.9689 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 18:05:59.9907 | Request finished in 26.4592ms 500  
+2019-04-03 18:06:54.3121 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:07:02.6052 | Request starting HTTP/1.1 GET http://localhost:61003/test   
+2019-04-03 18:07:02.7794 | Request finished in 165.5865ms 500  
+2019-04-03 18:07:06.6695 | Request starting HTTP/1.1 GET http://localhost:61003/go   
+2019-04-03 18:07:06.9507 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:07:07.6398 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 18:07:10.2265 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 18:07:10.3568 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 3378.1417ms 
+2019-04-03 18:07:10.3757 | Request finished in 3706.007ms 200 application/json; charset=utf-8 
+2019-04-03 18:07:10.4001 | Request starting HTTP/1.1 GET http://localhost:61003/favicon.ico   
+2019-04-03 18:07:10.4070 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:07:10.4759 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 18:07:10.4870 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 60.903ms 
+2019-04-03 18:07:10.4870 | Request finished in 92.3746ms 200 application/json; charset=utf-8 
+2019-04-03 18:08:45.3518 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:08:48.5198 | Request starting HTTP/1.1 GET http://localhost:61003/go   
+2019-04-03 18:08:48.8089 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:08:49.4451 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 18:08:54.6845 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 5854.7441ms 
+2019-04-03 18:08:54.7556 | Request finished in 6237.3383ms 500  
+2019-04-03 18:08:58.0722 | Request starting HTTP/1.1 GET http://localhost:61003/go   
+2019-04-03 18:08:58.0772 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:08:58.1583 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 18:09:28.9316 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:09:29.6381 | Request starting HTTP/1.1 GET http://localhost:61003/go   
+2019-04-03 18:09:29.9580 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:09:30.6701 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 18:09:33.0861 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 3108.7948ms 
+2019-04-03 18:09:33.1723 | Request finished in 3543.7439ms 500  
+2019-04-03 18:09:36.2276 | Request starting HTTP/1.1 GET http://localhost:61003/go   
+2019-04-03 18:09:36.2352 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:09:36.3118 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 18:09:37.7445 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1487.6248ms 
+2019-04-03 18:09:37.7696 | Request finished in 1548.163ms 500  
+2019-04-03 18:09:55.5231 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:09:56.2336 | Request starting HTTP/1.1 GET http://localhost:61003/go   
+2019-04-03 18:09:56.5258 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:09:57.3687 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 18:09:59.4302 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 2885.5466ms 
+2019-04-03 18:09:59.4718 | Request finished in 3247.0328ms 200 text/plain 
+2019-04-03 18:09:59.5374 | Request starting HTTP/1.1 GET http://localhost:61003/favicon.ico   
+2019-04-03 18:09:59.5468 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:09:59.6485 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 18:09:59.7931 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 222.427ms 
+2019-04-03 18:09:59.7968 | Request finished in 262.5777ms 200 application/json; charset=utf-8 
+2019-04-03 18:10:30.2258 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:10:51.1698 | Request starting HTTP/1.1 GET http://localhost:61003/go   
+2019-04-03 18:10:51.4819 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:10:52.2279 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 18:10:54.0866 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 2572.7679ms 
+2019-04-03 18:10:54.2221 | Request finished in 3050.4537ms 500 text/html; charset=utf-8 
+2019-04-03 18:10:54.3490 | Request starting HTTP/1.1 GET http://localhost:61003/favicon.ico   
+2019-04-03 18:10:54.3594 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:10:54.4571 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 18:10:54.6065 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 221.8275ms 
+2019-04-03 18:10:54.6097 | Request finished in 264.7064ms 200 application/json; charset=utf-8 
+2019-04-03 18:28:19.1770 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:28:38.2296 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 18:28:38.5005 | Route matched with {action = "Index", controller = "Home"}. Executing action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) 
+2019-04-03 18:28:38.6014 | Executing action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) - Validation state: Valid 
+2019-04-03 18:28:38.6014 | Executed action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.3164ms. 
+2019-04-03 18:28:38.6327 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-03 18:28:38.6453 | Executed action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) in 125.6511ms 
+2019-04-03 18:28:38.6575 | Request finished in 428.3969ms 302  
+2019-04-03 18:28:38.6575 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 18:28:38.8601 | Request finished in 197.0893ms 200 text/html 
+2019-04-03 18:28:38.9950 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 18:28:39.1567 | Request finished in 162.0986ms 200 application/json;charset=utf-8 
+2019-04-03 18:42:53.7724 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:43:11.5787 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 18:43:11.8655 | Route matched with {action = "Index", controller = "Home"}. Executing action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) 
+2019-04-03 18:43:11.9947 | Executing action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) - Validation state: Valid 
+2019-04-03 18:43:12.0046 | Executed action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.564ms. 
+2019-04-03 18:43:12.0317 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-03 18:43:12.0500 | Executed action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) in 162.6136ms 
+2019-04-03 18:43:12.0639 | Request finished in 491.8933ms 302  
+2019-04-03 18:43:12.0639 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 18:43:12.2758 | Request finished in 205.1494ms 200 text/html 
+2019-04-03 18:43:12.5285 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 18:43:12.5634 | Request finished in 34.3303ms 404  
+2019-04-03 18:43:31.0654 | Request starting HTTP/1.1 GET http://localhost:61003/doc/   
+2019-04-03 18:43:31.0960 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:43:31.7435 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 18:43:40.0673 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 8944.6204ms 
+2019-04-03 18:43:40.1887 | Request finished in 9128.6193ms 500 text/html; charset=utf-8 
+2019-04-03 18:43:40.2045 | Request starting HTTP/1.1 GET http://localhost:61003/favicon.ico   
+2019-04-03 18:43:40.2197 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 18:43:40.3188 | Executing JsonResult, writing value of type 'ShortUrl.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-03 18:43:40.3570 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 119.2462ms 
+2019-04-03 18:43:40.3612 | Request finished in 160.1547ms 200 application/json; charset=utf-8 
+2019-04-03 18:43:46.4509 | Request starting HTTP/1.1 GET http://localhost:61003/doc/dsds   
+2019-04-03 18:43:46.4509 | Request finished in 14.5204ms 404  
+2019-04-03 18:44:16.3110 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 18:44:16.3266 | Route matched with {action = "Index", controller = "Home"}. Executing action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) 
+2019-04-03 18:44:16.3855 | Executing action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) - Validation state: Valid 
+2019-04-03 18:44:16.3855 | Executed action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.0073ms. 
+2019-04-03 18:44:16.4029 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-03 18:44:16.4134 | Executed action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) in 62.8007ms 
+2019-04-03 18:44:16.4134 | Request finished in 107.2809ms 302  
+2019-04-03 18:44:16.4134 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 18:44:16.4239 | Request finished in 11.4035ms 200 text/html 
+2019-04-03 18:44:16.7046 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 18:44:16.7171 | Request finished in 24.9867ms 404  
+2019-04-03 18:47:22.4920 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 18:47:35.3721 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 18:47:35.6771 | Request finished in 305.3985ms 200 text/html 
+2019-04-03 18:47:35.9117 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 18:47:35.9378 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-03 18:47:35.9916 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-03 18:47:35.9916 | Request finished in 58.709ms 200 image/png 
+2019-04-03 18:47:36.1858 | Request finished in 274.6361ms 200 application/json;charset=utf-8 
+2019-04-03 19:44:56.1089 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:45:05.5764 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 19:45:05.8269 | Route matched with {action = "Index", controller = "Home"}. Executing action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) 
+2019-04-03 19:45:05.9371 | Executing action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) - Validation state: Valid 
+2019-04-03 19:45:05.9371 | Executed action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.2446ms. 
+2019-04-03 19:45:05.9674 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-03 19:45:05.9674 | Executed action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) in 136.9863ms 
+2019-04-03 19:45:05.9876 | Request finished in 421.0646ms 302  
+2019-04-03 19:45:06.0269 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 19:45:06.2033 | Request finished in 200.2863ms 200 text/html 
+2019-04-03 19:45:06.5362 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 19:45:06.7049 | Request finished in 171.4418ms 200 application/json;charset=utf-8 
+2019-04-03 19:45:19.5213 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:45:19.5499 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:45:20.1834 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:45:34.5209 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:45:35.2024 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:45:35.5086 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:45:36.2455 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:45:36.5844 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:45:36.9218 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:45:36.9677 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:45:37.1152 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:45:37.1419 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:45:37.5052 | Executed DbCommand (69ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:45:37.5243 | Executed DbCommand (72ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:45:37.6235 | 解压地址:ID=1 
+2019-04-03 19:45:37.6235 | 解压地址:ID=1 
+2019-04-03 19:45:38.0239 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 880.7466ms. 
+2019-04-03 19:45:38.0239 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1750.618ms. 
+2019-04-03 19:45:38.0768 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:45:38.0768 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:45:38.1070 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 2575.3317ms 
+2019-04-03 19:45:38.1070 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1099.8693ms 
+2019-04-03 19:45:38.1266 | Request finished in 2924.0004ms 0  
+2019-04-03 19:45:38.1266 | Request finished in 1222.3687ms 302  
+2019-04-03 19:46:41.6174 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:46:41.6440 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:46:41.7219 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:46:41.7384 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:46:41.7826 | Executed DbCommand (36ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:46:41.8128 | 解压地址:ID=1 
+2019-04-03 19:46:41.9639 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 234.3012ms. 
+2019-04-03 19:46:41.9922 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:46:42.0042 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 334.251ms 
+2019-04-03 19:46:42.0042 | Request finished in 395.5939ms 302  
+2019-04-03 19:46:59.0846 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:46:59.1075 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:46:59.1865 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:46:59.2029 | 解压地址:ID=1 
+2019-04-03 19:46:59.3470 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 152.8677ms. 
+2019-04-03 19:46:59.3680 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:46:59.3828 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 243.3734ms 
+2019-04-03 19:46:59.3828 | Request finished in 303.8881ms 302  
+2019-04-03 19:48:19.1173 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:48:31.3616 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:48:31.6500 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:48:32.3721 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:48:32.5549 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:48:32.9789 | Executed DbCommand (75ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:48:33.0679 | 解压地址:ID=1 
+2019-04-03 19:48:33.4243 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1038.016ms. 
+2019-04-03 19:48:33.4559 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:48:33.4768 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1802.4018ms 
+2019-04-03 19:48:33.4845 | Request finished in 2134.0597ms 302  
+2019-04-03 19:48:44.8735 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:48:44.8735 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:48:44.9625 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:48:44.9779 | 解压地址:ID=1 
+2019-04-03 19:48:45.1213 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 150.5469ms. 
+2019-04-03 19:48:45.1459 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:48:45.1608 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 254.8006ms 
+2019-04-03 19:48:45.1608 | Request finished in 293.8482ms 302  
+2019-04-03 19:49:03.6734 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 19:49:03.7063 | Route matched with {action = "Index", controller = "Home"}. Executing action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) 
+2019-04-03 19:49:03.7672 | Executing action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) - Validation state: Valid 
+2019-04-03 19:49:03.7672 | Executed action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.2503ms. 
+2019-04-03 19:49:03.7856 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-03 19:49:03.7956 | Executed action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) in 64.5773ms 
+2019-04-03 19:49:03.7956 | Request finished in 127.9847ms 302  
+2019-04-03 19:49:03.7956 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 19:49:03.8606 | Request finished in 60.4298ms 200 text/html 
+2019-04-03 19:49:04.0226 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 19:49:04.1881 | Request finished in 167.641ms 200 application/json;charset=utf-8 
+2019-04-03 19:49:08.3017 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:49:08.3117 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:49:08.3841 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:49:08.4002 | 解压地址:ID=1 
+2019-04-03 19:49:08.5333 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 137.6992ms. 
+2019-04-03 19:49:08.5655 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:49:08.5805 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 249.797ms 
+2019-04-03 19:49:08.5805 | Request finished in 284.0085ms 302  
+2019-04-03 19:49:24.6544 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:49:24.6736 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:49:24.7519 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:49:24.7672 | 解压地址:ID=1 
+2019-04-03 19:49:25.2803 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 520.8452ms. 
+2019-04-03 19:49:25.3047 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:49:25.3199 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 617.2963ms 
+2019-04-03 19:49:25.3199 | Request finished in 671.2412ms 302  
+2019-04-03 19:50:00.3750 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:50:02.9921 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:50:03.2946 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:50:04.1139 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:50:04.2855 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:50:04.7319 | Executed DbCommand (66ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:50:04.8221 | 解压地址:ID=1 
+2019-04-03 19:50:05.2665 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1133.1105ms. 
+2019-04-03 19:50:05.2967 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:50:05.3120 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1999.2554ms 
+2019-04-03 19:50:05.3267 | Request finished in 2339.7383ms 302  
+2019-04-03 19:50:23.5816 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:50:23.6089 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:50:23.6849 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:50:23.7023 | 解压地址:ID=1 
+2019-04-03 19:50:23.8369 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 141.9197ms. 
+2019-04-03 19:50:23.8665 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:50:23.8806 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 252.4152ms 
+2019-04-03 19:50:23.8806 | Request finished in 304.857ms 302  
+2019-04-03 19:51:07.5499 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:52:19.7458 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:52:20.0851 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:52:20.7948 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:52:20.9702 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:52:21.3984 | Executed DbCommand (71ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:52:21.4834 | 解压地址:ID=1 
+2019-04-03 19:52:21.8397 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1035.0754ms. 
+2019-04-03 19:52:21.8764 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:52:21.9031 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1797.3605ms 
+2019-04-03 19:52:21.9242 | Request finished in 2184.4636ms 302  
+2019-04-03 19:52:33.4193 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:52:33.4238 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:52:33.5028 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:52:33.5220 | 解压地址:ID=1 
+2019-04-03 19:52:33.6826 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 171.177ms. 
+2019-04-03 19:52:33.7097 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:52:33.7247 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 273.9444ms 
+2019-04-03 19:52:33.7247 | Request finished in 311.4217ms 302  
+2019-04-03 19:52:56.6925 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:53:12.9918 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:53:13.2924 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:53:14.0056 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:53:14.0380 | 解压地址:ID=1 
+2019-04-03 19:53:14.3354 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 318.754ms. 
+2019-04-03 19:53:14.3705 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:53:14.3966 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1084.9429ms 
+2019-04-03 19:53:14.4184 | Request finished in 1425.5679ms 302  
+2019-04-03 19:53:49.1011 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:53:51.7961 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:53:52.1294 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:53:52.8959 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:53:53.0898 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:53:53.4890 | Executed DbCommand (72ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:53:53.5679 | 解压地址:ID=1 
+2019-04-03 19:53:53.8813 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 969.4152ms. 
+2019-04-03 19:53:53.9117 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:53:53.9329 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1781.8023ms 
+2019-04-03 19:53:53.9519 | Request finished in 2155.9675ms 302  
+2019-04-03 19:54:15.9824 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:54:20.5511 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:54:20.8992 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:54:21.6034 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:54:21.6429 | 解压地址:ID=1 
+2019-04-03 19:54:21.9719 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 355.3772ms. 
+2019-04-03 19:54:22.0002 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:54:22.0197 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1099.1756ms 
+2019-04-03 19:54:22.0351 | Request finished in 1484.6561ms 302  
+2019-04-03 19:55:04.0533 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:55:05.5325 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:55:05.8349 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:55:06.5538 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:55:06.7235 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:55:07.1716 | Executed DbCommand (79ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:55:07.2472 | 解压地址:ID=1 
+2019-04-03 19:55:07.5557 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 992.5619ms. 
+2019-04-03 19:55:07.5877 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:55:07.6035 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1748.8656ms 
+2019-04-03 19:55:07.6247 | Request finished in 2104.6432ms 302  
+2019-04-03 19:55:29.7742 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:55:33.5811 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:55:33.8882 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:55:34.9911 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:55:35.0318 | 解压地址:ID=1 
+2019-04-03 19:55:35.3536 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 343.7245ms. 
+2019-04-03 19:55:35.3856 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:55:35.4059 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1493.9333ms 
+2019-04-03 19:55:35.4231 | Request finished in 1841.164ms 302  
+2019-04-03 19:56:11.5554 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 19:56:17.5354 | Request starting HTTP/1.1 GET http://localhost:61003/1   
+2019-04-03 19:56:17.8551 | Route matched with {action = "Go", controller = "Url"}. Executing action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) 
+2019-04-03 19:56:18.5805 | Executing action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) with arguments (ShortUrl.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-03 19:56:18.7655 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-03 19:56:19.1767 | Executed DbCommand (64ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-03 19:56:19.2608 | 解压地址:ID=1 
+2019-04-03 19:56:19.6016 | Executed action method ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1001.6339ms. 
+2019-04-03 19:56:19.6317 | Executing RedirectResult, redirecting to https://www.baidu.com. 
+2019-04-03 19:56:19.6498 | Executed action ShortUrl.Api.Controllers.UrlController.Go (ShortUrl.Api) in 1773.1366ms 
+2019-04-03 19:56:19.6568 | Request finished in 2134.5441ms 302  
+2019-04-03 21:59:52.9635 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-03 21:59:55.2892 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-03 21:59:55.5846 | Route matched with {action = "Index", controller = "Home"}. Executing action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) 
+2019-04-03 21:59:55.6955 | Executing action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) - Validation state: Valid 
+2019-04-03 21:59:55.7054 | Executed action method ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.5375ms. 
+2019-04-03 21:59:55.7361 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-03 21:59:55.7500 | Executed action ShortUrl.Api.Controllers.HomeController.Index (ShortUrl.Api) in 145.5713ms 
+2019-04-03 21:59:55.7675 | Request finished in 478.3417ms 302  
+2019-04-03 21:59:55.7675 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-03 21:59:55.9670 | Request finished in 199.2007ms 200 text/html 
+2019-04-03 21:59:56.1315 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-03 21:59:56.3105 | Request finished in 179.7478ms 200 application/json;charset=utf-8 

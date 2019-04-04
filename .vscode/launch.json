@@ -9,9 +9,12 @@
            "type": "node",
            "request": "launch",
            "name": "Launch via NPM",
+           "timeout": 10000,
+           "protocol": "auto", //新版vscode调试报错必须加上
            "runtimeExecutable": "npm",
            "runtimeArgs": [
-                "start"
+                "start",
+                "--remote-debugging-port=9229"
            ],
            "port": 9229
        },

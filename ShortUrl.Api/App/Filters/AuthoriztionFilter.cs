@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Primitives;
 
-namespace ShortUrl.Api.App
+namespace ShortUrl.Api.App.Filters
 {
 	public class AuthoriztionFilter : IAuthorizationFilter
 	{

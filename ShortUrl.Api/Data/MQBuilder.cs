@@ -17,7 +17,7 @@ namespace ShortUrl.Api.Data
 
 		public void UseRedis()
 		{
-			_services.AddTransient(typeof(IMessageQuery<>), typeof(RedisMQ<>));
+			_services.AddTransient(typeof(IMessageQuery<>), typeof(RedisMQClient<>));
 		}
 
 		public void UseRabbitMQ()

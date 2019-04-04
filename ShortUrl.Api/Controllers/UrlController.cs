@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ShortUrl.Api.App.Swagger;
 using ShortUrl.Api.Core;
 using ShortUrl.Api.Core.Url;
+using ShortUrl.Api.Exceptions;
 using ShortUrl.Api.Models;
 using ShortUrl.Api.Models.ViewModels.Url;
 
@@ -56,8 +58,10 @@ namespace ShortUrl.Api.Controllers
         /// </summary>
         /// <param name="input">短地址</param>
         /// <returns></returns>
+		[HiddenApi]
         [Route("/{SLink}")]
         [HttpGet]
+		[AllowAnonymous]
         public IActionResult Go([FromRoute]UnzipInputModel input)
         {
             var llink = _urlService.UnZip(input.SLink);

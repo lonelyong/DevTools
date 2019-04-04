@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShortUrl.Api.App
+namespace ShortUrl.Api.App.Filters
 {
 	/// <summary>
 	/// 全局异常过滤器

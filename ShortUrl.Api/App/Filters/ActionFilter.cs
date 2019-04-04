@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using ShortUrl.Api.Common.Utils;
 using ShortUrl.Api.Models;
 
-namespace ShortUrl.Api.App
+namespace ShortUrl.Api.App.Filters
 {
     public class ActionFilter : IActionFilter
     {

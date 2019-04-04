@@ -1,0 +1,1 @@
+2019-04-04 17:20:08.4519 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 

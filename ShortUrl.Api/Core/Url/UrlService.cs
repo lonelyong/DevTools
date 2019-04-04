@@ -32,9 +32,11 @@ namespace ShortUrl.Api.Core.Url
 
 		private readonly IRedisClient _redisClient;
 
-		private readonly MQManagement _mqManagement;
+		private readonly MQManger _mqManagement;
 
 		private readonly ILogger _logger;
+
+		private readonly RedisSettings redisSettings;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -43,13 +45,14 @@ namespace ShortUrl.Api.Core.Url
 		/// <param name="appSettings"></param>
 		/// <param name="mqManagement"></param>
 		/// <param name="logger"></param>
-		public UrlService(MssqlDbContext dbContext, IRedisClient redisClient, IOptions<AppSettings> appSettings, MQManagement mqManagement, ILogger<UrlService> logger) 
+		public UrlService(MssqlDbContext dbContext, IRedisClient redisClient, IOptions<AppSettings> appSettings, MQManger mqManagement, ILogger<UrlService> logger, IOptionsSnapshot<RedisSettings> options) 
         {
             _dbContext = dbContext;
 			_redisClient = redisClient;
             _appSettings = appSettings.Value;
 			_mqManagement = mqManagement;
 			_logger = logger;
+			redisSettings = options.Get("default");
         }
 
         /// <summary>
@@ -103,7 +106,10 @@ namespace ShortUrl.Api.Core.Url
 			_logger.LogInformation($"解压地址:ID={id}");
 			_logger.LogDebug($"解压地址:ID={id}");
 			_logger.LogTrace($"解压地址:ID={id}");
-			_mqManagement.TestMQ.Push($"{id}={_url}");
+			_logger.LogWarning($"解压地址:ID={id}");
+			_logger.LogError($"解压地址:ID={id}");
+			_mqManagement.TestMQ.Push($"{redisSettings.Configuration}={id}={_url}");
+			redisSettings.Configuration += "%";
 			return _url;
         }
 

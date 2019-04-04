@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿#define USE_CASTLE
+#define USE_STACKEXCHANGE_REDIS
+#define USE_NLOG
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication;
@@ -30,13 +33,21 @@ using Devart.Data.Oracle.Entity;
 using log4net;
 using NLog.Web;
 using NLog.Extensions.Logging;
+using Castle.Windsor.MsDependencyInjection;
+using Castle.Windsor;
+using Castle.MicroKernel.Registration;
+using Castle.LoggingFacility.MsLogging;
+using ShortUrl.Api.App.Filters;
+using ShortUrl.Api.App.Middlewares;
+using ShortUrl.Api.Exceptions;
+using ShortUrl.Api.App.Swagger;
 
 namespace ShortUrl.Api
 {
 	/// <summary>
 	/// 
 	/// </summary>
-	public class Startup
+	public class Startup 
     {
         private readonly IConfiguration _config;
         /// <summary>
@@ -53,7 +64,7 @@ namespace ShortUrl.Api
         /// 
         /// </summary>
         /// <param name="services"></param>
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
 			var _appSettings = _config.Get<AppSettings>();
 			services.AddLogging(options=> {
@@ -62,20 +73,28 @@ namespace ShortUrl.Api
 				//options.ConfigureNLog("");
 			});
             services.Configure<AppSettings>(_config);
-            services.AddSwaggerGen(c =>
+			services.PostConfigure<RedisSettings>("default", (opt) =>
+			{
+				opt.Configuration = "1";
+			});
+			services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info
-                {
-                    Version = "v1",
-                    Title = "ShortUrl接口文档",
-                    //Description = "RESTful API for ShortUrl",
-                    //TermsOfService = "None",
-                    //Contact = new Contact { Name = "Lonelyong", Email = "778652286@qq.com", Url = "" }
+				c.SwaggerDoc("v1", new Info
+				{
+					Version = "v1",
+					Title = "ShortUrl接口文档",
+					Description = "RESTful API for ShortUrl",
+					//TermsOfService = "None",
+					Contact = new Contact { Name = "Lonelyong", Email = "yong-zh@qq.com", Url = "" },
+					License = new License() { Name = "MIT", Url = "http://www.gnu.org/licenses/gpl-3.0.html" },
                 });
 				//Set the comments path for the swagger json and ui.
 				var basePath = PlatformServices.Default.Application.ApplicationBasePath;
                 var xmlPath = Path.Combine(basePath, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
+				c.DescribeAllParametersInCamelCase();
+				c.DescribeStringEnumsInCamelCase();
                 c.IncludeXmlComments(xmlPath);
+				c.DocumentFilter<HiddenApiFilter>();
 				//添加一个必须的全局安全信息，和AddSecurityDefinition方法指定的方案名称要一致，这里是Bearer。
 				c.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>> { { "Bearer", new string[] { } }, });
 				//Authorization的设置
@@ -128,7 +147,7 @@ namespace ShortUrl.Api
 				}; 
 			});
             services.AddMvc( options => {
-                options.Filters.Add(typeof(ExceptionFilter));
+                //options.Filters.Add(typeof(ExceptionFilter));
                 options.Filters.Add(new ActionFilter());
 				options.Filters.Add(new AuthoriztionFilter());
             });
@@ -142,15 +161,8 @@ namespace ShortUrl.Api
 				options.UseOracle(_appSettings.ConnectionStrings.Oracle, opts=> {
 				});
 			});
-			services.AddDistributedRedisCache(options=> {
-				options.Configuration = _config["ConnectionStrings:Redis"];
-				options.InstanceName = _config["Connections:Redis:InstanceName"];
-				//options.ConfigurationOptions = new StackExchange.Redis.ConfigurationOptions() {
-				//	ChannelPrefix = _config["Redis:Default:ChannelPrefix"],
-				//	Password = _config["Redis:Default:Password"],
-				//	DefaultDatabase = _config.GetValue<int>("Redis:Default:DefaultDatabase")
-				//};
-			});
+
+#if USE_STACKEXCHANGE_REDIS
 			services.AddStackExchangeRedisCache(
 				options=> {
 				options.Password = _config["Connections:Redis:Password"];
@@ -164,6 +176,18 @@ namespace ShortUrl.Api
 				customOptions=> {
 					customOptions.Prefix = _config["Connections:Redis:Prefix"];
 			});
+#else
+			services.AddDistributedRedisCache(options => {
+				options.Configuration = _config["ConnectionStrings:Redis"];
+				options.InstanceName = _config["Connections:Redis:InstanceName"];
+				//options.ConfigurationOptions = new StackExchange.Redis.ConfigurationOptions() {
+				//	ChannelPrefix = _config["Redis:Default:ChannelPrefix"],
+				//	Password = _config["Redis:Default:Password"],
+				//	DefaultDatabase = _config.GetValue<int>("Redis:Default:DefaultDatabase")
+				//};
+			});
+#endif
+		
 			services.Configure<IISOptions>(options => 
 			{
 				options.AutomaticAuthentication = false;
@@ -175,6 +199,14 @@ namespace ShortUrl.Api
 				options.UseZookeeper();
 			});
             services.AddServices();
+#if USE_CASTLE
+	var windsorContainer = new WindsorContainer();
+			//windsorContainer.Register(Component.For);
+			var windsorCastleServiceProvider = WindsorRegistrationHelper.CreateServiceProvider(windsorContainer, services);
+			return windsorCastleServiceProvider;
+#else
+			return services.BuildServiceProvider();
+#endif
 		}
 
 		/// <summary>
@@ -184,20 +216,23 @@ namespace ShortUrl.Api
 		/// <param name="env"></param>
 		/// <param name="loggerFactory"></param>
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+		public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime)
 		{
 			// env.ConfigureNLog("nlog.config");
+			// loggerFactory.AddCastleLogger(new Castle.Core.Logging.ConsoleFactory());
 			if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
+			{
+				// 越明确的异常越后注册
+				app.UseDeveloperExceptionPage();
 				app.UseDatabaseErrorPage();
 			}
 			else if(env.IsProduction())
 			{
 				app.UseHttpsRedirection();
-				app.UseExceptionHandler(new ExceptionHandlerOptions() {
-					ExceptionHandler = (httpContext) => { return Task.Run(()=> { httpContext.Response.Body.Write(Encoding.UTF8.GetBytes("Something went wrong!")); }); },
-				});
+				app.UseAppExceptionErrorPage();
+				//app.UseExceptionHandler(new ExceptionHandlerOptions() {
+				//	ExceptionHandler = (httpContext) => { return Task.Run(()=> { httpContext.Response.Body.Write(Encoding.UTF8.GetBytes("Something went wrong!")); }); },
+				//});
 			}
 			app.UseCors(t => t.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
 			app.Map("/test", builder => {
@@ -208,6 +243,7 @@ namespace ShortUrl.Api
 			});
 			app.UseAuthentication();
 			app.UseSwagger(options=> {
+				//options.RouteTemplate = "doc/{documentName}";
 			});
             // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
@@ -225,8 +261,26 @@ namespace ShortUrl.Api
                 routes.MapRoute(
                      name: "route",
                      template: "{controller=Home}/{action=Index}/{id?}");
+				
             });
-
+			
         }
-    }
+
+	}
+
+	public class StartupFilter : IStartupFilter
+	{
+		public Action<IApplicationBuilder> Configure(Action<IApplicationBuilder> next)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
+	public class HostStartup : IHostingStartup
+	{
+		public void Configure(IWebHostBuilder builder)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }
