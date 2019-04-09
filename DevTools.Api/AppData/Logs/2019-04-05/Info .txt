@@ -1,0 +1,133 @@
+2019-04-05 00:25:05.1101 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-05 00:25:13.6900 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-05 00:25:13.9763 | Route matched with {action = "Index", controller = "Home"}. Executing action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) 
+2019-04-05 00:25:14.0877 | Executing action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api) - Validation state: Valid 
+2019-04-05 00:25:14.0982 | Executed action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.4681ms. 
+2019-04-05 00:25:14.1311 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-05 00:25:14.1506 | Executed action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) in 148.27ms 
+2019-04-05 00:25:14.1689 | Request finished in 478.6285ms 302  
+2019-04-05 00:25:14.1689 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-05 00:25:14.3567 | Request finished in 187.1336ms 200 text/html 
+2019-04-05 00:25:14.5209 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-05 00:25:14.6955 | Request finished in 177.4973ms 200 application/json;charset=utf-8 
+2019-04-05 00:26:37.3339 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-05 00:26:38.1616 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-05 00:26:38.4663 | Request finished in 317.1175ms 200 text/html 
+2019-04-05 00:26:38.7242 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-05 00:26:38.7415 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-05 00:26:38.7910 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-05 00:26:38.7975 | Request finished in 51.9335ms 200 image/png 
+2019-04-05 00:26:39.0233 | Request finished in 303.0318ms 200 application/json;charset=utf-8 
+2019-04-05 00:27:05.1290 | Request starting HTTP/1.1 POST http://localhost:61003/Base64/Encrypt?encoding=utf8&text=123  0 
+2019-04-05 00:27:05.1544 | CORS policy execution successful. 
+2019-04-05 00:27:05.2464 | Route matched with {action = "Encrypt", controller = "Base64"}. Executing action DevTools.Api.Controllers.Base64Controller.Encrypt (DevTools.Api) 
+2019-04-05 00:27:05.4188 | Executing action method DevTools.Api.Controllers.Base64Controller.Encrypt (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Base64.EncryptDecryptInputViewModel) - Validation state: Valid 
+2019-04-05 00:27:12.0845 | Executed action DevTools.Api.Controllers.Base64Controller.Encrypt (DevTools.Api) in 6819.5985ms 
+2019-04-05 00:27:12.1912 | Request finished in 7064.4472ms 500 text/html; charset=utf-8 
+2019-04-05 00:27:16.2308 | Request starting HTTP/1.1 POST http://localhost:61003/Base64/Encrypt?encoding=utf-8&text=123  0 
+2019-04-05 00:27:16.2503 | CORS policy execution successful. 
+2019-04-05 00:27:16.2634 | Route matched with {action = "Encrypt", controller = "Base64"}. Executing action DevTools.Api.Controllers.Base64Controller.Encrypt (DevTools.Api) 
+2019-04-05 00:27:16.3372 | Executing action method DevTools.Api.Controllers.Base64Controller.Encrypt (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Base64.EncryptDecryptInputViewModel) - Validation state: Valid 
+2019-04-05 00:27:16.3433 | Executed action method DevTools.Api.Controllers.Base64Controller.Encrypt (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.5928ms. 
+2019-04-05 00:27:16.3661 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-05 00:27:16.3891 | Executed action DevTools.Api.Controllers.Base64Controller.Encrypt (DevTools.Api) in 108.6633ms 
+2019-04-05 00:27:16.3891 | Request finished in 164.2252ms 200 application/json; charset=utf-8 
+2019-04-05 00:27:43.7060 | Request starting HTTP/1.1 POST http://localhost:61003/Base64/Decrypt?encoding=utf-8&text=MTIz  0 
+2019-04-05 00:27:43.7159 | CORS policy execution successful. 
+2019-04-05 00:27:43.7372 | Route matched with {action = "Decrypt", controller = "Base64"}. Executing action DevTools.Api.Controllers.Base64Controller.Decrypt (DevTools.Api) 
+2019-04-05 00:27:43.8115 | Executing action method DevTools.Api.Controllers.Base64Controller.Decrypt (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Base64.EncryptDecryptInputViewModel) - Validation state: Valid 
+2019-04-05 00:27:43.8115 | Executed action method DevTools.Api.Controllers.Base64Controller.Decrypt (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.5314ms. 
+2019-04-05 00:27:43.8284 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-05 00:27:43.8284 | Executed action DevTools.Api.Controllers.Base64Controller.Decrypt (DevTools.Api) in 77.2172ms 
+2019-04-05 00:27:43.8412 | Request finished in 137.5828ms 200 application/json; charset=utf-8 
+2019-04-05 00:32:08.5644 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-05 00:32:11.8795 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-05 00:32:12.2357 | Request finished in 366.0908ms 200 text/html 
+2019-04-05 00:32:12.5220 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-05 00:32:12.5421 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-05 00:32:12.5766 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-05 00:32:12.5766 | Request finished in 41.5218ms 200 image/png 
+2019-04-05 00:32:12.8207 | Request finished in 299.3944ms 200 application/json;charset=utf-8 
+2019-04-05 00:32:22.8412 | Request starting HTTP/1.1 POST http://localhost:61003/Des/Encrypt?key=1&text=12313  0 
+2019-04-05 00:32:22.8412 | CORS policy execution successful. 
+2019-04-05 00:32:22.9468 | Route matched with {action = "Encrypt", controller = "Des"}. Executing action DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) 
+2019-04-05 00:32:23.1002 | Executing action method DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Des.EncryptDecryptInputViewModel) - Validation state: Valid 
+2019-04-05 00:32:23.1381 | Executed action method DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 29.2516ms. 
+2019-04-05 00:32:23.1677 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-05 00:32:23.1908 | Executed action DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) in 221.4171ms 
+2019-04-05 00:32:23.1908 | Request finished in 356.0775ms 200 application/json; charset=utf-8 
+2019-04-05 00:33:35.8729 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-05 00:33:36.4760 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-05 00:33:36.8158 | Request finished in 339.8991ms 200 text/html 
+2019-04-05 00:33:36.9993 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-05 00:33:37.0561 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-05 00:33:37.0823 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-05 00:33:37.0823 | Request finished in 31.6527ms 200 image/png 
+2019-04-05 00:33:37.2871 | Request finished in 290.3359ms 500 text/html; charset=utf-8 
+2019-04-05 00:33:39.3607 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-05 00:33:39.3733 | Request finished in 15.4051ms 200 text/html 
+2019-04-05 00:33:39.5111 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-05 00:33:39.5298 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-05 00:33:39.5636 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-05 00:33:39.5753 | Request finished in 46.0017ms 200 image/png 
+2019-04-05 00:33:39.5753 | Request finished in 72.6888ms 500 text/html; charset=utf-8 
+2019-04-05 00:34:14.2380 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-05 00:37:39.9033 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-05 00:37:55.3621 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-05 00:37:55.6570 | Request finished in 294.1876ms 200 text/html 
+2019-04-05 00:37:55.8097 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-05 00:37:55.8295 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-05 00:37:55.8803 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-05 00:37:55.8803 | Request finished in 52.2939ms 200 image/png 
+2019-04-05 00:37:56.0835 | Request finished in 276.8216ms 200 application/json;charset=utf-8 
+2019-04-05 00:38:47.6171 | Request starting HTTP/1.1 GET http://localhost:61003/Rsa/Key/Generate?keySize=1024   
+2019-04-05 00:38:47.6955 | Route matched with {action = "GenerateKey", controller = "Rsa"}. Executing action DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) 
+2019-04-05 00:38:47.8235 | Executing action method DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) with arguments (1024) - Validation state: Valid 
+2019-04-05 00:39:11.3729 | Executed action DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) in 23660.4946ms 
+2019-04-05 00:39:11.5191 | Request finished in 23904.8217ms 500 text/html; charset=utf-8 
+2019-04-05 00:39:18.1463 | Request starting HTTP/1.1 GET http://localhost:61003/Rsa/Key/Generate?keySize=2048   
+2019-04-05 00:39:18.1552 | Route matched with {action = "GenerateKey", controller = "Rsa"}. Executing action DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) 
+2019-04-05 00:39:18.2186 | Executing action method DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) with arguments (2048) - Validation state: Valid 
+2019-04-05 00:39:22.1804 | Executed action DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) in 4005.3795ms 
+2019-04-05 00:39:22.2171 | Request finished in 4073.0574ms 500 text/html; charset=utf-8 
+2019-04-05 00:39:47.0096 | Request starting HTTP/1.1 POST http://localhost:61003/Des/Encrypt application/json-patch+json 33 
+2019-04-05 00:39:47.0306 | CORS policy execution successful. 
+2019-04-05 00:39:47.0458 | Route matched with {action = "Encrypt", controller = "Des"}. Executing action DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) 
+2019-04-05 00:39:47.1655 | Executing action method DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Des.DesEncryptDecryptInputViewModel) - Validation state: Valid 
+2019-04-05 00:39:47.1797 | Executed action method DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 8.9028ms. 
+2019-04-05 00:39:47.2094 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-05 00:39:47.2344 | Executed action DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) in 166.0649ms 
+2019-04-05 00:39:47.2344 | Request finished in 229.9784ms 200 application/json; charset=utf-8 
+2019-04-05 00:39:54.6591 | Request starting HTTP/1.1 POST http://localhost:61003/Des/Encrypt application/json-patch+json 45 
+2019-04-05 00:39:54.6706 | CORS policy execution successful. 
+2019-04-05 00:39:54.6706 | Route matched with {action = "Encrypt", controller = "Des"}. Executing action DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) 
+2019-04-05 00:39:54.7522 | Executing action method DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Des.DesEncryptDecryptInputViewModel) - Validation state: Valid 
+2019-04-05 00:39:54.7522 | Executed action method DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.1744ms. 
+2019-04-05 00:39:54.7686 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-05 00:39:54.7686 | Executed action DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) in 80.7411ms 
+2019-04-05 00:39:54.7803 | Request finished in 123.4528ms 200 application/json; charset=utf-8 
+2019-04-05 00:40:00.1457 | Request starting HTTP/1.1 POST http://localhost:61003/Des/Encrypt application/json-patch+json 54 
+2019-04-05 00:40:00.1573 | CORS policy execution successful. 
+2019-04-05 00:40:00.1689 | Route matched with {action = "Encrypt", controller = "Des"}. Executing action DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) 
+2019-04-05 00:40:00.2353 | Executing action method DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Des.DesEncryptDecryptInputViewModel) - Validation state: Valid 
+2019-04-05 00:40:00.2353 | Executed action method DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.2094ms. 
+2019-04-05 00:40:00.2511 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-05 00:40:00.2511 | Executed action DevTools.Api.Controllers.DesController.Encrypt (DevTools.Api) in 75.1781ms 
+2019-04-05 00:40:00.2627 | Request finished in 119.5453ms 200 application/json; charset=utf-8 
+2019-04-05 00:40:51.1008 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringSHA512 application/json-patch+json 24 
+2019-04-05 00:40:51.1238 | CORS policy execution successful. 
+2019-04-05 00:40:51.1401 | Route matched with {action = "StringSHA512", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringSHA512 (DevTools.Api) 
+2019-04-05 00:40:51.2538 | Executing action method DevTools.Api.Controllers.HashController.StringSHA512 (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.StringInputViewModel) - Validation state: Valid 
+2019-04-05 00:40:51.2538 | Executed action method DevTools.Api.Controllers.HashController.StringSHA512 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 3.5675ms. 
+2019-04-05 00:40:51.2759 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-05 00:40:51.2859 | Executed action DevTools.Api.Controllers.HashController.StringSHA512 (DevTools.Api) in 95.2445ms 
+2019-04-05 00:40:51.2859 | Request finished in 189.9863ms 200 application/json; charset=utf-8 
+2019-04-05 01:35:03.7698 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-05 01:35:09.6891 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-05 01:35:10.0017 | Request finished in 313.1356ms 200 text/html 
+2019-04-05 01:35:10.2599 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-05 01:35:10.2943 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-05 01:35:10.3645 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-05 01:35:10.3767 | Request finished in 82.7295ms 200 image/png 
+2019-04-05 01:35:10.5767 | Request finished in 320.7611ms 200 application/json;charset=utf-8 
+2019-04-05 02:25:07.9681 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 

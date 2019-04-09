@@ -1,0 +1,531 @@
+2019-04-04 17:20:08.4519 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:28:20.7123 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:28:21.5112 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:28:21.5112 | Request starting HTTP/1.1 GET http://localhost:51744/swagger   
+2019-04-04 21:28:21.5664 | Request finished in 61.2765ms 200  
+2019-04-04 21:28:21.6912 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:28:21.6912 | Request finished in 191.11ms 301  
+2019-04-04 21:28:21.8961 | Request finished in 202.3721ms 200 text/html 
+2019-04-04 21:28:21.9161 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/swagger-ui.css   
+2019-04-04 21:28:21.9480 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/swagger-ui-bundle.js   
+2019-04-04 21:28:22.0109 | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2019-04-04 21:28:22.0203 | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2019-04-04 21:28:22.0341 | Request finished in 91.9039ms 200 application/javascript 
+2019-04-04 21:28:22.0341 | Request finished in 126.8895ms 200 text/css 
+2019-04-04 21:28:22.0468 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/swagger-ui-standalone-preset.js   
+2019-04-04 21:28:22.0710 | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2019-04-04 21:28:22.0785 | Request finished in 31.7622ms 200 application/javascript 
+2019-04-04 21:28:23.0729 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:28:23.1253 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/favicon-32x32.png   
+2019-04-04 21:28:23.1478 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-04 21:28:23.1544 | Request finished in 29.3757ms 200 image/png 
+2019-04-04 21:28:23.3677 | Request finished in 298.3423ms 200 application/json;charset=utf-8 
+2019-04-04 21:28:48.2257 | Request starting HTTP/1.1 POST http://localhost:51744/Account/Login application/json-patch+json 51 
+2019-04-04 21:28:48.2362 | CORS policy execution successful. 
+2019-04-04 21:28:48.3128 | Route matched with {action = "Login", controller = "Account"}. Executing action DevTools.Api.Controllers.AccountController.Login (DevTools.Api) 
+2019-04-04 21:28:48.7572 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-04 21:28:48.9670 | Executing action method DevTools.Api.Controllers.AccountController.Login (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Account.LoginInputModel) - Validation state: Valid 
+2019-04-04 21:28:49.6117 | Executed DbCommand (85ms) [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-04 21:28:49.7344 | Executed action method DevTools.Api.Controllers.AccountController.Login (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 760.9558ms. 
+2019-04-04 21:28:49.7734 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[DevTools.Api.Models.ViewModels.Account.LoginOutputModel, DevTools.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2019-04-04 21:28:49.8072 | Executed action DevTools.Api.Controllers.AccountController.Login (DevTools.Api) in 1474.8409ms 
+2019-04-04 21:28:49.8118 | Request finished in 1596.5752ms 200 application/json; charset=utf-8 
+2019-04-04 21:29:12.2487 | Request starting HTTP/1.1 GET http://localhost:51744/Url/Unzip?sLink=1   
+2019-04-04 21:29:12.2694 | Successfully validated the token. 
+2019-04-04 21:29:12.2784 | Route matched with {action = "Unzip", controller = "Url"}. Executing action DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) 
+2019-04-04 21:29:12.3131 | Authorization was successful. 
+2019-04-04 21:29:13.2719 | Executing action method DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-04 21:29:13.3050 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-04 21:29:13.4452 | Executed DbCommand (46ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-04 21:29:13.5026 | 解压地址:ID=1 
+2019-04-04 21:29:13.7275 | Executed action method DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 444.9155ms. 
+2019-04-04 21:29:13.7586 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:29:13.7799 | Executed action DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) in 1477.346ms 
+2019-04-04 21:29:13.7958 | Request finished in 1544.6742ms 200 application/json; charset=utf-8 
+2019-04-04 21:30:50.9072 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:30:51.7336 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:30:51.7336 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:30:51.8185 | Request finished in 91.7638ms 200  
+2019-04-04 21:30:52.1135 | Request finished in 383.5369ms 200 text/html 
+2019-04-04 21:30:52.4319 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:30:52.6781 | Request finished in 249.6502ms 200 application/json;charset=utf-8 
+2019-04-04 21:31:12.7270 | Request starting HTTP/1.1 POST http://localhost:51744/Account/Login application/json-patch+json 51 
+2019-04-04 21:31:12.7490 | CORS policy execution successful. 
+2019-04-04 21:31:12.8228 | Route matched with {action = "Login", controller = "Account"}. Executing action DevTools.Api.Controllers.AccountController.Login (DevTools.Api) 
+2019-04-04 21:31:13.1722 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-04 21:31:13.4190 | Executing action method DevTools.Api.Controllers.AccountController.Login (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Account.LoginInputModel) - Validation state: Valid 
+2019-04-04 21:31:13.9363 | Executed DbCommand (82ms) [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-04 21:31:14.0823 | Executed action method DevTools.Api.Controllers.AccountController.Login (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 656.2937ms. 
+2019-04-04 21:31:14.1155 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[DevTools.Api.Models.ViewModels.Account.LoginOutputModel, DevTools.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2019-04-04 21:31:14.1547 | Executed action DevTools.Api.Controllers.AccountController.Login (DevTools.Api) in 1309.8942ms 
+2019-04-04 21:31:14.1705 | Request finished in 1441.3024ms 200 application/json; charset=utf-8 
+2019-04-04 21:31:33.1466 | Request starting HTTP/1.1 GET http://localhost:51744/Url/Unzip?sLink=1   
+2019-04-04 21:31:33.1690 | Successfully validated the token. 
+2019-04-04 21:31:33.1859 | Route matched with {action = "Unzip", controller = "Url"}. Executing action DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) 
+2019-04-04 21:31:33.2390 | Authorization was successful. 
+2019-04-04 21:31:33.8211 | Executing action method DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-04 21:31:33.8801 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-04 21:31:34.0144 | Executed DbCommand (47ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-04 21:31:34.0880 | 解压地址:ID=1 
+2019-04-04 21:31:34.7769 | Executed action method DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 943.8674ms. 
+2019-04-04 21:31:34.8069 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:31:34.8318 | Executed action DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) in 1601.6837ms 
+2019-04-04 21:31:34.8418 | Request finished in 1698.3254ms 200 application/json; charset=utf-8 
+2019-04-04 21:37:38.4664 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:37:39.3590 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:37:39.3590 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:37:39.4383 | Request finished in 87.3385ms 200  
+2019-04-04 21:37:39.7693 | Request finished in 414.4505ms 200 text/html 
+2019-04-04 21:37:39.9353 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:37:40.2038 | Request finished in 267.6718ms 200 application/json;charset=utf-8 
+2019-04-04 21:39:03.6010 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:39:04.5463 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:39:04.5463 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:39:04.6277 | Request finished in 79.525ms 200  
+2019-04-04 21:39:04.9879 | Request finished in 446.4493ms 200 text/html 
+2019-04-04 21:39:05.1358 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:39:05.3914 | Request finished in 258.8576ms 200 application/json;charset=utf-8 
+2019-04-04 21:39:32.0929 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:39:33.1345 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:39:33.1345 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:39:33.2196 | Request finished in 94.5135ms 200  
+2019-04-04 21:39:33.5821 | Request finished in 452.6443ms 200 text/html 
+2019-04-04 21:39:34.0834 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:39:34.3514 | Request finished in 271.8957ms 200 application/json;charset=utf-8 
+2019-04-04 21:40:28.5162 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 text/plain 3 
+2019-04-04 21:40:28.5369 | CORS policy execution successful. 
+2019-04-04 21:40:28.6228 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:40:28.7134 | Executing HttpStatusCodeResult, setting HTTP status code 415 
+2019-04-04 21:40:28.7280 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 72.0352ms 
+2019-04-04 21:40:28.7330 | Request finished in 224.8071ms 415  
+2019-04-04 21:40:28.7548 | Connection id "0HLLP0BS7R4LK", Request id "0HLLP0BS7R4LK:00000002": the application completed without reading the entire request body. 
+2019-04-04 21:42:49.5849 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/x-www-form-urlencoded 3 
+2019-04-04 21:42:49.6876 | CORS policy execution successful. 
+2019-04-04 21:42:49.7005 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:42:49.8447 | Executing HttpStatusCodeResult, setting HTTP status code 415 
+2019-04-04 21:42:49.8676 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 136.6265ms 
+2019-04-04 21:42:49.8733 | Request finished in 320.2541ms 415  
+2019-04-04 21:42:52.5882 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/x-www-form-urlencoded 3 
+2019-04-04 21:42:52.5933 | CORS policy execution successful. 
+2019-04-04 21:42:52.6081 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:42:52.6902 | Executing HttpStatusCodeResult, setting HTTP status code 415 
+2019-04-04 21:42:52.7013 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 70.5827ms 
+2019-04-04 21:42:52.7013 | Request finished in 118.5041ms 415  
+2019-04-04 21:42:53.7226 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/x-www-form-urlencoded 3 
+2019-04-04 21:42:53.7341 | CORS policy execution successful. 
+2019-04-04 21:42:53.7475 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:42:53.8153 | Executing HttpStatusCodeResult, setting HTTP status code 415 
+2019-04-04 21:42:53.8260 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 59.9214ms 
+2019-04-04 21:42:53.8260 | Request finished in 109.0005ms 415  
+2019-04-04 21:42:54.3439 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/x-www-form-urlencoded 3 
+2019-04-04 21:42:54.3439 | CORS policy execution successful. 
+2019-04-04 21:42:54.3565 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:42:54.4189 | Executing HttpStatusCodeResult, setting HTTP status code 415 
+2019-04-04 21:42:54.4394 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 60.0686ms 
+2019-04-04 21:42:54.4394 | Request finished in 100.8337ms 415  
+2019-04-04 21:42:54.8797 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/x-www-form-urlencoded 3 
+2019-04-04 21:42:54.8896 | CORS policy execution successful. 
+2019-04-04 21:42:54.9055 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:42:54.9712 | Executing HttpStatusCodeResult, setting HTTP status code 415 
+2019-04-04 21:42:54.9850 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 60.0968ms 
+2019-04-04 21:42:54.9850 | Request finished in 111.3315ms 415  
+2019-04-04 21:42:55.3574 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/x-www-form-urlencoded 3 
+2019-04-04 21:42:55.3574 | CORS policy execution successful. 
+2019-04-04 21:42:55.3722 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:42:55.4420 | Executing HttpStatusCodeResult, setting HTTP status code 415 
+2019-04-04 21:42:55.4537 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 60.9689ms 
+2019-04-04 21:42:55.4537 | Request finished in 101.8657ms 415  
+2019-04-04 21:43:15.0053 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 text/plain 3 
+2019-04-04 21:43:15.0153 | CORS policy execution successful. 
+2019-04-04 21:43:15.0306 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:43:15.0942 | Executing HttpStatusCodeResult, setting HTTP status code 415 
+2019-04-04 21:43:15.1132 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 53.7554ms 
+2019-04-04 21:43:15.1132 | Request finished in 112.7784ms 415  
+2019-04-04 21:43:15.1237 | Connection id "0HLLP0BS7R4LM", Request id "0HLLP0BS7R4LM:00000007": the application completed without reading the entire request body. 
+2019-04-04 21:45:09.4361 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 13 
+2019-04-04 21:45:09.4661 | CORS policy execution successful. 
+2019-04-04 21:45:09.4829 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:45:09.7090 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:45:09.7341 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 222.5182ms 
+2019-04-04 21:45:09.7341 | Request finished in 301.4126ms 200 application/json; charset=utf-8 
+2019-04-04 21:45:28.0798 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 13 
+2019-04-04 21:45:28.0918 | CORS policy execution successful. 
+2019-04-04 21:45:28.1088 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:45:28.1845 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:45:28.1845 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 66.2657ms 
+2019-04-04 21:45:28.2000 | Request finished in 120.2453ms 200 application/json; charset=utf-8 
+2019-04-04 21:45:32.9989 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 13 
+2019-04-04 21:45:32.9989 | CORS policy execution successful. 
+2019-04-04 21:45:33.0122 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:45:33.0785 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:45:33.0983 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 63.0796ms 
+2019-04-04 21:45:33.0983 | Request finished in 103.8064ms 200 application/json; charset=utf-8 
+2019-04-04 21:45:33.7682 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 13 
+2019-04-04 21:45:33.7682 | CORS policy execution successful. 
+2019-04-04 21:45:33.7797 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:45:33.8490 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:45:33.8592 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 57.6974ms 
+2019-04-04 21:45:33.8592 | Request finished in 96.0444ms 200 application/json; charset=utf-8 
+2019-04-04 21:45:34.4670 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 13 
+2019-04-04 21:45:34.4670 | CORS policy execution successful. 
+2019-04-04 21:45:34.4817 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:45:34.5492 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:45:34.5492 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 62.1428ms 
+2019-04-04 21:45:34.5618 | Request finished in 97.2205ms 200 application/json; charset=utf-8 
+2019-04-04 21:45:35.9804 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 13 
+2019-04-04 21:45:35.9840 | CORS policy execution successful. 
+2019-04-04 21:45:35.9840 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:45:36.0518 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:45:36.0612 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 51.6619ms 
+2019-04-04 21:45:36.0612 | Request finished in 85.6923ms 200 application/json; charset=utf-8 
+2019-04-04 21:46:33.8694 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:46:33.9352 | CORS policy execution successful. 
+2019-04-04 21:46:33.9507 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:46:34.0457 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:46:34.0457 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 78.525ms 
+2019-04-04 21:46:34.0606 | Request finished in 198.6928ms 200 application/json; charset=utf-8 
+2019-04-04 21:46:59.9515 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:46:59.9713 | CORS policy execution successful. 
+2019-04-04 21:46:59.9815 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:47:00.0632 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:47:00.0778 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 71.3077ms 
+2019-04-04 21:47:00.0778 | Request finished in 131.1549ms 200 application/json; charset=utf-8 
+2019-04-04 21:47:12.6308 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:47:12.6525 | Request finished in 21.3214ms 200 text/html 
+2019-04-04 21:47:12.8912 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:47:12.9234 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/favicon-32x32.png   
+2019-04-04 21:47:12.9345 | Request finished in 55.5038ms 200 application/json;charset=utf-8 
+2019-04-04 21:47:12.9583 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-04 21:47:12.9583 | Request finished in 43.0258ms 200 image/png 
+2019-04-04 21:47:20.6887 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:47:21.5657 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:47:21.5657 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:47:21.6524 | Request finished in 86.9395ms 200  
+2019-04-04 21:47:21.9836 | Request finished in 421.6772ms 200 text/html 
+2019-04-04 21:47:22.2683 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:47:22.5339 | Request finished in 270.2613ms 200 application/json;charset=utf-8 
+2019-04-04 21:47:56.2765 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:47:57.2889 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:47:57.2889 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:47:57.3631 | Request finished in 79.274ms 200  
+2019-04-04 21:47:57.7206 | Request finished in 432.5483ms 200 text/html 
+2019-04-04 21:47:57.8846 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:47:58.1579 | Request finished in 277.3741ms 500 text/html; charset=utf-8 
+2019-04-04 21:48:58.2841 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:48:59.2072 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:48:59.2072 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:48:59.2933 | Request finished in 85.0946ms 200  
+2019-04-04 21:48:59.5919 | Request finished in 401.3277ms 200 text/html 
+2019-04-04 21:48:59.7604 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:49:00.0211 | Request finished in 252.9841ms 500 text/html; charset=utf-8 
+2019-04-04 21:51:57.8176 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:51:58.7933 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:51:58.7933 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:51:58.8741 | Request finished in 88.0013ms 200  
+2019-04-04 21:51:59.2069 | Request finished in 417.1193ms 200 text/html 
+2019-04-04 21:51:59.3761 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:51:59.6312 | Request finished in 259.9297ms 200 application/json;charset=utf-8 
+2019-04-04 21:54:35.8832 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:54:36.8442 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:54:36.8442 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:54:36.8924 | Request finished in 53.0028ms 200  
+2019-04-04 21:54:37.2224 | Request finished in 378.9899ms 200 text/html 
+2019-04-04 21:54:37.4055 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:54:37.6457 | Request finished in 243.0403ms 200 application/json;charset=utf-8 
+2019-04-04 21:55:02.0386 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:55:02.8995 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:55:02.8995 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:55:02.9829 | Request finished in 92.3069ms 200  
+2019-04-04 21:55:03.2840 | Request finished in 390.5523ms 200 text/html 
+2019-04-04 21:55:03.4178 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:55:03.6736 | Request finished in 258.9548ms 200 application/json;charset=utf-8 
+2019-04-04 21:55:20.7879 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:55:20.8098 | CORS policy execution successful. 
+2019-04-04 21:55:20.9025 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:55:21.0835 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:55:21.1025 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 181.8153ms 
+2019-04-04 21:55:21.1079 | Request finished in 320.7209ms 200 application/json; charset=utf-8 
+2019-04-04 21:55:23.0626 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:55:23.0755 | CORS policy execution successful. 
+2019-04-04 21:55:23.0755 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:55:23.1587 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:55:23.1587 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 66.216ms 
+2019-04-04 21:55:23.1702 | Request finished in 109.9539ms 200 application/json; charset=utf-8 
+2019-04-04 21:55:23.9414 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:55:23.9414 | CORS policy execution successful. 
+2019-04-04 21:55:23.9517 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:55:24.0152 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:55:24.0152 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 53.5892ms 
+2019-04-04 21:55:24.0295 | Request finished in 87.9708ms 200 application/json; charset=utf-8 
+2019-04-04 21:55:24.4621 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:55:24.4661 | CORS policy execution successful. 
+2019-04-04 21:55:24.4661 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:55:24.5378 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:55:24.5480 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 55.5608ms 
+2019-04-04 21:55:24.5480 | Request finished in 90.3849ms 200 application/json; charset=utf-8 
+2019-04-04 21:55:24.9517 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:55:24.9517 | CORS policy execution successful. 
+2019-04-04 21:55:24.9675 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:55:25.0148 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:55:25.0346 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 51.7823ms 
+2019-04-04 21:55:25.0346 | Request finished in 87.524ms 200 application/json; charset=utf-8 
+2019-04-04 21:55:25.4378 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:55:25.4378 | CORS policy execution successful. 
+2019-04-04 21:55:25.4504 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:55:25.5159 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:55:25.5159 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 58.3585ms 
+2019-04-04 21:55:25.5290 | Request finished in 93.7386ms 200 application/json; charset=utf-8 
+2019-04-04 21:58:19.3147 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:58:20.3085 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:58:20.3085 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:58:20.4076 | Request finished in 105.4086ms 200  
+2019-04-04 21:58:20.7543 | Request finished in 447.9189ms 200 text/html 
+2019-04-04 21:58:20.9152 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-04-04 21:58:21.1780 | Request finished in 266.6653ms 200 application/json;charset=utf-8 
+2019-04-04 21:58:42.6530 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:58:42.6750 | CORS policy execution successful. 
+2019-04-04 21:58:42.7502 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:58:42.9642 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:58:43.0106 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 233.2295ms 
+2019-04-04 21:58:43.0147 | Request finished in 364.3903ms 200 application/json; charset=utf-8 
+2019-04-04 21:58:46.0819 | Request starting HTTP/1.1 POST http://localhost:51744/hash/stringmd5 application/json 17 
+2019-04-04 21:58:46.1032 | CORS policy execution successful. 
+2019-04-04 21:58:46.1080 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:58:46.1716 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:58:46.1917 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 62.8386ms 
+2019-04-04 21:58:46.1917 | Request finished in 114.4764ms 200 application/json; charset=utf-8 
+2019-04-04 21:58:54.6162 | Request starting HTTP/1.1 POST http://localhost:51744/Hash/StringMD5 application/json-patch+json 6 
+2019-04-04 21:58:54.6237 | CORS policy execution successful. 
+2019-04-04 21:58:54.6237 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 21:58:54.7039 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 21:58:54.7039 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 62.522ms 
+2019-04-04 21:58:54.7176 | Request finished in 101.2689ms 200 application/json; charset=utf-8 
+2019-04-04 21:59:57.0740 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 21:59:57.6292 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-04-04 21:59:57.6292 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-04-04 21:59:57.7934 | Route matched with {action = "Index", controller = "Home"}. Executing action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) 
+2019-04-04 21:59:57.8253 | Executing action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api) - Validation state: Valid 
+2019-04-04 21:59:57.8253 | Executed action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.2608ms. 
+2019-04-04 21:59:57.8253 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-04 21:59:57.8411 | Executed action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) in 26.4636ms 
+2019-04-04 21:59:57.8411 | Request finished in 223.909ms 302  
+2019-04-04 21:59:57.8834 | Request finished in 255.5863ms 200 text/html 
+2019-04-04 22:00:04.6755 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:00:05.8141 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-04 22:00:06.1618 | Route matched with {action = "Index", controller = "Home"}. Executing action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) 
+2019-04-04 22:00:06.3263 | Executing action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api) - Validation state: Valid 
+2019-04-04 22:00:06.3263 | Executed action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.567ms. 
+2019-04-04 22:00:06.3736 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-04 22:00:06.3956 | Executed action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) in 204.9176ms 
+2019-04-04 22:00:06.4044 | Request finished in 602.2578ms 302  
+2019-04-04 22:00:06.4208 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-04 22:00:06.6066 | Request finished in 189.3941ms 200 text/html 
+2019-04-04 22:00:06.7929 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-04 22:00:06.9672 | Request finished in 175.3515ms 500 text/html; charset=utf-8 
+2019-04-04 22:00:09.8030 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-04 22:00:09.8269 | Request finished in 23.5927ms 200 text/html 
+2019-04-04 22:00:09.8973 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-04 22:00:09.9267 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-04 22:00:09.9364 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-04 22:00:09.9504 | Request finished in 46.3984ms 200 image/png 
+2019-04-04 22:00:09.9504 | Request finished in 59.2785ms 500 text/html; charset=utf-8 
+2019-04-04 22:01:00.0822 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:01:04.0481 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-04 22:01:04.4236 | Request finished in 375.4455ms 200 text/html 
+2019-04-04 22:01:04.5115 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-04 22:01:04.5313 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-04 22:01:04.5868 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-04 22:01:04.5963 | Request finished in 64.4682ms 200 image/png 
+2019-04-04 22:01:04.8648 | Request finished in 357.5976ms 200 application/json;charset=utf-8 
+2019-04-04 22:01:12.9093 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 6 
+2019-04-04 22:01:12.9291 | CORS policy execution successful. 
+2019-04-04 22:01:13.0095 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:01:13.2998 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 22:01:13.3344 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 293.1277ms 
+2019-04-04 22:01:13.3421 | Request finished in 431.1981ms 200 application/json; charset=utf-8 
+2019-04-04 22:03:47.6873 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:03:50.6018 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 6 
+2019-04-04 22:03:50.6228 | CORS policy execution successful. 
+2019-04-04 22:03:50.9951 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:03:51.3035 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 22:03:51.4074 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 387.4508ms 
+2019-04-04 22:03:51.4253 | Request finished in 830.6945ms 200 application/json; charset=utf-8 
+2019-04-04 22:04:14.0500 | Request starting HTTP/1.1 POST http://localhost:61003/Account/Login application/json-patch+json 50 
+2019-04-04 22:04:14.0745 | CORS policy execution successful. 
+2019-04-04 22:04:14.0745 | Route matched with {action = "Login", controller = "Account"}. Executing action DevTools.Api.Controllers.AccountController.Login (DevTools.Api) 
+2019-04-04 22:04:14.4726 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-04 22:04:14.6857 | Executing action method DevTools.Api.Controllers.AccountController.Login (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Account.LoginInputModel) - Validation state: Valid 
+2019-04-04 22:04:15.1235 | Executed DbCommand (61ms) [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-04 22:04:18.1145 | Executed action DevTools.Api.Controllers.AccountController.Login (DevTools.Api) in 4009.7629ms 
+2019-04-04 22:04:18.2828 | Executed DbCommand (79ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2019-04-04 22:04:18.3992 | Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2019-04-04 22:04:18.4656 | Request finished in 4421.3758ms 500 text/html; charset=utf-8 
+2019-04-04 22:05:21.9605 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:05:33.0698 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 6 
+2019-04-04 22:05:33.0909 | CORS policy execution successful. 
+2019-04-04 22:05:33.4795 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:05:33.6650 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments () - Validation state: Valid 
+2019-04-04 22:05:33.6883 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.36ms. 
+2019-04-04 22:05:33.7488 | Executing ObjectResult, writing value of type 'System.String'. 
+2019-04-04 22:05:33.7778 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 269.8016ms 
+2019-04-04 22:05:33.8013 | Request finished in 731.8041ms 200 text/plain; charset=utf-8 
+2019-04-04 22:05:33.8209 | Connection id "0HLLP0QD53997", Request id "0HLLP0QD53997:00000001": the application completed without reading the entire request body. 
+2019-04-04 22:05:55.6655 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 6 
+2019-04-04 22:05:55.6890 | CORS policy execution successful. 
+2019-04-04 22:05:55.7019 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:05:55.7711 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments () - Validation state: Valid 
+2019-04-04 22:05:55.7711 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0726ms. 
+2019-04-04 22:05:55.7939 | Executing ObjectResult, writing value of type 'System.String'. 
+2019-04-04 22:05:55.7939 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 77.4835ms 
+2019-04-04 22:05:55.8132 | Request finished in 147.8036ms 200 text/plain; charset=utf-8 
+2019-04-04 22:05:55.8132 | Connection id "0HLLP0QD53997", Request id "0HLLP0QD53997:00000002": the application completed without reading the entire request body. 
+2019-04-04 22:06:04.9634 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/swagger-ui-bundle.js.map   
+2019-04-04 22:06:04.9726 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/swagger-ui-standalone-preset.js.map   
+2019-04-04 22:06:04.9825 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/swagger-ui.css.map   
+2019-04-04 22:06:05.0243 | Sending file. Request path: '/swagger-ui.css.map'. Physical path: 'N/A' 
+2019-04-04 22:06:05.0522 | Request finished in 52.8335ms 200 text/plain 
+2019-04-04 22:06:05.0966 | Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A' 
+2019-04-04 22:06:05.1089 | Request finished in 139.8905ms 200 text/plain 
+2019-04-04 22:06:05.1240 | Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A' 
+2019-04-04 22:06:05.1240 | Request finished in 166.0611ms 200 text/plain 
+2019-04-04 22:06:08.3520 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 6 
+2019-04-04 22:06:08.3728 | CORS policy execution successful. 
+2019-04-04 22:06:08.3728 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:06:08.4503 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments () - Validation state: Valid 
+2019-04-04 22:06:08.4503 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0127ms. 
+2019-04-04 22:06:08.4693 | Executing ObjectResult, writing value of type 'System.String'. 
+2019-04-04 22:06:08.4876 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 82.6056ms 
+2019-04-04 22:06:08.4876 | Request finished in 141.6118ms 200 text/plain; charset=utf-8 
+2019-04-04 22:06:08.4984 | Connection id "0HLLP0QD53997", Request id "0HLLP0QD53997:00000004": the application completed without reading the entire request body. 
+2019-04-04 22:06:26.9059 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 6 
+2019-04-04 22:06:26.9207 | CORS policy execution successful. 
+2019-04-04 22:06:26.9410 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:06:26.9954 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments () - Validation state: Valid 
+2019-04-04 22:06:30.8710 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3873.0011ms. 
+2019-04-04 22:06:30.8894 | Executing ObjectResult, writing value of type 'System.String'. 
+2019-04-04 22:06:30.9036 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 3947.107ms 
+2019-04-04 22:06:30.9036 | Request finished in 4003.3025ms 200 text/plain; charset=utf-8 
+2019-04-04 22:06:30.9036 | Connection id "0HLLP0QD53997", Request id "0HLLP0QD53997:00000005": the application completed without reading the entire request body. 
+2019-04-04 22:07:05.6467 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 17 
+2019-04-04 22:07:05.6566 | CORS policy execution successful. 
+2019-04-04 22:07:05.6706 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:07:05.7442 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments () - Validation state: Valid 
+2019-04-04 22:07:10.7455 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4998.8714ms. 
+2019-04-04 22:07:10.7645 | Executing ObjectResult, writing value of type 'System.String'. 
+2019-04-04 22:07:10.7798 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 5080.3094ms 
+2019-04-04 22:07:10.7798 | Request finished in 5138.1905ms 200 text/plain; charset=utf-8 
+2019-04-04 22:07:10.7798 | Connection id "0HLLP0QD53997", Request id "0HLLP0QD53997:00000006": the application completed without reading the entire request body. 
+2019-04-04 22:07:23.6186 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 19 
+2019-04-04 22:07:23.6394 | CORS policy execution successful. 
+2019-04-04 22:07:23.6394 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:07:23.7292 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments () - Validation state: Valid 
+2019-04-04 22:07:23.7333 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0116ms. 
+2019-04-04 22:07:23.7662 | Executing ObjectResult, writing value of type 'System.String'. 
+2019-04-04 22:07:23.7821 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 111.7033ms 
+2019-04-04 22:07:23.7821 | Request finished in 168.3372ms 200 text/plain; charset=utf-8 
+2019-04-04 22:07:23.7821 | Connection id "0HLLP0QD53997", Request id "0HLLP0QD53997:00000007": the application completed without reading the entire request body. 
+2019-04-04 22:08:17.1646 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:08:24.2168 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 19 
+2019-04-04 22:08:24.2497 | CORS policy execution successful. 
+2019-04-04 22:08:24.6551 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:08:24.9576 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 22:08:25.0722 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 385.4057ms 
+2019-04-04 22:08:25.0954 | Request finished in 880.4236ms 200 application/json; charset=utf-8 
+2019-04-04 22:11:17.9338 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:11:19.2846 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 19 
+2019-04-04 22:11:19.3140 | CORS policy execution successful. 
+2019-04-04 22:11:19.6805 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:11:20.0178 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Hash.StringInputViewModel) - Validation state: Valid 
+2019-04-04 22:11:20.0394 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12.482ms. 
+2019-04-04 22:11:20.0910 | Executing ObjectResult, writing value of type 'System.String'. 
+2019-04-04 22:11:20.1263 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 417.9523ms 
+2019-04-04 22:11:20.1791 | Request finished in 894.5063ms 200 text/plain; charset=utf-8 
+2019-04-04 22:11:30.5031 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 18 
+2019-04-04 22:11:30.5234 | CORS policy execution successful. 
+2019-04-04 22:11:30.5309 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:11:30.6210 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Hash.StringInputViewModel) - Validation state: Valid 
+2019-04-04 22:11:30.6244 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.9801ms. 
+2019-04-04 22:11:30.6395 | Executing ObjectResult, writing value of type 'System.String'. 
+2019-04-04 22:11:30.6595 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 105.9134ms 
+2019-04-04 22:11:30.6595 | Request finished in 162.7063ms 200 text/plain; charset=utf-8 
+2019-04-04 22:13:44.2490 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:13:48.2796 | Request starting HTTP/1.1 POST http://localhost:61003/Hash/StringMD5 application/json-patch+json 18 
+2019-04-04 22:13:48.3121 | CORS policy execution successful. 
+2019-04-04 22:13:48.7214 | Route matched with {action = "StringMD5", controller = "Hash"}. Executing action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) 
+2019-04-04 22:13:49.0983 | Executing action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Hash.StringInputViewModel) - Validation state: Valid 
+2019-04-04 22:13:49.1185 | Executed action method DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 13.3991ms. 
+2019-04-04 22:13:49.1485 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 22:13:49.2252 | Executed action DevTools.Api.Controllers.HashController.StringMD5 (DevTools.Api) in 474.9712ms 
+2019-04-04 22:13:49.2318 | Request finished in 961.2551ms 200 application/json; charset=utf-8 
+2019-04-04 22:19:35.1592 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:19:44.1160 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-04 22:19:44.5190 | Request finished in 401.9075ms 200 text/html 
+2019-04-04 22:19:44.7896 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-04 22:19:44.8129 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-04 22:19:44.8838 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-04 22:19:44.8873 | Request finished in 78.9797ms 200 image/png 
+2019-04-04 22:19:45.0978 | Request finished in 312.0768ms 200 application/json;charset=utf-8 
+2019-04-04 22:20:08.7650 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:20:55.6753 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:20:58.3948 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-04 22:20:58.7957 | Request finished in 401.8193ms 200 text/html 
+2019-04-04 22:20:59.0621 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-04 22:20:59.0839 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-04 22:20:59.1140 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-04 22:20:59.1229 | Request finished in 36.3101ms 200 image/png 
+2019-04-04 22:20:59.4080 | Request finished in 349.6169ms 500 text/html; charset=utf-8 
+2019-04-04 22:21:27.7750 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:21:30.3554 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-04 22:21:30.7035 | Request finished in 357.0441ms 200 text/html 
+2019-04-04 22:21:30.8457 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-04 22:21:30.8627 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-04 22:21:30.9053 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-04 22:21:30.9053 | Request finished in 51.2293ms 200 image/png 
+2019-04-04 22:21:31.1235 | Request finished in 277.2954ms 200 application/json;charset=utf-8 
+2019-04-04 22:21:37.5429 | Request starting HTTP/1.1 POST http://localhost:61003/Rsa/key/generate  0 
+2019-04-04 22:21:37.5679 | CORS policy execution successful. 
+2019-04-04 22:21:37.6549 | Route matched with {action = "GenerateKey", controller = "Rsa"}. Executing action DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) 
+2019-04-04 22:21:37.8220 | Executing action method DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) - Validation state: Valid 
+2019-04-04 22:21:37.8461 | Executed action method DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 14.4888ms. 
+2019-04-04 22:21:37.8868 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-04 22:21:37.9201 | Executed action DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) in 236.9454ms 
+2019-04-04 22:21:37.9201 | Request finished in 383.7621ms 200 application/json; charset=utf-8 
+2019-04-04 22:28:35.4631 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:28:38.6669 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-04 22:28:39.0549 | Request finished in 386.2656ms 200 text/html 
+2019-04-04 22:28:39.1781 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-04 22:28:39.2008 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/favicon-32x32.png   
+2019-04-04 22:28:39.2446 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-04-04 22:28:39.2475 | Request finished in 46.3024ms 200 image/png 
+2019-04-04 22:28:39.4853 | Request finished in 311.5367ms 200 application/json;charset=utf-8 
+2019-04-04 22:29:59.1407 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-04 22:30:02.1386 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-04 22:30:02.4695 | Route matched with {action = "Index", controller = "Home"}. Executing action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) 
+2019-04-04 22:30:02.6276 | Executing action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api) - Validation state: Valid 
+2019-04-04 22:30:02.6276 | Executed action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.4142ms. 
+2019-04-04 22:30:02.6796 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-04 22:30:02.6993 | Executed action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) in 201.2072ms 
+2019-04-04 22:30:02.7197 | Request finished in 580.7982ms 302  
+2019-04-04 22:30:02.7197 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-04 22:30:02.9388 | Request finished in 217.8798ms 200 text/html 
+2019-04-04 22:30:03.1133 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-04 22:30:03.3156 | Request finished in 206.8843ms 200 application/json;charset=utf-8 

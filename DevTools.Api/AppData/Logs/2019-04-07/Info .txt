@@ -1,0 +1,46 @@
+2019-04-07 22:35:47.3402 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-04-07 22:35:54.4355 | Request starting HTTP/1.1 GET http://localhost:61003/   
+2019-04-07 22:35:54.7809 | Route matched with {action = "Index", controller = "Home"}. Executing action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) 
+2019-04-07 22:35:54.9079 | Executing action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api) - Validation state: Valid 
+2019-04-07 22:35:54.9079 | Executed action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.5803ms. 
+2019-04-07 22:35:54.9474 | Executing RedirectResult, redirecting to /swagger. 
+2019-04-07 22:35:54.9662 | Executed action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) in 163.0326ms 
+2019-04-07 22:35:54.9837 | Request finished in 547.1952ms 302  
+2019-04-07 22:35:54.9837 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/index.html   
+2019-04-07 22:35:55.2107 | Request finished in 226.653ms 200 text/html 
+2019-04-07 22:35:55.5884 | Request starting HTTP/1.1 GET http://localhost:61003/swagger/v1/swagger.json   
+2019-04-07 22:35:55.7792 | Request finished in 189.9246ms 200 application/json;charset=utf-8 
+2019-04-07 22:36:07.2712 | Request starting HTTP/1.1 POST http://localhost:61003/Account/Login application/json-patch+json 51 
+2019-04-07 22:36:07.2943 | CORS policy execution successful. 
+2019-04-07 22:36:07.3204 | Route matched with {action = "Login", controller = "Account"}. Executing action DevTools.Api.Controllers.AccountController.Login (DevTools.Api) 
+2019-04-07 22:36:07.7205 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-07 22:36:07.8736 | Executing action method DevTools.Api.Controllers.AccountController.Login (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Account.LoginInputModel) - Validation state: Valid 
+2019-04-07 22:36:08.4854 | Executed DbCommand (61ms) [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-07 22:36:08.5994 | Executed action method DevTools.Api.Controllers.AccountController.Login (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 722.8128ms. 
+2019-04-07 22:36:08.6254 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[DevTools.Api.Models.ViewModels.Account.LoginOutputModel, DevTools.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2019-04-07 22:36:08.6481 | Executed action DevTools.Api.Controllers.AccountController.Login (DevTools.Api) in 1310.2888ms 
+2019-04-07 22:36:08.6564 | Request finished in 1390.1834ms 200 application/json; charset=utf-8 
+2019-04-07 22:36:39.7520 | Request starting HTTP/1.1 GET http://localhost:61003/Url/Unzip?sLink=1   
+2019-04-07 22:36:39.7817 | Successfully validated the token. 
+2019-04-07 22:36:39.8100 | Route matched with {action = "Unzip", controller = "Url"}. Executing action DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) 
+2019-04-07 22:36:39.8500 | Authorization was successful. 
+2019-04-07 22:36:40.3985 | Executing action method DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) with arguments (DevTools.Api.Models.ViewModels.Url.UnzipInputModel) - Validation state: Valid 
+2019-04-07 22:37:22.3274 | Entity Framework Core 2.2.3-servicing-35854 initialized 'MssqlDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2019-04-07 22:37:22.4376 | Executed DbCommand (54ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Link]
+FROM [tb_short_url] AS [t]
+WHERE [t].[Id] = @__id_0 
+2019-04-07 22:37:22.5000 | 解压地址:ID=1 
+2019-04-07 22:37:22.7242 | Executed action method DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.JsonResult in 42315.5859ms. 
+2019-04-07 22:37:22.7507 | Executing JsonResult, writing value of type 'DevTools.Api.Models.TResponse`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2019-04-07 22:37:22.7685 | Executed action DevTools.Api.Controllers.UrlController.Unzip (DevTools.Api) in 42933.6429ms 
+2019-04-07 22:37:22.7795 | Request finished in 43026.4194ms 200 application/json; charset=utf-8 
+2019-04-07 22:37:41.5193 | Request starting HTTP/1.1 GET http://localhost:61003/Rsa/Key/Generate?keySize=12   
+2019-04-07 22:37:41.5193 | Successfully validated the token. 
+2019-04-07 22:37:41.5475 | Route matched with {action = "GenerateKey", controller = "Rsa"}. Executing action DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) 
+2019-04-07 22:37:41.6343 | Executing action method DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) with arguments (12) - Validation state: Valid 
+2019-04-07 22:37:45.1099 | Executed action DevTools.Api.Controllers.RsaController.GenerateKey (DevTools.Api) in 3530.635ms 
+2019-04-07 22:37:45.2638 | Request finished in 3744.7482ms 500 text/html; charset=utf-8 

@@ -1,0 +1,955 @@
+2019-04-08 08:37:20.6519 | Hosting starting 
+2019-04-08 08:37:20.7866 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 08:37:20.7963 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 08:37:20.7963 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 08:37:20.8473 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 08:37:20.8473 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 08:37:20.8473 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 08:37:20.8567 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 08:37:20.8567 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 08:37:20.8567 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 08:37:20.8567 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 08:37:20.9449 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 08:37:21.0040 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 08:37:21.0040 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 08:37:21.0128 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 08:37:21.0128 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 08:37:21.0128 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 08:37:21.0128 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 08:37:21.0305 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 08:37:21.0305 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 08:37:21.0473 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 08:37:21.0473 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 08:37:21.0473 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 08:37:21.0759 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 08:37:21.1272 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 08:37:21.1272 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 08:37:21.1600 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 08:37:21.1600 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 08:37:21.1600 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 08:37:21.2207 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 08:37:21.3065 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 08:37:21.3872 | Hosting started 
+2019-04-08 08:37:21.3913 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 08:38:02.4597 | Connection id "0HLLRN9QJJGGF" started. 
+2019-04-08 08:38:02.5896 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 08:38:02.8343 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 08:38:02.9496 | The request path  does not match the path filter 
+2019-04-08 08:38:03.0984 | Request successfully matched the route with name '(null)' and template 'Rsa/Key/Generate' 
+2019-04-08 08:38:03.1611 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 08:38:03.1611 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 08:38:03.1728 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 08:38:03.1728 | Execution plan of exception filters (in the following order): None 
+2019-04-08 08:38:03.1728 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 08:38:03.2168 | Attempting to bind parameter 'keySize' of type 'System.Int32' ... 
+2019-04-08 08:38:03.2168 | Attempting to bind model of type 'System.Int32' using the name 'keySize' in request data ... 
+2019-04-08 08:38:03.2322 | Done attempting to bind model of type 'System.Int32' using the name 'keySize'. 
+2019-04-08 08:38:03.2322 | Done attempting to bind parameter 'keySize' of type 'System.Int32'. 
+2019-04-08 08:38:09.5672 | System.Security.Cryptography.CryptographicException occurred, checking if Entity Framework recorded this exception as resulting from a failed database operation. 
+2019-04-08 08:38:09.5879 | Entity Framework did not record any exceptions due to failed database operations. This means the current exception is not a failed Entity Framework database operation, or the current exception occurred from a DbContext that was not obtained from request services. 
+2019-04-08 08:38:09.7297 | Connection id "0HLLRN9QJJGGF" completed keep alive response. 
+2019-04-08 08:38:15.9519 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 08:38:15.9662 | The request path  does not match the path filter 
+2019-04-08 08:38:15.9662 | Request successfully matched the route with name '(null)' and template 'Rsa/Key/Generate' 
+2019-04-08 08:38:15.9662 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 08:38:15.9662 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 08:38:15.9836 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 08:38:15.9836 | Execution plan of exception filters (in the following order): None 
+2019-04-08 08:38:15.9836 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 08:38:16.0037 | Attempting to bind parameter 'keySize' of type 'System.Int32' ... 
+2019-04-08 08:38:16.0037 | Attempting to bind model of type 'System.Int32' using the name 'keySize' in request data ... 
+2019-04-08 08:38:16.0037 | Done attempting to bind model of type 'System.Int32' using the name 'keySize'. 
+2019-04-08 08:38:16.0132 | Done attempting to bind parameter 'keySize' of type 'System.Int32'. 
+2019-04-08 08:38:32.8319 | System.PlatformNotSupportedException occurred, checking if Entity Framework recorded this exception as resulting from a failed database operation. 
+2019-04-08 08:38:32.8437 | Entity Framework did not record any exceptions due to failed database operations. This means the current exception is not a failed Entity Framework database operation, or the current exception occurred from a DbContext that was not obtained from request services. 
+2019-04-08 08:38:32.8603 | Connection id "0HLLRN9QJJGGF" completed keep alive response. 
+2019-04-08 08:46:44.5181 | Connection id "0HLLRN9QJJGGF" received FIN. 
+2019-04-08 08:46:44.5693 | Connection id "0HLLRN9QJJGGF" disconnecting. 
+2019-04-08 08:46:44.5693 | Connection id "0HLLRN9QJJGGF" sending FIN because: "The client closed the connection." 
+2019-04-08 08:46:44.5886 | Connection id "0HLLRN9QJJGGF" stopped. 
+2019-04-08 09:20:49.0031 | Hosting starting 
+2019-04-08 09:20:49.2327 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 09:20:49.2505 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 09:20:49.2654 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 09:20:49.3134 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 09:20:49.3134 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 09:20:49.3257 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 09:20:49.3257 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 09:20:49.3479 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 09:20:49.3595 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 09:20:49.3595 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 09:20:49.4569 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 09:20:49.5072 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 09:20:49.5072 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 09:20:49.5146 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 09:20:49.5146 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 09:20:49.5146 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 09:20:49.5146 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 09:20:49.5289 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 09:20:49.5289 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 09:20:49.5289 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 09:20:49.5477 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 09:20:49.5477 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 09:20:49.5748 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 09:20:49.6487 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 09:20:49.6487 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 09:20:49.6772 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 09:20:49.6772 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 09:20:49.6772 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 09:20:49.7440 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 09:20:49.8424 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 09:20:49.9655 | Hosting started 
+2019-04-08 09:20:49.9721 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 09:20:58.4567 | Connection id "0HLLRO1QA4MIR" started. 
+2019-04-08 09:20:58.5919 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 09:20:58.9083 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 09:20:59.0256 | The request path  does not match the path filter 
+2019-04-08 09:20:59.2127 | Request successfully matched the route with name '(null)' and template 'Rsa/Key/Generate' 
+2019-04-08 09:20:59.2811 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 09:20:59.2811 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 09:20:59.2811 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 09:20:59.2954 | Execution plan of exception filters (in the following order): None 
+2019-04-08 09:20:59.2954 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 09:20:59.3387 | Attempting to bind parameter 'keySize' of type 'System.Int32' ... 
+2019-04-08 09:20:59.3509 | Attempting to bind model of type 'System.Int32' using the name 'keySize' in request data ... 
+2019-04-08 09:20:59.3570 | Done attempting to bind model of type 'System.Int32' using the name 'keySize'. 
+2019-04-08 09:20:59.3570 | Done attempting to bind parameter 'keySize' of type 'System.Int32'. 
+2019-04-08 11:59:48.3306 | Hosting starting 
+2019-04-08 11:59:48.5419 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 11:59:48.5533 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 11:59:48.5670 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 11:59:48.6205 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 11:59:48.6261 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 11:59:48.6261 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 11:59:48.6390 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 11:59:48.6390 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 11:59:48.6594 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 11:59:48.6594 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 11:59:48.7533 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 11:59:48.7980 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 11:59:48.7980 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 11:59:48.7980 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 11:59:48.7980 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 11:59:48.8142 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 11:59:48.8142 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 11:59:48.8142 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 11:59:48.8260 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 11:59:48.8260 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 11:59:48.8420 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 11:59:48.8420 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 11:59:48.8634 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 11:59:48.9333 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 11:59:48.9374 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 11:59:48.9644 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 11:59:48.9693 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 11:59:48.9693 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 11:59:49.0330 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 11:59:49.1196 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 11:59:49.2389 | Hosting started 
+2019-04-08 11:59:49.2389 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 11:59:52.2988 | Connection id "0HLLRQQJK0GOO" started. 
+2019-04-08 11:59:52.4364 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 11:59:52.7158 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 11:59:52.8180 | The request path  does not match the path filter 
+2019-04-08 11:59:52.9774 | Request successfully matched the route with name '(null)' and template 'Rsa/Key/Generate' 
+2019-04-08 11:59:53.0447 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 11:59:53.0447 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 11:59:53.0633 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 11:59:53.0633 | Execution plan of exception filters (in the following order): None 
+2019-04-08 11:59:53.0633 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 11:59:53.1066 | Attempting to bind parameter 'keySize' of type 'System.Int32' ... 
+2019-04-08 11:59:53.1164 | Attempting to bind model of type 'System.Int32' using the name 'keySize' in request data ... 
+2019-04-08 11:59:53.1164 | Done attempting to bind model of type 'System.Int32' using the name 'keySize'. 
+2019-04-08 11:59:53.1250 | Done attempting to bind parameter 'keySize' of type 'System.Int32'. 
+2019-04-08 11:59:59.7024 | System.PlatformNotSupportedException occurred, checking if Entity Framework recorded this exception as resulting from a failed database operation. 
+2019-04-08 11:59:59.7236 | Entity Framework did not record any exceptions due to failed database operations. This means the current exception is not a failed Entity Framework database operation, or the current exception occurred from a DbContext that was not obtained from request services. 
+2019-04-08 11:59:59.8230 | Connection id "0HLLRQQJK0GOO" completed keep alive response. 
+2019-04-08 12:04:05.2233 | Hosting starting 
+2019-04-08 12:04:05.3905 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 12:04:05.4085 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 12:04:05.4193 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 12:04:05.4582 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 12:04:05.4582 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 12:04:05.4664 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 12:04:05.4664 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 12:04:05.4664 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 12:04:05.4830 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 12:04:05.4830 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 12:04:05.5438 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 12:04:05.5836 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 12:04:05.5836 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 12:04:05.5836 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 12:04:05.5935 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 12:04:05.5935 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 12:04:05.5935 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 12:04:05.5935 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 12:04:05.5935 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 12:04:05.6139 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 12:04:05.6139 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 12:04:05.6139 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 12:04:05.6364 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 12:04:05.7045 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 12:04:05.7045 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 12:04:05.7338 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:04:05.7338 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:04:05.7338 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:04:05.7780 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 12:04:05.8888 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 12:04:05.9710 | Hosting started 
+2019-04-08 12:04:05.9710 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 12:04:05.9844 | Loaded hosting startup assembly Microsoft.AspNetCore.Server.IISIntegration 
+2019-04-08 12:04:06.0020 | Connection id "0HLLRQSV7GRNQ" started. 
+2019-04-08 12:04:06.0922 | Connection id "0HLLRQSV7GRNR" started. 
+2019-04-08 12:04:06.1708 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 12:04:06.1708 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 12:04:06.2250 | Connection id "0HLLRQSV7GRNQ" completed keep alive response. 
+2019-04-08 12:04:06.3064 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 12:04:06.5760 | Connection id "0HLLRQSV7GRNR" completed keep alive response. 
+2019-04-08 12:04:06.7393 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 12:04:06.9944 | Connection id "0HLLRQSV7GRNQ" completed keep alive response. 
+2019-04-08 12:04:26.6977 | Hosting starting 
+2019-04-08 12:04:26.8764 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 12:04:26.8764 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 12:04:26.9006 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 12:04:26.9522 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 12:04:26.9522 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 12:04:26.9522 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 12:04:26.9522 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 12:04:26.9740 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 12:04:26.9852 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 12:04:26.9852 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 12:04:27.0754 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 12:04:27.1334 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 12:04:27.1334 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 12:04:27.1421 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 12:04:27.1421 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 12:04:27.1421 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 12:04:27.1542 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 12:04:27.1542 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 12:04:27.1542 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 12:04:27.1700 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 12:04:27.1700 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 12:04:27.1700 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 12:04:27.1903 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 12:04:27.2505 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 12:04:27.2505 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 12:04:27.2789 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:04:27.2789 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:04:27.2789 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:04:27.3317 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 12:04:27.4164 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 12:04:27.5318 | Hosting started 
+2019-04-08 12:04:27.5318 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 12:04:28.8236 | Connection id "0HLLRQT61570A" started. 
+2019-04-08 12:04:28.9510 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 12:04:29.2414 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 12:04:29.3309 | The request path  does not match the path filter 
+2019-04-08 12:04:29.5103 | Request successfully matched the route with name '(null)' and template 'Rsa/Key/Generate' 
+2019-04-08 12:04:29.5506 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 12:04:29.5506 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 12:04:29.5641 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 12:04:29.5641 | Execution plan of exception filters (in the following order): None 
+2019-04-08 12:04:29.5641 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 12:04:29.6069 | Attempting to bind parameter 'keySize' of type 'System.Int32' ... 
+2019-04-08 12:04:29.6069 | Attempting to bind model of type 'System.Int32' using the name 'keySize' in request data ... 
+2019-04-08 12:04:29.6238 | Done attempting to bind model of type 'System.Int32' using the name 'keySize'. 
+2019-04-08 12:04:29.6238 | Done attempting to bind parameter 'keySize' of type 'System.Int32'. 
+2019-04-08 12:04:29.9893 | Connection id "0HLLRQT61570A" completed keep alive response. 
+2019-04-08 12:05:05.6456 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 12:05:05.6543 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 12:05:05.6543 | POST requests are not supported 
+2019-04-08 12:05:05.6543 | Request successfully matched the route with name '(null)' and template 'Rsa/Encrypt' 
+2019-04-08 12:05:05.6761 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 12:05:05.6761 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 12:05:05.6761 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 12:05:05.6854 | Execution plan of exception filters (in the following order): None 
+2019-04-08 12:05:05.6854 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 12:05:05.6854 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Rsa.RsaEncryptInputViewModel' ... 
+2019-04-08 12:05:05.6854 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Rsa.RsaEncryptInputViewModel' using the name '' in request data ... 
+2019-04-08 12:05:05.7013 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 12:05:05.7013 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 12:05:05.7013 | Connection id "0HLLRQT61570A", Request id "0HLLRQT61570A:00000002": started reading request body. 
+2019-04-08 12:05:05.7212 | Connection id "0HLLRQT61570A", Request id "0HLLRQT61570A:00000002": done reading request body. 
+2019-04-08 12:05:05.7416 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Rsa.RsaEncryptInputViewModel' using the name ''. 
+2019-04-08 12:05:05.7416 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Rsa.RsaEncryptInputViewModel'. 
+2019-04-08 12:15:49.8828 | Hosting starting 
+2019-04-08 12:15:50.0484 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 12:15:50.0484 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 12:15:50.0678 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 12:15:50.1040 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 12:15:50.1070 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 12:15:50.1070 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 12:15:50.1070 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 12:15:50.1070 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 12:15:50.1234 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 12:15:50.1234 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 12:15:50.1731 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 12:15:50.2014 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 12:15:50.2014 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 12:15:50.2014 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 12:15:50.2014 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 12:15:50.2014 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 12:15:50.2014 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 12:15:50.2014 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 12:15:50.2179 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 12:15:50.2179 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 12:15:50.2179 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 12:15:50.2179 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 12:15:50.2394 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 12:15:50.2746 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 12:15:50.2746 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 12:15:50.2916 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:15:50.2916 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:15:50.2967 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 12:15:50.3283 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 12:15:50.3860 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 12:15:50.4444 | Hosting started 
+2019-04-08 12:15:50.4444 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 12:16:04.0067 | Connection id "0HLLRR3L6RGA6" started. 
+2019-04-08 12:16:04.1236 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 12:16:04.1236 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 12:16:04.3893 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 12:16:04.4714 | POST requests are not supported 
+2019-04-08 12:16:04.6443 | Request successfully matched the route with name '(null)' and template 'Rsa/Encrypt' 
+2019-04-08 12:16:04.7103 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 12:16:04.7179 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 12:16:04.7179 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 12:16:04.7179 | Execution plan of exception filters (in the following order): None 
+2019-04-08 12:16:04.7179 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 12:16:04.7611 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Rsa.RsaEncryptInputViewModel' ... 
+2019-04-08 12:16:04.7769 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Rsa.RsaEncryptInputViewModel' using the name '' in request data ... 
+2019-04-08 12:16:04.7811 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 12:16:04.7811 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 12:16:04.7945 | Connection id "0HLLRR3L6RGA6", Request id "0HLLRR3L6RGA6:00000001": started reading request body. 
+2019-04-08 12:16:04.7945 | Connection id "0HLLRR3L6RGA6", Request id "0HLLRR3L6RGA6:00000001": done reading request body. 
+2019-04-08 12:16:04.8589 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Rsa.RsaEncryptInputViewModel' using the name ''. 
+2019-04-08 12:16:04.8589 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Rsa.RsaEncryptInputViewModel'. 
+2019-04-08 12:16:05.1129 | Connection id "0HLLRR3L6RGA6" completed keep alive response. 
+2019-04-08 12:16:38.4395 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 12:16:38.4395 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 12:16:38.4395 | POST requests are not supported 
+2019-04-08 12:16:38.4518 | Request successfully matched the route with name '(null)' and template 'Rsa/Decrypt' 
+2019-04-08 12:16:38.4518 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 12:16:38.4678 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 12:16:38.4678 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 12:16:38.4678 | Execution plan of exception filters (in the following order): None 
+2019-04-08 12:16:38.4678 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 12:16:38.4840 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Rsa.RsaDecryptInputViewModel' ... 
+2019-04-08 12:16:38.4840 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Rsa.RsaDecryptInputViewModel' using the name '' in request data ... 
+2019-04-08 12:16:38.4840 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 12:16:38.4840 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 12:16:38.4840 | Connection id "0HLLRR3L6RGA6", Request id "0HLLRR3L6RGA6:00000002": started reading request body. 
+2019-04-08 12:16:38.4974 | Connection id "0HLLRR3L6RGA6", Request id "0HLLRR3L6RGA6:00000002": done reading request body. 
+2019-04-08 12:16:38.4974 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Rsa.RsaDecryptInputViewModel' using the name ''. 
+2019-04-08 12:16:38.4974 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Rsa.RsaDecryptInputViewModel'. 
+2019-04-08 12:16:38.5478 | Connection id "0HLLRR3L6RGA6" completed keep alive response. 
+2019-04-08 17:36:15.3910 | Hosting starting 
+2019-04-08 17:36:15.5655 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 17:36:15.5829 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 17:36:15.5993 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 17:36:15.6414 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 17:36:15.6414 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 17:36:15.6414 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 17:36:15.6414 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 17:36:15.6565 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 17:36:15.6565 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 17:36:15.6565 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 17:36:15.7320 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 17:36:15.7720 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 17:36:15.7720 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 17:36:15.7720 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 17:36:15.7795 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 17:36:15.7795 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 17:36:15.7795 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 17:36:15.7795 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 17:36:15.7795 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 17:36:15.7944 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 17:36:15.7944 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 17:36:15.7944 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 17:36:15.8136 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 17:36:15.8547 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 17:36:15.8571 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 17:36:15.8734 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:36:15.8734 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:36:15.8734 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:36:15.9104 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 17:36:15.9825 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 17:36:16.0642 | Hosting started 
+2019-04-08 17:36:16.0642 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 17:36:16.0895 | Connection id "0HLLS0MIRKRP8" started. 
+2019-04-08 17:36:16.2056 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 17:36:16.3037 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:36:16.3282 | Connection id "0HLLS0MIRKRP9" started. 
+2019-04-08 17:36:16.3797 | The request path  does not match the path filter 
+2019-04-08 17:36:16.5250 | Request successfully matched the route with name 'default' and template '{id?}' 
+2019-04-08 17:36:16.5506 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 17:36:16.5506 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:36:16.5611 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:36:16.5611 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:36:16.5611 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:36:23.9110 | Connection id "0HLLS0MIRKRP8" completed keep alive response. 
+2019-04-08 17:36:23.9345 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:36:24.1281 | Connection id "0HLLS0MIRKRP8" completed keep alive response. 
+2019-04-08 17:36:24.2780 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:36:24.4640 | Connection id "0HLLS0MIRKRP8" completed keep alive response. 
+2019-04-08 17:36:46.6517 | Connection id "0HLLS0MIRKRP9" received FIN. 
+2019-04-08 17:36:46.6831 | Connection id "0HLLS0MIRKRP9" disconnecting. 
+2019-04-08 17:36:46.7089 | Connection id "0HLLS0MIRKRP9" sending FIN because: "The client closed the connection." 
+2019-04-08 17:36:46.7089 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:36:46.7173 | Connection id "0HLLS0MIRKRP9" stopped. 
+2019-04-08 17:36:46.7173 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:36:46.7173 | POST requests are not supported 
+2019-04-08 17:36:46.7173 | Request successfully matched the route with name '(null)' and template 'Hash/StringSHA512' 
+2019-04-08 17:36:46.7470 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 17:36:46.7470 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:36:46.7470 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:36:46.7470 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:36:46.7470 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:37:16.5246 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' ... 
+2019-04-08 17:37:16.5335 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name '' in request data ... 
+2019-04-08 17:37:16.5480 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:37:16.5480 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:37:16.5614 | Connection id "0HLLS0MIRKRP8", Request id "0HLLS0MIRKRP8:00000004": started reading request body. 
+2019-04-08 17:37:16.5614 | Connection id "0HLLS0MIRKRP8", Request id "0HLLS0MIRKRP8:00000004": done reading request body. 
+2019-04-08 17:37:16.6032 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name ''. 
+2019-04-08 17:37:16.6066 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel'. 
+2019-04-08 17:38:58.5810 | Connection id "0HLLS0MIRKRPA" started. 
+2019-04-08 17:38:58.6537 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:38:58.6537 | System.NotSupportedException occurred, checking if Entity Framework recorded this exception as resulting from a failed database operation. 
+2019-04-08 17:38:58.6537 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:38:58.6690 | Entity Framework did not record any exceptions due to failed database operations. This means the current exception is not a failed Entity Framework database operation, or the current exception occurred from a DbContext that was not obtained from request services. 
+2019-04-08 17:38:58.6690 | POST requests are not supported 
+2019-04-08 17:38:58.6690 | Request successfully matched the route with name '(null)' and template 'Hash/StringMD5' 
+2019-04-08 17:38:58.6690 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 17:38:58.6857 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:38:58.6857 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:38:58.6857 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:38:58.6857 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:39:01.1215 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' ... 
+2019-04-08 17:39:01.1247 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name '' in request data ... 
+2019-04-08 17:39:01.1247 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:39:01.1589 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:39:01.1589 | Connection id "0HLLS0MIRKRPA", Request id "0HLLS0MIRKRPA:00000001": started reading request body. 
+2019-04-08 17:39:01.1589 | Connection id "0HLLS0MIRKRPA", Request id "0HLLS0MIRKRPA:00000001": done reading request body. 
+2019-04-08 17:39:01.1690 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name ''. 
+2019-04-08 17:39:01.1690 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel'. 
+2019-04-08 17:39:41.6968 | Hosting starting 
+2019-04-08 17:39:41.8307 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 17:39:41.8426 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 17:39:41.8566 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 17:39:41.9014 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 17:39:41.9047 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 17:39:41.9047 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 17:39:41.9047 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 17:39:41.9182 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 17:39:41.9182 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 17:39:41.9182 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 17:39:41.9792 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 17:39:42.0066 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 17:39:42.0066 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 17:39:42.0066 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 17:39:42.0122 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 17:39:42.0122 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 17:39:42.0122 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 17:39:42.0122 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 17:39:42.0122 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 17:39:42.0122 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 17:39:42.0290 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 17:39:42.0290 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 17:39:42.0290 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 17:39:42.0790 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 17:39:42.0790 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 17:39:42.0973 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:39:42.0973 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:39:42.0973 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:39:42.1321 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 17:39:42.1922 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 17:39:42.2653 | Hosting started 
+2019-04-08 17:39:42.2653 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 17:39:44.0833 | Connection id "0HLLS0OGR7M8U" started. 
+2019-04-08 17:39:44.1723 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 17:39:44.1870 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:39:44.2451 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:39:44.2971 | POST requests are not supported 
+2019-04-08 17:39:44.4167 | Request successfully matched the route with name '(null)' and template 'Hash/StringMD5' 
+2019-04-08 17:39:44.4568 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 17:39:44.4568 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:39:44.4677 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:39:44.4677 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:39:44.4677 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:39:51.8119 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' ... 
+2019-04-08 17:39:51.8119 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name '' in request data ... 
+2019-04-08 17:39:51.8329 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:39:51.8329 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:39:51.8432 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000001": started reading request body. 
+2019-04-08 17:39:51.8571 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000001": done reading request body. 
+2019-04-08 17:39:51.9633 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name ''. 
+2019-04-08 17:39:51.9668 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel'. 
+2019-04-08 17:39:52.2486 | Connection id "0HLLS0OGR7M8U" completed keep alive response. 
+2019-04-08 17:41:00.5744 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:41:00.5995 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:41:00.5995 | POST requests are not supported 
+2019-04-08 17:41:00.6056 | Request successfully matched the route with name '(null)' and template 'Account/Login' 
+2019-04-08 17:41:00.6056 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter 
+2019-04-08 17:41:00.6056 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:41:00.6056 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:41:00.6236 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:41:00.6236 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:41:06.8558 | An 'IServiceProvider' was created for internal use by Entity Framework. 
+2019-04-08 17:41:07.0899 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' ... 
+2019-04-08 17:41:07.0899 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name '' in request data ... 
+2019-04-08 17:41:07.0899 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:41:07.1095 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:41:07.1222 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000002": started reading request body. 
+2019-04-08 17:41:07.1222 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000002": done reading request body. 
+2019-04-08 17:41:07.1222 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name ''. 
+2019-04-08 17:41:07.1386 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel'. 
+2019-04-08 17:41:07.2438 | Compiling query model: 
+'(from User t in DbSet<User>
+where [t].UserName == __input_UserName_0 && !([t].IsDeleted)
+select [t]).Single()' 
+2019-04-08 17:41:07.2548 | Optimized query model: 
+'(from User t in DbSet<User>
+where [t].UserName == __input_UserName_0 && !([t].IsDeleted)
+select [t]).Single()' 
+2019-04-08 17:41:07.3037 | (QueryContext queryContext) => IEnumerable<User> _InterceptExceptions(
+|__ source: IEnumerable<User> _TrackEntities(
+|   |__ results: IEnumerable<User> _ToSequence(() => User Single(IEnumerable<User> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+|   |   |       FROM [tb_user] AS [t]
+|   |   |       WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0), 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new User()
+|   |           instance.<Id>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, User.Id)
+|   |           instance.<CreationTime>k__BackingField = long TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, User.CreationTime)
+|   |           instance.<Email>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, User.Email)
+|   |           instance.<IsDeleted>k__BackingField = bool TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, User.IsDeleted)
+|   |           instance.<MobilePhone>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 4, User.MobilePhone)
+|   |           instance.<NickName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 5, User.NickName)
+|   |           instance.<Password>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 6, User.Password)
+|   |           instance.<RoleType>k__BackingField = UserRoleType TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 7, User.RoleType)
+|   |           instance.<StatusCode>k__BackingField = UserStatusCode TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 8, User.StatusCode)
+|   |           instance.<Telephone>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 9, User.Telephone)
+|   |           instance.<UserName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 10, User.UserName)
+|   |           return instance
+|   |       }))), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: User }, 
+|   |__ entityAccessors: List<Func<User, object>> 
+|       { 
+|           Func<User, User>, 
+|       }), 
+|__ contextType: DevTools.Api.Data.MssqlDbContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext) 
+2019-04-08 17:41:07.3712 | Opening connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:41:07.5474 | Opened connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:41:07.5812 | Executing DbCommand [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-08 17:41:07.7053 | A data reader was disposed. 
+2019-04-08 17:41:07.7053 | Closing connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:41:07.7210 | Closed connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:41:07.7210 | Context 'MssqlDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2019-04-08 17:41:11.1081 | DevTools.Api.Exceptions.ApiException occurred, checking if Entity Framework recorded this exception as resulting from a failed database operation. 
+2019-04-08 17:41:11.1239 | Entity Framework did not record any exceptions due to failed database operations. This means the current exception is not a failed Entity Framework database operation, or the current exception occurred from a DbContext that was not obtained from request services. 
+2019-04-08 17:41:11.2240 | Connection id "0HLLS0OGR7M8U" completed keep alive response. 
+2019-04-08 17:41:11.2240 | 'MssqlDbContext' disposed. 
+2019-04-08 17:41:18.3091 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:41:18.3264 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:41:18.3264 | POST requests are not supported 
+2019-04-08 17:41:18.3264 | Request successfully matched the route with name '(null)' and template 'Account/Login' 
+2019-04-08 17:41:18.3425 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter 
+2019-04-08 17:41:18.3425 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:41:18.3425 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:41:18.3425 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:41:18.3561 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:41:18.4282 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' ... 
+2019-04-08 17:41:18.4282 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name '' in request data ... 
+2019-04-08 17:41:18.4342 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:41:18.4342 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:41:18.4342 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000003": started reading request body. 
+2019-04-08 17:41:18.4342 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000003": done reading request body. 
+2019-04-08 17:41:18.4342 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name ''. 
+2019-04-08 17:41:18.4512 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel'. 
+2019-04-08 17:41:18.4654 | Request was short circuited at action filter 'DevTools.Api.App.Filters.ActionFilter'. 
+2019-04-08 17:41:18.4896 | Connection id "0HLLS0OGR7M8U" completed keep alive response. 
+2019-04-08 17:41:18.4896 | 'MssqlDbContext' disposed. 
+2019-04-08 17:41:22.1067 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:41:22.1067 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:41:22.1067 | POST requests are not supported 
+2019-04-08 17:41:22.1067 | Request successfully matched the route with name '(null)' and template 'Account/Login' 
+2019-04-08 17:41:22.1236 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter 
+2019-04-08 17:41:22.1236 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:41:22.1236 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:41:22.1236 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:41:22.1393 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:41:22.1565 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' ... 
+2019-04-08 17:41:22.1565 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name '' in request data ... 
+2019-04-08 17:41:22.1565 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:41:22.1713 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:41:22.1713 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000004": started reading request body. 
+2019-04-08 17:41:22.1713 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000004": done reading request body. 
+2019-04-08 17:41:22.1713 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name ''. 
+2019-04-08 17:41:22.1851 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel'. 
+2019-04-08 17:41:22.1851 | Request was short circuited at action filter 'DevTools.Api.App.Filters.ActionFilter'. 
+2019-04-08 17:41:22.2227 | Connection id "0HLLS0OGR7M8U" completed keep alive response. 
+2019-04-08 17:41:22.2227 | 'MssqlDbContext' disposed. 
+2019-04-08 17:41:42.7351 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:41:42.7351 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:41:42.7543 | POST requests are not supported 
+2019-04-08 17:41:42.7543 | Request successfully matched the route with name '(null)' and template 'Account/Login' 
+2019-04-08 17:41:42.7635 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter 
+2019-04-08 17:41:42.7635 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:41:42.7635 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:41:42.7635 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:41:42.7635 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:41:42.7964 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' ... 
+2019-04-08 17:41:42.7964 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name '' in request data ... 
+2019-04-08 17:41:42.7964 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:41:42.7964 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:41:42.7964 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000005": started reading request body. 
+2019-04-08 17:41:42.8114 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000005": done reading request body. 
+2019-04-08 17:41:42.8114 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name ''. 
+2019-04-08 17:41:42.8114 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel'. 
+2019-04-08 17:41:42.8423 | Opening connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:41:42.8423 | Opened connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:41:42.8423 | Executing DbCommand [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-08 17:41:42.8887 | A data reader was disposed. 
+2019-04-08 17:41:42.8887 | Closing connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:41:42.8887 | Closed connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:41:42.8887 | Context 'MssqlDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2019-04-08 17:41:54.6749 | DevTools.Api.Exceptions.ApiException occurred, checking if Entity Framework recorded this exception as resulting from a failed database operation. 
+2019-04-08 17:41:54.6749 | Entity Framework did not record any exceptions due to failed database operations. This means the current exception is not a failed Entity Framework database operation, or the current exception occurred from a DbContext that was not obtained from request services. 
+2019-04-08 17:41:54.7082 | Connection id "0HLLS0OGR7M8U" completed keep alive response. 
+2019-04-08 17:41:54.7082 | 'MssqlDbContext' disposed. 
+2019-04-08 17:42:06.7001 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:42:06.7237 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:42:06.7237 | POST requests are not supported 
+2019-04-08 17:42:06.7323 | Request successfully matched the route with name '(null)' and template 'Account/Login' 
+2019-04-08 17:42:06.7323 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter 
+2019-04-08 17:42:06.7323 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:42:06.7486 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:42:06.7486 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:42:06.7486 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:42:06.7707 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' ... 
+2019-04-08 17:42:06.7777 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name '' in request data ... 
+2019-04-08 17:42:06.7777 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:42:06.7777 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:42:06.7777 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000006": started reading request body. 
+2019-04-08 17:42:06.7777 | Connection id "0HLLS0OGR7M8U", Request id "0HLLS0OGR7M8U:00000006": done reading request body. 
+2019-04-08 17:42:06.7943 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name ''. 
+2019-04-08 17:42:06.7943 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel'. 
+2019-04-08 17:42:06.8267 | Opening connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:42:06.8267 | Opened connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:42:06.8267 | Executing DbCommand [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-08 17:42:06.8736 | A data reader was disposed. 
+2019-04-08 17:42:06.8736 | Closing connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:42:06.8736 | Closed connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:42:06.8736 | Context 'MssqlDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2019-04-08 17:44:33.7619 | Hosting starting 
+2019-04-08 17:44:33.9066 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 17:44:33.9256 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 17:44:33.9363 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 17:44:33.9748 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 17:44:33.9878 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 17:44:33.9878 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 17:44:33.9878 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 17:44:33.9993 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 17:44:33.9993 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 17:44:33.9993 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 17:44:34.0532 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 17:44:34.0848 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 17:44:34.0848 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 17:44:34.0848 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 17:44:34.0927 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 17:44:34.0927 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 17:44:34.0927 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 17:44:34.0927 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 17:44:34.0927 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 17:44:34.1086 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 17:44:34.1086 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 17:44:34.1086 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 17:44:34.1296 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 17:44:34.1721 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 17:44:34.1721 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 17:44:34.1883 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:44:34.1883 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:44:34.1883 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:44:34.2235 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 17:44:34.2897 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 17:44:34.3729 | Hosting started 
+2019-04-08 17:44:34.3729 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 17:44:39.2723 | Connection id "0HLLS0R8QCCKB" started. 
+2019-04-08 17:44:39.3890 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 17:44:39.4039 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:44:39.4665 | AuthenticationScheme: Bearer was not authenticated. 
+2019-04-08 17:44:39.5242 | POST requests are not supported 
+2019-04-08 17:44:39.6639 | Request successfully matched the route with name '(null)' and template 'Account/Login' 
+2019-04-08 17:44:39.7197 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter 
+2019-04-08 17:44:39.7197 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:44:39.7317 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:44:39.7317 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:44:39.7317 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:44:39.8534 | An 'IServiceProvider' was created for internal use by Entity Framework. 
+2019-04-08 17:44:40.0573 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' ... 
+2019-04-08 17:44:40.0637 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name '' in request data ... 
+2019-04-08 17:44:40.0637 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:44:40.0637 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:44:40.0806 | Connection id "0HLLS0R8QCCKB", Request id "0HLLS0R8QCCKB:00000001": started reading request body. 
+2019-04-08 17:44:40.0958 | Connection id "0HLLS0R8QCCKB", Request id "0HLLS0R8QCCKB:00000001": done reading request body. 
+2019-04-08 17:44:40.2195 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name ''. 
+2019-04-08 17:44:40.2195 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel'. 
+2019-04-08 17:44:40.3957 | Compiling query model: 
+'(from User t in DbSet<User>
+where [t].UserName == __input_UserName_0 && !([t].IsDeleted)
+select [t]).Single()' 
+2019-04-08 17:44:40.4073 | Optimized query model: 
+'(from User t in DbSet<User>
+where [t].UserName == __input_UserName_0 && !([t].IsDeleted)
+select [t]).Single()' 
+2019-04-08 17:44:40.4529 | (QueryContext queryContext) => IEnumerable<User> _InterceptExceptions(
+|__ source: IEnumerable<User> _TrackEntities(
+|   |__ results: IEnumerable<User> _ToSequence(() => User Single(IEnumerable<User> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+|   |   |       FROM [tb_user] AS [t]
+|   |   |       WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0), 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new User()
+|   |           instance.<Id>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, User.Id)
+|   |           instance.<CreationTime>k__BackingField = long TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, User.CreationTime)
+|   |           instance.<Email>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, User.Email)
+|   |           instance.<IsDeleted>k__BackingField = bool TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, User.IsDeleted)
+|   |           instance.<MobilePhone>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 4, User.MobilePhone)
+|   |           instance.<NickName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 5, User.NickName)
+|   |           instance.<Password>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 6, User.Password)
+|   |           instance.<RoleType>k__BackingField = UserRoleType TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 7, User.RoleType)
+|   |           instance.<StatusCode>k__BackingField = UserStatusCode TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 8, User.StatusCode)
+|   |           instance.<Telephone>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 9, User.Telephone)
+|   |           instance.<UserName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 10, User.UserName)
+|   |           return instance
+|   |       }))), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: User }, 
+|   |__ entityAccessors: List<Func<User, object>> 
+|       { 
+|           Func<User, User>, 
+|       }), 
+|__ contextType: DevTools.Api.Data.MssqlDbContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext) 
+2019-04-08 17:44:40.4891 | Opening connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:44:40.6593 | Opened connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:44:40.6911 | Executing DbCommand [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-08 17:44:40.7997 | A data reader was disposed. 
+2019-04-08 17:44:40.7997 | Closing connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:44:40.7997 | Closed connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:44:40.8169 | Context 'MssqlDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2019-04-08 17:44:40.9856 | Connection id "0HLLS0R8QCCKB" completed keep alive response. 
+2019-04-08 17:44:40.9856 | 'MssqlDbContext' disposed. 
+2019-04-08 17:45:05.6235 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:45:05.6592 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 17:45:05.6592 | POST requests are not supported 
+2019-04-08 17:45:05.6592 | Request successfully matched the route with name '(null)' and template 'Hash/StringSHA1' 
+2019-04-08 17:45:05.6725 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 17:45:05.6725 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:45:05.6725 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:45:05.6859 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:45:05.6859 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:45:05.7002 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' ... 
+2019-04-08 17:45:05.7002 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name '' in request data ... 
+2019-04-08 17:45:05.7002 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:45:05.7002 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:45:05.7002 | Connection id "0HLLS0R8QCCKB", Request id "0HLLS0R8QCCKB:00000002": started reading request body. 
+2019-04-08 17:45:05.7002 | Connection id "0HLLS0R8QCCKB", Request id "0HLLS0R8QCCKB:00000002": done reading request body. 
+2019-04-08 17:45:05.7182 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name ''. 
+2019-04-08 17:45:05.7182 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel'. 
+2019-04-08 17:45:05.7811 | Connection id "0HLLS0R8QCCKB" completed keep alive response. 
+2019-04-08 17:45:14.5212 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:45:14.5295 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 17:45:14.5295 | POST requests are not supported 
+2019-04-08 17:45:14.5295 | Request successfully matched the route with name '(null)' and template 'Hash/StringSHA1' 
+2019-04-08 17:45:14.5438 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 17:45:14.5438 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:45:14.5438 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:45:14.5438 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:45:14.5438 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:52:48.5426 | Hosting starting 
+2019-04-08 17:52:48.6747 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 17:52:48.6747 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 17:52:48.6998 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 17:52:48.7361 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 17:52:48.7361 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 17:52:48.7361 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 17:52:48.7361 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 17:52:48.7493 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 17:52:48.7493 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 17:52:48.7493 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 17:52:48.7974 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 17:52:48.8232 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 17:52:48.8254 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 17:52:48.8254 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 17:52:48.8254 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 17:52:48.8254 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 17:52:48.8254 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 17:52:48.8254 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 17:52:48.8254 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 17:52:48.8423 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 17:52:48.8423 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 17:52:48.8423 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 17:52:48.8581 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 17:52:48.8928 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 17:52:48.8928 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 17:52:48.9096 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:52:48.9096 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:52:48.9096 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 17:52:48.9437 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 17:52:49.0047 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 17:52:49.0549 | Hosting started 
+2019-04-08 17:52:49.0549 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 17:52:57.2584 | Connection id "0HLLS0VT7HFBI" started. 
+2019-04-08 17:52:57.3580 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 17:52:57.3722 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 17:52:57.5801 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 17:52:57.6356 | POST requests are not supported 
+2019-04-08 17:52:57.7520 | Request successfully matched the route with name '(null)' and template 'Account/Login' 
+2019-04-08 17:52:57.7862 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter 
+2019-04-08 17:52:57.7862 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:52:57.7955 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 17:52:57.7955 | Execution plan of exception filters (in the following order): None 
+2019-04-08 17:52:57.7955 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 17:53:04.2551 | An 'IServiceProvider' was created for internal use by Entity Framework. 
+2019-04-08 17:53:04.4395 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' ... 
+2019-04-08 17:53:04.4395 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name '' in request data ... 
+2019-04-08 17:53:04.4395 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:53:04.4519 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 17:53:04.4519 | Connection id "0HLLS0VT7HFBI", Request id "0HLLS0VT7HFBI:00000001": started reading request body. 
+2019-04-08 17:53:04.4752 | Connection id "0HLLS0VT7HFBI", Request id "0HLLS0VT7HFBI:00000001": done reading request body. 
+2019-04-08 17:53:04.5115 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel' using the name ''. 
+2019-04-08 17:53:04.5141 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.Account.LoginInputModel'. 
+2019-04-08 17:53:09.6191 | Compiling query model: 
+'(from User t in DbSet<User>
+where [t].UserName == __input_UserName_0 && !([t].IsDeleted)
+select [t]).Single()' 
+2019-04-08 17:53:09.6304 | Optimized query model: 
+'(from User t in DbSet<User>
+where [t].UserName == __input_UserName_0 && !([t].IsDeleted)
+select [t]).Single()' 
+2019-04-08 17:53:09.6802 | (QueryContext queryContext) => IEnumerable<User> _InterceptExceptions(
+|__ source: IEnumerable<User> _TrackEntities(
+|   |__ results: IEnumerable<User> _ToSequence(() => User Single(IEnumerable<User> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+|   |   |       FROM [tb_user] AS [t]
+|   |   |       WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0), 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new User()
+|   |           instance.<Id>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, User.Id)
+|   |           instance.<CreationTime>k__BackingField = long TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, User.CreationTime)
+|   |           instance.<Email>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, User.Email)
+|   |           instance.<IsDeleted>k__BackingField = bool TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, User.IsDeleted)
+|   |           instance.<MobilePhone>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 4, User.MobilePhone)
+|   |           instance.<NickName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 5, User.NickName)
+|   |           instance.<Password>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 6, User.Password)
+|   |           instance.<RoleType>k__BackingField = UserRoleType TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 7, User.RoleType)
+|   |           instance.<StatusCode>k__BackingField = UserStatusCode TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 8, User.StatusCode)
+|   |           instance.<Telephone>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 9, User.Telephone)
+|   |           instance.<UserName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 10, User.UserName)
+|   |           return instance
+|   |       }))), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: User }, 
+|   |__ entityAccessors: List<Func<User, object>> 
+|       { 
+|           Func<User, User>, 
+|       }), 
+|__ contextType: DevTools.Api.Data.MssqlDbContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext) 
+2019-04-08 17:53:09.7169 | Opening connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:53:09.8770 | Opened connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:53:09.9053 | Executing DbCommand [Parameters=[@__input_UserName_0='?' (Size = 16)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[CreationTime], [t].[Email], [t].[IsDeleted], [t].[MobilePhone], [t].[NickName], [t].[Password], [t].[RoleType], [t].[StatusCode], [t].[Telephone], [t].[UserName]
+FROM [tb_user] AS [t]
+WHERE ([t].[UserName] = @__input_UserName_0) AND ([t].[IsDeleted] = 0) 
+2019-04-08 17:53:10.0334 | A data reader was disposed. 
+2019-04-08 17:53:10.0334 | Closing connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:53:10.0334 | Closed connection to database 'sharing' on server 'wetest.fun'. 
+2019-04-08 17:53:10.0472 | Context 'MssqlDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2019-04-08 17:53:10.1459 | Connection id "0HLLS0VT7HFBI" completed keep alive response. 
+2019-04-08 17:53:10.1572 | 'MssqlDbContext' disposed. 
+2019-04-08 19:06:19.8776 | Hosting starting 
+2019-04-08 19:06:19.9981 | Reading data from file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8.xml'. 
+2019-04-08 19:06:20.0150 | Found key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8}. 
+2019-04-08 19:06:20.0150 | Considering key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} with expiration date 2019-06-04 15:27:18Z as default key. 
+2019-04-08 19:06:20.0568 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 19:06:20.0599 | Decrypting secret element using Windows DPAPI. 
+2019-04-08 19:06:20.0599 | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2019-04-08 19:06:20.0599 | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2019-04-08 19:06:20.0599 | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2019-04-08 19:06:20.0757 | Using key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} as the default key. 
+2019-04-08 19:06:20.0757 | Key ring with default key {3e52796d-4d8f-4d0c-a17c-f3bc74ebefe8} was loaded during application startup. 
+2019-04-08 19:06:20.1453 | Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False 
+2019-04-08 19:06:20.1705 | Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False 
+2019-04-08 19:06:20.1705 | Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False 
+2019-04-08 19:06:20.1705 | Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False 
+2019-04-08 19:06:20.1705 | Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions 
+2019-04-08 19:06:20.1705 | Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False 
+2019-04-08 19:06:20.1705 | Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False 
+2019-04-08 19:06:20.1705 | Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null) 
+2019-04-08 19:06:20.1856 | Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False 
+2019-04-08 19:06:20.1856 | Compatibility switch AllowAreas in type RazorPagesOptions is using default value False 
+2019-04-08 19:06:20.1856 | Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False 
+2019-04-08 19:06:20.1856 | Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False 
+2019-04-08 19:06:20.2072 | Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True 
+2019-04-08 19:06:20.2422 | Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False 
+2019-04-08 19:06:20.2422 | Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False 
+2019-04-08 19:06:20.2590 | Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 19:06:20.2621 | Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 19:06:20.2621 | Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0 
+2019-04-08 19:06:20.3018 | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2019-04-08 19:06:20.3593 | Failed to locate the development https certificate at '(null)'. 
+2019-04-08 19:06:20.4135 | Hosting started 
+2019-04-08 19:06:20.4135 | Loaded hosting startup assembly DevTools.Api 
+2019-04-08 19:06:26.3602 | Connection id "0HLLS28V80H4H" started. 
+2019-04-08 19:06:26.4712 | Wildcard detected, all requests with hosts will be allowed. 
+2019-04-08 19:06:26.4858 | The request has an origin header: 'http://localhost:61003'. 
+2019-04-08 19:08:59.4447 | AuthenticationScheme: Bearer was successfully authenticated. 
+2019-04-08 19:08:59.5292 | POST requests are not supported 
+2019-04-08 19:08:59.6500 | Request successfully matched the route with name '(null)' and template 'Hash/StringMD5' 
+2019-04-08 19:08:59.6904 | Execution plan of authorization filters (in the following order): DevTools.Api.App.Filters.AuthoriztionFilter 
+2019-04-08 19:08:59.6904 | Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 19:08:59.7004 | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), DevTools.Api.App.Filters.ActionFilter 
+2019-04-08 19:08:59.7004 | Execution plan of exception filters (in the following order): None 
+2019-04-08 19:08:59.7004 | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2019-04-08 19:08:59.7242 | Attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' ... 
+2019-04-08 19:08:59.7242 | Attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name '' in request data ... 
+2019-04-08 19:08:59.7318 | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 19:08:59.7318 | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json-patch+json'. 
+2019-04-08 19:08:59.7318 | Connection id "0HLLS28V80H4H", Request id "0HLLS28V80H4H:00000001": started reading request body. 
+2019-04-08 19:08:59.7545 | Connection id "0HLLS28V80H4H", Request id "0HLLS28V80H4H:00000001": done reading request body. 
+2019-04-08 19:08:59.7912 | Done attempting to bind model of type 'DevTools.Api.Models.ViewModels.StringInputViewModel' using the name ''. 
+2019-04-08 19:08:59.7952 | Done attempting to bind parameter 'input' of type 'DevTools.Api.Models.ViewModels.StringInputViewModel'. 
+2019-04-08 19:09:00.0294 | Connection id "0HLLS28V80H4H" completed keep alive response. 
+2019-04-08 19:16:49.1943 | Connection id "0HLLS28V80H4H" received FIN. 
+2019-04-08 19:16:49.2385 | Connection id "0HLLS28V80H4H" disconnecting. 
+2019-04-08 19:16:49.2525 | Connection id "0HLLS28V80H4H" sending FIN because: "The client closed the connection." 
+2019-04-08 19:16:49.2525 | Connection id "0HLLS28V80H4H" stopped. 
