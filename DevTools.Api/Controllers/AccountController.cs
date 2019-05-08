@@ -83,9 +83,9 @@ namespace DevTools.Api.Controllers
 		/// <returns></returns>
 		[HttpGet]
 		[Route("[action]")]
-		public ActionResult<IndexOutputModel> Index()
+		public ActionResult<DetailsOutputModel> Details()
 		{
-			return Json(TResponse<IndexOutputModel>.Ok(new IndexOutputModel()));
+			return Json(TResponse<DetailsOutputModel>.Ok(new DetailsOutputModel()));
 		}
 	}
 }

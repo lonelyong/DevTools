@@ -36,23 +36,12 @@
     <Content Include="README.md" />
     <Content Include="scripts\from.ps1" />
     <Content Include="scripts\powershell.ps1" />
-    <Content Include="scripts\tempCodeRunnerFile.bat" />
-    <Content Include="scripts\tempCodeRunnerFile.cs" />
     <Content Include="scripts\test.bat" />
     <Content Include="scripts\test.ps1" />
     <Content Include="scripts\test.py" />
     <Content Include="scripts\test.sql" />
     <Content Include="scripts\test.vbs" />
     <Content Include="scripts\test.xml" />
-    <Content Include="src\content\css\App.css" />
-    <Content Include="src\content\css\Document.css" />
-    <Content Include="src\content\css\Error.css" />
-    <Content Include="src\content\css\Go.css" />
-    <Content Include="src\content\css\home\About.css" />
-    <Content Include="src\content\css\home\Contact.css" />
-    <Content Include="src\content\css\home\Index.css" />
-    <Content Include="src\content\css\home\Login.css" />
-    <Content Include="src\content\css\home\Signup.css" />
     <Content Include="src\content\svgs\logo.svg" />
   </ItemGroup>
   <ItemGroup>
@@ -92,22 +81,12 @@
     <Compile Include="src\content\js\HttpMethod.js" />
     <Compile Include="src\content\js\RegexUtil.js" />
     <Compile Include="src\index.js" />
-    <Compile Include="src\pages\docs\Intro.js" />
-    <Compile Include="src\pages\docs\Rule.js" />
-    <Compile Include="src\pages\docs\Unzip.js" />
-    <Compile Include="src\pages\docs\Zip.js" />
-    <Compile Include="src\pages\Document.js" />
     <Compile Include="src\pages\errs\Err404.js" />
-    <Compile Include="src\pages\Go.js" />
     <Compile Include="src\pages\home\About.js" />
     <Compile Include="src\pages\home\Contact.js" />
-    <Compile Include="src\pages\home\Index.js" />
-    <Compile Include="src\pages\home\Login.js" />
-    <Compile Include="src\pages\home\Signup.js" />
     <Compile Include="src\registerServiceWorker.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="scripts\tempCodeRunnerFile.ts" />
     <TypeScriptCompile Include="scripts\test.ts" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->

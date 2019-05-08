@@ -148,7 +148,7 @@ namespace DevTools.Api
 				}; 
 			});
             services.AddMvc( options => {
-                //options.Filters.Add(typeof(ExceptionFilter));
+                options.Filters.Add(typeof(ExceptionFilter));
                 options.Filters.Add(new ActionFilter());
 				options.Filters.Add(new AuthoriztionFilter());
             });
@@ -256,11 +256,10 @@ namespace DevTools.Api
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                       name: "default",
-                       template: "{id?}",
-                       defaults: new { controller = "Home", action="Index"});
+                       name: "area",
+                       template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(
-                     name: "route",
+                     name: "default",
                      template: "{controller=Home}/{action=Index}/{id?}");
 				
             });

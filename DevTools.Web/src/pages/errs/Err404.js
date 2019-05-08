@@ -1,6 +1,5 @@
 import React from 'react';
 const setTitle = ()=> document.title = '404';
-import '../../content/css/Error.css';
 class Err404 extends React.Component{
     
     componentDidMount() {

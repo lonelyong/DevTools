@@ -6,15 +6,13 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
-import Index from './pages/home/Index';
-import Document from './pages/Document';
+import Index from './pages/tabs/url/SLink';
+import Go from './pages/tabs/url/SLinkGo';
 import About from './pages/home/About';
 import Contact from './pages/home/Contact';
-import Login from './pages/home/Login';
-import Signup from './pages/home/Signup';
-import './content/css/App.css';
+import Login from './pages/account/Login';
+import Signup from './pages/account/Signup';
 import Err404 from './pages/errs/Err404';
-import Go from './pages/Go';
 import AccountInfo from './content/js/AccountInfo';
 class App extends Component {
 
@@ -36,11 +34,11 @@ class App extends Component {
   render() {
     return (      
       <Router>
-        <div id='router-root'>
-          <div className="topper">
+        <div id='router-root' className='container d-flex flex-column align-content-stretch'>
+          <div className="topper d-flex justify-content-between p-2">
             <div className="left">
                 <Link to='/home/index'>首页</Link>
-                <Link to='/docs'>APIs</Link>
+                <a href="https://api.link.hicode.net">APIs</a>
             </div>
             <div className="right">
                 {
@@ -56,28 +54,28 @@ class App extends Component {
             </div>
           </div>
           <Switch>
-            <Route path="/home/index" component={Index}/>
-            <Route path="/home/about" component={About}/>
-            <Route path="/home/contact" component={Contact}/>
-            <Route path="/home/login" component={Login}/>
-            <Route path="/home/signup" component={Signup}/>
-            <Route path="/docs" component={Document}/>
-            <Redirect exact from='' to={{pathname:'/home/index'}}/>
-            <Redirect exact from='/' to={{pathname:'/home/index'}}/>
-            <Redirect exact from='/home' to={{pathname:'/home/index'}}/>
-            <Route from='/*/*' component={Err404}/>
-            <Route exact path='/*' component={Go}/>
-          </Switch>
-          <div className="footer">
-            <div className="line"></div>
-            <div className="linkbar">
+              <Route path="/home/index" component={Index}/>
+              <Route path="/home/about" component={About}/>
+              <Route path="/home/contact" component={Contact}/>
+              <Route path="/home/login" component={Login}/>
+              <Route path="/home/signup" component={Signup}/>
+              <Route path="/docs" component={Document}/>
+              <Redirect exact from='' to={{pathname:'/home/index'}}/>
+              <Redirect exact from='/' to={{pathname:'/home/index'}}/>
+              <Redirect exact from='/home' to={{pathname:'/home/index'}}/>
+              <Route from='/*/*' component={Err404}/>
+              <Route exact path='/*' component={Go}/>
+            </Switch>
+          <div className="footer p-2">
+            <hr className="hr-line-dashed"></hr>
+            <div className="d-flex justify-content-center">
                 <a href="http://pm.tianxia.ink" target="_blank">Spm</a>|
                 <a href="http://jsutils.hicode.net" target="_blank">jsutils</a>|
                 <a href="http://github.com" target="_blank">Github</a>|
                 <a href="http://google.com" target="_blank">谷歌</a>|
                 <a href="http://bootcdn.com" target="_blank">BootCDN</a>
             </div>
-            <div className="linkbar">
+            <div className="d-flex justify-content-center">
                 <Link to='/home/contact'>联系</Link>
                 <Link to='/home/about'>关于</Link>
             </div>

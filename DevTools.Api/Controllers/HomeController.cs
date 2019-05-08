@@ -10,9 +10,6 @@ namespace DevTools.Api.Controllers
 {
     public class HomeController : ControllerBase
 	{
-		public HomeController()
-		{
-		}
 
         public IActionResult Index()
         {

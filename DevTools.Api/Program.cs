@@ -17,7 +17,7 @@ namespace DevTools.Api
     {
         public static void Main(string[] args)
         {
-			NLog.Web.NLogBuilder.ConfigureNLog("nlog.config");
+			NLogBuilder.ConfigureNLog("nlog.config");
 			var webHost = BuildWebHost(args);
             webHost.Run();
         }

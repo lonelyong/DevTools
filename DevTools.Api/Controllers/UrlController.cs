@@ -16,7 +16,7 @@ namespace DevTools.Api.Controllers
 	/// <summary>
 	/// 链接压缩与解压
 	/// </summary>
-	[Route("[controller]")]
+	[Route("[controller]/[action]")]
 	public class UrlController : ControllerBase
     {
 		private readonly UrlService _urlService;
@@ -32,7 +32,6 @@ namespace DevTools.Api.Controllers
         /// <returns>短链接</returns>
         [HttpPost]
 		[Authorize]
-        [Route("[action]")]
         public ActionResult<string> Zip([FromBody]ZipInputModel input)
         {
             var slink = _urlService.Zip(input.LLink);
@@ -46,7 +45,6 @@ namespace DevTools.Api.Controllers
         /// <returns>长链接</returns>
         [HttpGet]
 		[Authorize]
-		[Route("[action]")]
         public ActionResult<string> Unzip([FromQuery]UnzipInputModel input)
         {
             var llink = _urlService.UnZip(input.SLink);

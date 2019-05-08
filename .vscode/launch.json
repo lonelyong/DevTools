@@ -5,7 +5,7 @@
    "version": "0.2.0",
    "configurations": [
        { 
-           "cwd": "${workspaceFolder}/shorturl.web",
+           "cwd": "${workspaceFolder}/DevTools.Web",
            "type": "node",
            "request": "launch",
            "name": "Launch via NPM",
@@ -24,9 +24,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/ShortUrl.Api/bin/Debug/netcoreapp2.1/ShortUrl.Api.dll",
+            "program": "${workspaceFolder}/DevTools.Api/bin/Debug/netcoreapp2.1/DevTools.Api.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/ShortUrl.Api",
+            "cwd": "${workspaceFolder}/DevTools.Api",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
@@ -47,7 +47,7 @@
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "sourceFileMap": {
-                "/Views": "${workspaceFolder}/ShortUrl.Api/Views"
+                "/Views": "${workspaceFolder}/DevTools.Api/Views"
             }
         },
         {
