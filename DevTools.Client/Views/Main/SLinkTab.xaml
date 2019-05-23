@@ -5,8 +5,50 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DevTools.Client.Views.Main"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Label>hello, this is SLink tab!</Label>
+             d:DesignHeight="450" d:DesignWidth="800" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+    <Grid Width="500" Height="300" Background="#d3d3d3"  VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Height="30" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="zipTabHeaderGrid" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDown="ZipTabHeaderGrid_MouseDown">
+                <Label Content="正转" Foreground="Black"  HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            </Grid>
+            <Grid x:Name="unzipTabHeaderGrid" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="DimGray" MouseDown="UnzipTabHeaderGrid_MouseDown">
+                <Label Content="反转" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            </Grid>
+        </Grid>
+        <Grid x:Name="zipTabContentGrid" Grid.Row="1"  Grid.Column="0" Background="Beige" Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"></RowDefinition>
+                <RowDefinition Height="32"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="32"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label Content="请输入要缩短的网址(最长1024字符)"></Label>
+            </Grid>
+            <Grid Grid.Row="1" x:Name="zipInputWrap">
+                <Canvas>
+                    <Rectangle RadiusX="8" RadiusY="5" 
+                               Width="{Binding ElementName=zipInputWrap, Path=ActualWidth}" 
+                               Height="{Binding ElementName=zipInputWrap, Path=ActualHeight}"
+                               Stroke="Black" StrokeDashArray="5,2,1,2" StrokeThickness="1"/>
+                </Canvas>
+                <TextBox x:Name="zipInputTextBox" BorderThickness="0" VerticalAlignment="Center" Background="Transparent">123</TextBox>
+            </Grid>
+            <Grid Grid.Row="2">
+                <TextBlock x:Name="zipResultTextBlock">this is result!</TextBlock>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Button Content="压缩"></Button>
+            </Grid>
+        </Grid>
+        <Grid x:Name="unzipTabContentGrid" Grid.Row="1"  Grid.Column="1" Visibility="Hidden" Background="Bisque"></Grid>
     </Grid>
 </UserControl>

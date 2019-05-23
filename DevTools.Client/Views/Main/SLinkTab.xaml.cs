@@ -24,5 +24,17 @@ namespace DevTools.Client.Views.Main
         {
             InitializeComponent();
         }
+
+        private void ZipTabHeaderGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            unzipTabContentGrid.Visibility = Visibility.Hidden;
+            zipTabContentGrid.Visibility = Visibility.Visible;
+        }
+
+        private void UnzipTabHeaderGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            unzipTabContentGrid.Visibility = Visibility.Visible;
+            zipTabContentGrid.Visibility = Visibility.Hidden;
+        }
     }
 }
