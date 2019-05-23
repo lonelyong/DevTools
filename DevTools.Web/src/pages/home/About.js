@@ -10,7 +10,7 @@ class About extends React.Component{
     }
     render(){
         return(
-            <div id='About' className='container body-content'>
+            <div id='About' className='page-content'>
                 <div className="title">
                     <label>ABOUT</label>
                 </div>

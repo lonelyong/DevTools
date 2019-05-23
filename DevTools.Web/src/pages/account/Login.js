@@ -18,7 +18,7 @@ class Login extends React.Component{
             }, 
             (rep)=>{  
                 if(Apis.isOk(rep)){
-                  this.props.history.push("/home/index");
+                  this.props.history.push("/slink");
                 }
             },
             (err)=>{
@@ -30,7 +30,7 @@ class Login extends React.Component{
     };
     render(){
         return(
-            <div id='Login' className='container body-content'>
+            <div id='Login' className='body-content'>
                 <div className="title">
                     <label>登录</label>
                 </div>

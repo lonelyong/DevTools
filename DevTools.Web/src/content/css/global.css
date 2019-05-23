@@ -7,6 +7,16 @@ html, body{
     width: 100%;
     height: 100%;
 }
+
+.topper{
+    background-color:#363636;
+    /* position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 3rem; */
+}
+
 .topper a{
     margin: 0.5rem;
 }
@@ -17,4 +27,12 @@ html, body{
 .hr-line-dashed{
     border:none;
     border-top: 1px gray dashed;
+}
+.topper a,
+.topper a:hover,
+.topper a:visited,
+.topper a:active,
+.topper a:any-link,
+.topper a:not([href]):not([tabindex]){
+    color: white
 }

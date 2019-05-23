@@ -1,0 +1,39 @@
+.content-wrap{
+    border-radius: 1rem;
+    background: #d3d3d3;
+    min-width: 40rem;
+    min-height: 20rem;
+}
+.input-wrap
+{
+    border:1px black dashed;
+}
+.input-wrap input{
+    outline: none;
+    border:none;
+    background-color: transparent;
+}
+.nav-item:first-child .nav-link{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 0 !important;
+}
+.nav-item:last-child .nav-link{
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 0 !important;
+}
+.nav-link{
+    background-color: dimgray;
+    border:none !important;
+    color: white;
+}
+.nav-tabs .nav-link.active{
+    background-color: #d3d3d3;
+}
+
+.success{
+    color: green;
+}
+
+.error{
+    color:red;
+}

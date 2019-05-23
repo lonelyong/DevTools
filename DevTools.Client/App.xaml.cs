@@ -17,10 +17,22 @@ namespace DevTools.Client
 	[Service(Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton)]
 	public partial class App : Application
 	{
+		public ControlTemplate DefaultControlTemplate { get; }
+
+		public Style DefaultControlTemplateStyle { get; }
+
 		public App()
 		{
+			InitializeComponent();
+			DefaultControlTemplate = (ControlTemplate)Resources["DefaultWindowTemplate"];
+			DefaultControlTemplateStyle = (Style)Resources["DefaultWindowTemplateStyle"];
 
-        }
+		}
+
+		public static App GetCurrent()
+		{
+			return Current as App;
+		}
 
 		private void TitleBtnGroupStackPanel_Click(object sender, RoutedEventArgs e)
 		{

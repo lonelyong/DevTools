@@ -35,7 +35,7 @@ class Login extends React.Component{
     };
     render(){
         return(
-            <div id='Login' className='container body-content'>
+            <div id='Login' className='body-content'>
                 <div className="title">
                     <label>注册</label>
                 </div>

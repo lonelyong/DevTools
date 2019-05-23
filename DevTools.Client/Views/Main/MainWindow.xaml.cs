@@ -20,8 +20,9 @@ namespace DevTools.Client.Views.Main
 	/// MainWindow.xaml 的交互逻辑
 	/// </summary>
 	[Service(Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton)]
-	public partial class MainWindow : Window
+	partial class MainWindow : DefaultWindow
 	{
+
 		public MainWindow()
 		{
 			InitializeComponent();

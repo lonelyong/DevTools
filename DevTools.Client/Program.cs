@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Microsoft.Extensions.DependencyInjection;
-
+using DevTools.Client.Views.Main;
 namespace DevTools.Client
 {
 	static class Program
@@ -20,6 +20,14 @@ namespace DevTools.Client
 
 		private static IServiceProvider _serviceProvider;
 
+		private static App _currentApp;
+
+		private static MainWindow _mainWindow;
+
+		public static IServiceProvider Services { get { return _serviceProvider; } }
+
+		public static App CurrentApp { get { return _currentApp; } }
+
 		[STAThread]
         static void Main(string[] args)
 		{
@@ -28,16 +36,15 @@ namespace DevTools.Client
 #elif USE_MSDI
 			UseMicrosoftDI();
 #endif
-			var app = _serviceProvider.GetService<App>();
-            var mainWindow = _serviceProvider.GetService<Views.Main.MainWindow>();
-            app.InitializeComponent();
-            app.Run(mainWindow);
+			_currentApp = _serviceProvider.GetService<App>();
+            _mainWindow = _serviceProvider.GetService<MainWindow>();
+            _currentApp.Run(_mainWindow);
 		}
 
 		static void RegisterServices()
 		{
 			_services.AddSingleton<App>();
-			_services.AddSingleton<Views.Main.MainWindow>();
+			_services.AddSingleton<MainWindow>();
 		}
 
 		static void UseCastleWindsor()

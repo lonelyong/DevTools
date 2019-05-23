@@ -9,7 +9,7 @@ class Contact extends React.Component{
     }
     render(){
         return(
-            <div id='Contact' className='container body-content'>
+            <div id='Contact' className='page-content'>
                 <address>
                     <strong>Phone</strong> <a href="tel:010-000000">010-000000</a><br />
                 </address>

@@ -2,7 +2,7 @@ import React from 'react';
 import APIs from '../../../content/js/Apis';
 import Configs from '../../../content/js/Configuration';
 import RegexUtil from '../../../content/js/RegexUtil';
-
+import css from "./SLink.css";
 const dataTarget = 'data-target';
 const tab = {
     zip:'zip',
@@ -195,43 +195,47 @@ class Home extends React.Component{
     }
 
     render(){
-        let iszip = this.state.tab===tab.zip;
-        let isunzip = this.state.tab===tab.unzip;
-        let activatedClass = 'active';
-        let tabHeaderClass = 'tab-header';
-        let tabBodyClass = 'tab-body';
         let successClass = 'success';
         let errClass = 'error';
-        let resultClass = 'result';
         return(
             <div className='d-flex flex-grow-1 justify-content-center align-items-center'>
-                <div className="box">
-                    <div className="tab-banner">
-                        <div className={iszip ? `${activatedClass} ${tabHeaderClass}` : tabHeaderClass} data-target={tab.zip} onClick={this.switchTab}>正转</div>
-                        <div className={isunzip ? `${activatedClass} ${tabHeaderClass}` : tabHeaderClass} data-target={tab.unzip} onClick={this.switchTab}>逆转</div>
-                    </div>
-                    <div className={iszip ? `${tab.zip} ${tabBodyClass} ${activatedClass}` : `${tab.zip} ${tabBodyClass}`}>
-                        <div className="title"><label>请输入要缩短的网址(最长1024字符)</label></div>
-                        <div className="input-container">
-                            <input ref='zipInput' value={this.state.zipInput} type="text" name="long" id=" long" maxLength="1024" onKeyDown={this.zipInputEnter} onChange={this.zipInputChange}/>
-                        </div>
-                        <div className={`${resultClass} ${this.state.zipOutputStatus===0?errClass:successClass}`} onClick={this.go}>{this.state.zipOutput}</div>
-                        <div className="submit">
-                            <div className="button">
-                                <label onClick={this.zip}>缩短网址</label>
+                <div className="content-wrap d-flex flex-column align-content-stretch">
+                    <ul className="nav nav-tabs border-bottom-0 flex-shrink-0">
+                        <li className="nav-item flex-grow-1 text-center">
+                            <span className="nav-link active" data-toggle="pill" href="#zip">正转</span>
+                        </li>
+                        <li className="nav-item flex-grow-1 text-center">
+                            <span className="nav-link" data-toggle="pill" href="#unzip">逆转</span>
+                        </li>
+                    </ul>
+                    <div className="tab-content mt-2 p-2 flex-grow-1 d-flex align-content-stretch">
+                        <div id="zip" className="tab-pane active flex-grow-1">
+                            <div className="d-flex flex-column h-100">
+                                <div className="text-dark"><label>请输入要缩短的网址(最长1024字符)</label></div>
+                                <div className="input-wrap w-100 d-flex flex-row align-items-center p-1">
+                                    <input ref='zipInput' value={this.state.zipInput} type="text" name="long" id=" long" maxLength="1024" className="flex-grow-1"
+                                        onKeyDown={this.zipInputEnter} 
+                                        onChange={this.zipInputChange}/>
+                                </div>
+                                <div className={`${this.state.zipOutputStatus===0?errClass:successClass} flex-grow-1`} onClick={this.go}>{this.state.zipOutput}</div>
+                                <div className="p-2 d-flex flex-row justify-content-end">
+                                    <div className="btn btn-secondary" onClick={this.zip}>缩短网址</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={isunzip ? `${tab.unzip} ${tabBodyClass} ${activatedClass}` : `${tab.unzip} ${tabBodyClass}`}>
-                        <div className="title"><label>请输入短网址</label></div>
-                        <div className="input-container">
-                            <div className="host"><label>{Configs.host}/</label></div>
-                            <input ref='unzipInput' value={this.state.unzipInput} type="text" name="short" id=" short" maxLength="8" onKeyDown={this.unzipInputEnter} onChange={this.unzipInputChange}/>
-                        </div>
-                        <div className={`${resultClass} ${this.state.unzipOutputStatus===0?errClass:successClass}`} onClick={this.go} >{this.state.unzipOutput}</div>
-                        <div className="submit">
-                            <div className="button">
-                                <label onClick={this.unzip}>还原网址</label>
+                        <div id="unzip" className="tab-pane fade flex-grow-1">
+                        <div className="d-flex flex-column h-100">
+                            <div className="text-dark"><label>请输入短网址</label></div>
+                                <div className="input-wrap w-100 d-flex flex-row align-items-center p-1">
+                                    <label className="flex-shrink-0 m-0 text-info">{Configs.host}/</label>
+                                    <input ref='unzipInput' value={this.state.unzipInput} type="text" name="short" id=" short" maxLength="8" className="flex-grow-1 text-success"
+                                onKeyDown={this.unzipInputEnter} 
+                                onChange={this.unzipInputChange}/>
+                                </div>
+                                <div className={`${this.state.unzipOutputStatus===0?errClass:successClass} flex-grow-1`} onClick={this.go} >{this.state.unzipOutput}</div>
+                                <div className="p-2 d-flex flex-row justify-content-end">
+                                    <div className="btn btn-secondary" onClick={this.unzip}>还原网址</div>
+                                </div>
                             </div>
                         </div>
                     </div>

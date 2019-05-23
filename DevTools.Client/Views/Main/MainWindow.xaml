@@ -1,13 +1,32 @@
-﻿<Window
+﻿<views:DefaultWindow
 	x:Class="DevTools.Client.Views.Main.MainWindow"
     xmlns:local="clr-namespace:DevTools.Client.Views.Main"
+	xmlns:views="clr-namespace:DevTools.Client.Views"
+    xmlns:views_main="clr-namespace:DevTools.Client.Views.Main"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Template="{DynamicResource DefaultWindow}"
-    Title="MainWindow" Height="450" Width="800" AllowsTransparency="True" Background="Transparent" WindowStyle="None"
+    Title="MainWindow" Height="450" Width="800"
 	MouseLeftButtonDown="Window_MouseLeftButtonDown"
 	StateChanged="Window_StateChanged">
+    <Grid>
+        <TabControl Margin="10">
+            <TabItem Header="RSA">
+                <views_main:RsaTab/>
+            </TabItem>
+            <TabItem Header="DES">
+                
+            </TabItem>
+            <TabItem Header="AES">
+                
+            </TabItem>
+            <TabItem Header="HASH">
 
-</Window>
+            </TabItem>
+            <TabItem Header="SLink">
+                <views_main:SLinkTab/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</views:DefaultWindow>

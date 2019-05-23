@@ -6,8 +6,8 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
-import Index from './pages/tabs/url/SLink';
-import Go from './pages/tabs/url/SLinkGo';
+import SLink from './pages/tabs/url/SLink';
+import SLinkGo from './pages/tabs/url/SLinkGo';
 import About from './pages/home/About';
 import Contact from './pages/home/Contact';
 import Login from './pages/account/Login';
@@ -34,39 +34,42 @@ class App extends Component {
   render() {
     return (      
       <Router>
-        <div id='router-root' className='container d-flex flex-column align-content-stretch'>
-          <div className="topper d-flex justify-content-between p-2">
-            <div className="left">
-                <Link to='/home/index'>首页</Link>
-                <a href="https://api.link.hicode.net">APIs</a>
-            </div>
-            <div className="right">
-                {
-                  AccountInfo.isLogined() ?
-                  (<a onClick={this.logout}>注销（{AccountInfo.username()}）</a>):
-                  (<Link to='/home/login'>登录</Link>)
-                }
-                {
-                  !AccountInfo.isLogined() && <Link to='/home/signup'>注册</Link>
-                }
-                <a>分享</a>
-                <Link to='/home/about'>关于</Link>
+        <div id='router-root' className='d-flex flex-column align-content-stretch flex-grow-1'>
+          <div className="topper">
+            <div className="container d-flex flex-row justify-content-between align-content-center pt-2 pb-2 flex-shrink-0">
+              <div className="left">
+                  <Link to='/slink'>首页</Link>
+                  <a href="https://api.link.hicode.net">APIs</a>
+              </div>
+              <div className="right">
+                  {
+                    AccountInfo.isLogined() ?
+                    (<a onClick={this.logout}>注销（{AccountInfo.username()}）</a>):
+                    (<Link to='/account/login'>登录</Link>)
+                  }
+                  {
+                    !AccountInfo.isLogined() && <Link to='/account/signup'>注册</Link>
+                  }
+                  <a>分享</a>
+                  <Link to='/home/about'>关于</Link>
+              </div>
             </div>
           </div>
-          <Switch>
-              <Route path="/home/index" component={Index}/>
-              <Route path="/home/about" component={About}/>
-              <Route path="/home/contact" component={Contact}/>
-              <Route path="/home/login" component={Login}/>
-              <Route path="/home/signup" component={Signup}/>
-              <Route path="/docs" component={Document}/>
-              <Redirect exact from='' to={{pathname:'/home/index'}}/>
-              <Redirect exact from='/' to={{pathname:'/home/index'}}/>
-              <Redirect exact from='/home' to={{pathname:'/home/index'}}/>
-              <Route from='/*/*' component={Err404}/>
-              <Route exact path='/*' component={Go}/>
-            </Switch>
-          <div className="footer p-2">
+          <div className="container d-flex flex-column flex-grow-1" id="body-content-wrap">
+            <Switch>
+                <Route path="/slink" component={SLink}/>
+                <Route path="/home/about" component={About}/>
+                <Route path="/home/contact" component={Contact}/>
+                <Route path="/account/login" component={Login}/>
+                <Route path="/account/signup" component={Signup}/>
+                <Redirect exact from='' to={{pathname:'/slink'}}/>
+                <Redirect exact from='/' to={{pathname:'/slink'}}/>
+                <Redirect exact from='/home' to={{pathname:'/slink'}}/>
+                <Route from='/*/*' component={Err404}/>
+                <Route exact path='/*' component={SLinkGo}/>
+              </Switch>
+          </div>
+          <div className="container footer pt-2 pb-2">
             <hr className="hr-line-dashed"></hr>
             <div className="d-flex justify-content-center">
                 <a href="http://pm.tianxia.ink" target="_blank">Spm</a>|
