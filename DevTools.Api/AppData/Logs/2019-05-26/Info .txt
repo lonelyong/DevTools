@@ -1,0 +1,46 @@
+2019-05-26 11:34:23.8483 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-26 11:34:23.8829 | Creating key {68d5c430-5518-491e-976b-eb28fdedc77a} with creation date 2019-05-26 03:34:23Z, activation date 2019-05-26 03:34:23Z, and expiration date 2019-08-24 03:34:23Z. 
+2019-05-26 11:34:23.9414 | Writing data to file 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys\key-68d5c430-5518-491e-976b-eb28fdedc77a.xml'. 
+2019-05-26 11:34:24.9276 | Request starting HTTP/1.1 DEBUG http://localhost:51744/  0 
+2019-05-26 11:34:24.9276 | Request starting HTTP/1.1 GET http://localhost:51744/swagger   
+2019-05-26 11:34:25.0048 | Request finished in 81.7371ms 200  
+2019-05-26 11:34:25.2539 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-05-26 11:34:25.2539 | Request finished in 335.6946ms 301  
+2019-05-26 11:34:25.4505 | Request finished in 193.4062ms 200 text/html 
+2019-05-26 11:34:25.4662 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/swagger-ui.css   
+2019-05-26 11:34:25.4662 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/swagger-ui-bundle.js   
+2019-05-26 11:34:25.5090 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/swagger-ui-standalone-preset.js   
+2019-05-26 11:34:25.5887 | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2019-05-26 11:34:25.5887 | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2019-05-26 11:34:25.5887 | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2019-05-26 11:34:25.6059 | Request finished in 144.4127ms 200 text/css 
+2019-05-26 11:34:25.6128 | Request finished in 124.6449ms 200 application/javascript 
+2019-05-26 11:34:25.6128 | Request finished in 146.4358ms 200 application/javascript 
+2019-05-26 11:34:26.2653 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-05-26 11:34:26.2970 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/favicon-32x32.png   
+2019-05-26 11:34:26.3023 | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2019-05-26 11:34:26.3183 | Request finished in 24.7246ms 200 image/png 
+2019-05-26 11:34:26.7245 | Request finished in 461.9349ms 200 application/json;charset=utf-8 
+2019-05-26 12:07:17.1664 | User profile is available. Using 'C:\Users\sa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-26 12:07:17.7288 | Request starting HTTP/1.1 GET http://localhost:51744/   
+2019-05-26 12:07:17.9776 | Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) 
+2019-05-26 12:07:18.0076 | Executing action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api) - Validation state: Valid 
+2019-05-26 12:07:18.0076 | Executed action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.2985ms. 
+2019-05-26 12:07:18.0228 | Executing RedirectResult, redirecting to /swagger. 
+2019-05-26 12:07:18.0228 | Executed action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) in 38.7215ms 
+2019-05-26 12:07:18.0354 | Request finished in 315.8864ms 302  
+2019-05-26 12:07:18.0492 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-05-26 12:07:18.2264 | Request finished in 178.307ms 200 text/html 
+2019-05-26 12:07:18.5230 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-05-26 12:07:18.6960 | Request finished in 173.9059ms 200 application/json;charset=utf-8 
+2019-05-26 17:23:27.9295 | Request starting HTTP/1.1 GET http://localhost:51744/   
+2019-05-26 17:23:27.9442 | Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) 
+2019-05-26 17:23:27.9554 | Executing action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api) - Validation state: Valid 
+2019-05-26 17:23:27.9554 | Executed action method DevTools.Api.Controllers.HomeController.Index (DevTools.Api), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.0326ms. 
+2019-05-26 17:23:27.9554 | Executing RedirectResult, redirecting to /swagger. 
+2019-05-26 17:23:27.9554 | Executed action DevTools.Api.Controllers.HomeController.Index (DevTools.Api) in 5.4606ms 
+2019-05-26 17:23:27.9554 | Request finished in 32.1798ms 302  
+2019-05-26 17:23:27.9749 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/index.html   
+2019-05-26 17:23:27.9749 | Request finished in 5.6898ms 200 text/html 
+2019-05-26 17:23:28.1630 | Request starting HTTP/1.1 GET http://localhost:51744/swagger/v1/swagger.json   
+2019-05-26 17:23:28.1630 | Request finished in 11.1977ms 200 application/json;charset=utf-8 

@@ -3,7 +3,7 @@ class ProductionConfiguration{
     host='https://link.hicode.net'
 }
 class DevelopmentConfiguration{
-    apiHost='http://localhost:5001';
+    apiHost='http://localhost:51744';
     host='http://localhost:3000'
 }
 const isDevelopment = false;

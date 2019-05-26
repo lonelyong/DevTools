@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using DevTools.GuiComm.Wpf;
+using System.Windows.Media;
+using DevTools.Client.Views;
 
 namespace DevTools.Client
 {
@@ -21,42 +24,21 @@ namespace DevTools.Client
 
 		public Style DefaultControlTemplateStyle { get; }
 
+        public Theme Theme { get; set; }
+
 		public App()
 		{
 			InitializeComponent();
-			DefaultControlTemplate = (ControlTemplate)Resources["DefaultWindowTemplate"];
-			DefaultControlTemplateStyle = (Style)Resources["DefaultWindowTemplateStyle"];
-
+            Theme = new Theme() {
+                BorderBrush = Brushes.Green,
+                Background = Brushes.WhiteSmoke,
+                Foreground = Brushes.Black
+            };
 		}
 
 		public static App GetCurrent()
 		{
 			return Current as App;
 		}
-
-		private void TitleBtnGroupStackPanel_Click(object sender, RoutedEventArgs e)
-		{
-			var btn = e.Source as Button;
-			var wnd = Window.GetWindow(btn);
-			if (btn.Name == "minimizeButton")
-			{
-				wnd.WindowState = WindowState.Minimized;
-			}
-			else if (btn.Name == "maximizeButton")
-			{
-				if(wnd.WindowState == WindowState.Maximized)
-				{
-					wnd.WindowState = WindowState.Normal;
-				}
-				else if(wnd.WindowState == WindowState.Normal)
-				{
-					wnd.WindowState = WindowState.Maximized;
-				}
-			}
-			else if (btn.Name == "closeButton")
-			{
-				wnd.Close();
-			}
-		}
-	}
+    }
 }

@@ -49,6 +49,6 @@
                 <Button Content="压缩"></Button>
             </Grid>
         </Grid>
-        <Grid x:Name="unzipTabContentGrid" Grid.Row="1"  Grid.Column="1" Visibility="Hidden" Background="Bisque"></Grid>
+        <Grid x:Name="unzipTabContentGrid" Grid.Row="1"  Grid.Column="1" Visibility="Collapsed" Background="Bisque"></Grid>
     </Grid>
 </UserControl>

@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using DevTools.GuiComm.Wpf;
 namespace DevTools.Client.Views.Main
 {
 	/// <summary>
@@ -26,26 +26,24 @@ namespace DevTools.Client.Views.Main
 		public MainWindow()
 		{
 			InitializeComponent();
-			
-		}
-
-		private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-		{
-			if(e.LeftButton == MouseButtonState.Pressed)
-			{
-				if(!(e.MouseDevice.Target is Control))
-				{
-					this.DragMove();
-				}
-			}
-		}
+            Icon = Properties.Resources.icon.ToBitmapImage();
+            //TitleBar.Visibility = Visibility.Collapsed;
+            TitleBar.MinimizeButtonVisibility = Visibility.Collapsed;
+        }
 
 		private void Window_StateChanged(object sender, EventArgs e)
 		{
-			if(this.WindowState == WindowState.Maximized)
-			{
-
-			}
+           
 		}
-	}
+
+        private void DefaultWindow_Initialized(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void DefaultWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
 }

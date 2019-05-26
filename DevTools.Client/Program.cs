@@ -24,7 +24,7 @@ namespace DevTools.Client
 
 		private static MainWindow _mainWindow;
 
-		public static IServiceProvider Services { get { return _serviceProvider; } }
+		public static IServiceProvider Container { get { return _serviceProvider; } }
 
 		public static App CurrentApp { get { return _currentApp; } }
 
@@ -38,11 +38,13 @@ namespace DevTools.Client
 #endif
 			_currentApp = _serviceProvider.GetService<App>();
             _mainWindow = _serviceProvider.GetService<MainWindow>();
+            _mainWindow.Theme = _currentApp.Theme;
             _currentApp.Run(_mainWindow);
 		}
 
 		static void RegisterServices()
 		{
+            _services.ConfigureConfigurations();
 			_services.AddSingleton<App>();
 			_services.AddSingleton<MainWindow>();
 		}
