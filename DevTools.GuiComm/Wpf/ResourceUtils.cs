@@ -14,5 +14,18 @@ namespace DevTools.GuiComm.Wpf
             var obj = Application.LoadComponent(uri);
             return obj as ResourceDictionary;
         }
+
+        public static void MergeCurrentAssemblyResources(this ResourceDictionary resourceDictionary)
+        {
+            var res = GetResourceDictionary(new Uri("/DevTools.GuiComm;component/Wpf/PublicResources.xaml", UriKind.Relative));
+            if(resourceDictionary == null)
+            {
+                throw new ArgumentNullException(nameof(resourceDictionary));
+            }
+            else
+            {
+                resourceDictionary.MergedDictionaries.Add(res);
+            }
+        }
     }
 }

@@ -11,7 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using NgNet.Date;
+using Utilities.Date;
+using Utilities;
+using Utilities.Security;
 
 namespace DevTools.Api.Core.Account
 {
@@ -38,8 +40,8 @@ namespace DevTools.Api.Core.Account
 		/// <returns></returns>
 		public User Signup(SignupInputModel input)
 		{
-			var _user = NgNet.MappingUtils.MapPropertiesTo<User>(input);
-			_user.Password = NgNet.Security.HashHelper.StringSHA512(_user.Password);
+			var _user = MappingUtils.MapPropertiesTo<User>(input);
+			_user.Password = HashHelper.StringSHA512(_user.Password);
 			var _oldUser = _db.Users.FirstOrDefault(t=>t.UserName==_user.UserName && !t.IsDeleted);
 			if(_oldUser != null)
 			{
@@ -64,7 +66,7 @@ namespace DevTools.Api.Core.Account
 			{
 				throw new ApiException("此用户不存在");
 			}
-			if (NgNet.Security.HashHelper.StringSHA512(input.Password).Equals(_user.Password, StringComparison.OrdinalIgnoreCase))
+			if (HashHelper.StringSHA512(input.Password).Equals(_user.Password, StringComparison.OrdinalIgnoreCase))
 			{
 				token = SecurityUtils.IssueToken(_appSettings, _user);
 				return _user;

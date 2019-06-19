@@ -2,7 +2,7 @@ import React from 'react';
 import APIs from '../../../content/js/Apis';
 import Configs from '../../../content/js/Configuration';
 import RegexUtil from '../../../content/js/RegexUtil';
-import css from "./SLink.css";
+import less from "./SLink.less";
 const dataTarget = 'data-target';
 const tab = {
     zip:'zip',
@@ -15,6 +15,12 @@ class Home extends React.Component{
     }
     componentDidUpdate() {
         setTitle()
+    }
+    componentWillMount(){
+        less.use()
+    }
+    componentWillUnmount(){
+        less.unuse()
     }
     constructor(){
         super();
@@ -198,7 +204,7 @@ class Home extends React.Component{
         let successClass = 'success';
         let errClass = 'error';
         return(
-            <div className='d-flex flex-grow-1 justify-content-center align-items-center'>
+            <div id="slink-tab" className='d-flex flex-grow-1 justify-content-center align-items-center'>
                 <div className="content-wrap d-flex flex-column align-content-stretch">
                     <ul className="nav nav-tabs border-bottom-0 flex-shrink-0">
                         <li className="nav-item flex-grow-1 text-center">

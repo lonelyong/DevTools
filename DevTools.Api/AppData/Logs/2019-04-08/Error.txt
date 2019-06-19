@@ -1,7 +1,7 @@
 2019-04-08 08:38:09.6561 | An unhandled exception has occurred while executing the request. System.Security.Cryptography.CryptographicException: Specified key is not a valid size for this algorithm.
    at System.Security.Cryptography.AsymmetricAlgorithm.set_KeySize(Int32 value)
    at System.Security.Cryptography.RSA.Create(Int32 keySizeInBits)
-   at NgNet.Security.RsaHelper..ctor(Int32 keySize) in G:\projects\NgNetCore\NgNet.Core\Security\RsaHelper.cs:line 42
+   at RsaHelper..ctor(Int32 keySize) in G:\projects\NgNetCore\NgNet.Core\Security\RsaHelper.cs:line 42
    at DevTools.Api.Controllers.RsaController.GenerateKey(Int32 keySize) in G:\projects\DevTools\DevTools.Api\Controllers\RsaController.cs:line 36
    at lambda_method(Closure , Object , Object[] )
    at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)

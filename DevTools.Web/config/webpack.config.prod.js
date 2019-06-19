@@ -129,6 +129,11 @@ module.exports = {
         include: paths.appSrc,
       },
       {
+        test: /\.less$/,
+        use:['style-loader','css-loader','less-loader'], // 编译顺序从右往左
+        include:path.appSrc
+      },
+      {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
         // back to the "file" loader at the end of the loader list.
