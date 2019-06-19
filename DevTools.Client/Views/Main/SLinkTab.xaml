@@ -3,52 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cfg="clr-namespace:DevTools.Client.Models.Configuration"
              xmlns:local="clr-namespace:DevTools.Client.Views.Main"
+             xmlns:comp="clr-namespace:DevTools.Client.Views.Components"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-    <Grid Width="500" Height="300" Background="#d3d3d3"  VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-        <Grid Height="30" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <Grid x:Name="zipTabHeaderGrid" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDown="ZipTabHeaderGrid_MouseDown">
-                <Label Content="正转" Foreground="Black"  HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-            </Grid>
-            <Grid x:Name="unzipTabHeaderGrid" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="DimGray" MouseDown="UnzipTabHeaderGrid_MouseDown">
-                <Label Content="反转" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-            </Grid>
-        </Grid>
-        <Grid x:Name="zipTabContentGrid" Grid.Row="1"  Grid.Column="0" Background="Beige" Margin="16">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="32"></RowDefinition>
-                <RowDefinition Height="32"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="32"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Label Content="请输入要缩短的网址(最长1024字符)"></Label>
-            </Grid>
-            <Grid Grid.Row="1" x:Name="zipInputWrap">
-                <Canvas>
-                    <Rectangle RadiusX="8" RadiusY="5" 
-                               Width="{Binding ElementName=zipInputWrap, Path=ActualWidth}" 
-                               Height="{Binding ElementName=zipInputWrap, Path=ActualHeight}"
+             d:DesignHeight="300" d:DesignWidth="600" Width="500" Height="300">
+    <Border>
+        <comp:CustomTabControl Margin="0" Background="{Binding Background, RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Window}}}">
+            <TabItem Header="正转">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32"></RowDefinition>
+                        <RowDefinition Height="32"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="32"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Content="请输入要缩短的网址(最长1024字符)"></Label>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Canvas>
+                            <Rectangle RadiusX="8" RadiusY="5"
+                               Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}, Mode=FindAncestor},Path=ActualWidth}" 
+                               Height="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}, Mode=FindAncestor},Path=ActualHeight}"
                                Stroke="Black" StrokeDashArray="5,2,1,2" StrokeThickness="1"/>
-                </Canvas>
-                <TextBox x:Name="zipInputTextBox" BorderThickness="0" VerticalAlignment="Center" Background="Transparent">123</TextBox>
-            </Grid>
-            <Grid Grid.Row="2">
-                <TextBlock x:Name="zipResultTextBlock">this is result!</TextBlock>
-            </Grid>
-            <Grid Grid.Row="3">
-                <Button Content="压缩"></Button>
-            </Grid>
-        </Grid>
-        <Grid x:Name="unzipTabContentGrid" Grid.Row="1"  Grid.Column="1" Visibility="Collapsed" Background="Bisque"></Grid>
-    </Grid>
+                        </Canvas>
+                        <TextBox BorderThickness="0" VerticalAlignment="Center" Text="{Binding ZipInput, Mode=TwoWay}" Background="Transparent"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <TextBlock Margin="0 10" Text="{Binding ZipResult}"/>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Button Content="压缩"></Button>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="逆转">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32"></RowDefinition>
+                        <RowDefinition Height="32"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="32"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Content="请输入要还原的网址"></Label>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Canvas>
+                            <Rectangle RadiusX="8" RadiusY="5"
+                               Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}, Mode=FindAncestor},Path=ActualWidth}" 
+                               Height="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}, Mode=FindAncestor},Path=ActualHeight}"
+                               Stroke="Black" StrokeDashArray="5,2,1,2" StrokeThickness="1"/>
+                        </Canvas>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Margin="14 0 0 0" Grid.Column="0" VerticalAlignment="Center" Text="{Binding Source={x:Static cfg:AppConfig.Settings}, Path=ApiHost}"></TextBlock>
+                            <TextBox Grid.Column="1" BorderThickness="0" VerticalAlignment="Center" Text="{Binding UnzipInput, Mode=TwoWay}" Background="Transparent"></TextBox>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <TextBlock Margin="0 10" Text="{Binding UnzipResult}"/>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Button Content="还原"></Button>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </comp:CustomTabControl>
+    </Border>
 </UserControl>

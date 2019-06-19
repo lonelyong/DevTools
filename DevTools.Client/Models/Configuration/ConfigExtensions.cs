@@ -16,9 +16,6 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddOptions();
             var configXml = new ConfigXmlDocument();
             configXml.Load(AppConfig.ConfigFilePath);
-            services.Configure<AppConfig>((c)=> {
-                
-            });
         }
     }
 }
