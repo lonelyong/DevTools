@@ -1,2 +1,0 @@
-2019-04-07 22:36:07.2712 | The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
-2019-04-07 22:37:22.5000 | 解压地址:ID=1 

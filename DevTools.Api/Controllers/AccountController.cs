@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using NgNet.Net;
+using Utilities.Net;
 using DevTools.Api.App;
 using DevTools.Api.Common.Utils;
 using DevTools.Api.Core.Account;
@@ -16,6 +16,7 @@ using DevTools.Api.Models;
 using DevTools.Api.Models.Configuration;
 using DevTools.Api.Models.ViewModels.Account;
 using static System.Net.WebRequestMethods;
+using Utilities;
 
 namespace DevTools.Api.Controllers
 {
@@ -55,7 +56,7 @@ namespace DevTools.Api.Controllers
 		public ActionResult<LoginOutputModel> Login([FromBody]LoginInputModel input)
 		{
 			var _user = _accountService.Login(input, out string token);
-			var _output = NgNet.MappingUtils.MapPropertiesTo<LoginOutputModel>(_user);
+			var _output = MappingUtils.MapPropertiesTo<LoginOutputModel>(_user);
 			_output.AccessToken = token;
 			_output.UserId = _user.Id;
 			return Json(TResponse<LoginOutputModel>.Ok(_output));
@@ -72,7 +73,7 @@ namespace DevTools.Api.Controllers
 		public ActionResult<SignupOutputModel> Signup([FromBody]SignupInputModel input)
 		{
 			var _user = _accountService.Signup(input);
-			var _output = NgNet.MappingUtils.MapPropertiesTo<SignupOutputModel>(_user);
+			var _output = MappingUtils.MapPropertiesTo<SignupOutputModel>(_user);
 			_output.UserId = _user.Id;
 			return Json(TResponse<SignupOutputModel>.Ok(_output));
 		}

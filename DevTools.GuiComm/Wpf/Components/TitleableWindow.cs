@@ -65,6 +65,7 @@ namespace DevTools.GuiComm.Wpf.Components
             Style = ResourceManager.WindowResources[WindowResources.ResourceKey_TitleableWindowStyle] as Style;
             ApplyTemplate();
             Background = Theme.Default.Background;
+            //MaxHeight = SystemParameters.maxw
 		}
 
         protected override void OnPropertyChanged(DependencyPropertyChangedEventArgs e)

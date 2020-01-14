@@ -62,6 +62,8 @@
       <DependentUpon>TitleBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Wpf\Components\TitleBarButton.cs" />
+    <Compile Include="Wpf\Converters\OppositeBrushConverter.cs" />
+    <Compile Include="Wpf\Converters\LighterBrushConverter.cs" />
     <Compile Include="Wpf\ImageUtils.cs" />
     <Compile Include="Wpf\Theme.cs" />
     <Compile Include="Wpf\ResourceUtils.cs" />
@@ -74,6 +76,10 @@
     <Page Include="Wpf\Components\TitleBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Wpf\PublicResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

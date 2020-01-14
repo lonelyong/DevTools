@@ -9,7 +9,7 @@ using DevTools.Api.Common.Consts;
 using DevTools.Api.Entities;
 using DevTools.Api.Models.Configuration;
 using System.Text;
-using NgNet.Date;
+using Utilities.Date;
 
 namespace DevTools.Api.Common.Utils
 {

@@ -56,6 +56,14 @@ class App extends Component {
             </div>
           </div>
           <div className="container d-flex flex-column flex-grow-1" id="body-content-wrap">
+            <ul className="nav nav-tabs" role="tab-list">
+              <li className="nav-item active">
+                <a className="nav-link">ShortUrl</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link">ShortUrl</a>
+              </li>
+            </ul>
             <Switch>
                 <Route path="/slink" component={SLink}/>
                 <Route path="/home/about" component={About}/>
@@ -67,7 +75,7 @@ class App extends Component {
                 <Redirect exact from='/home' to={{pathname:'/slink'}}/>
                 <Route from='/*/*' component={Err404}/>
                 <Route exact path='/*' component={SLinkGo}/>
-              </Switch>
+            </Switch>
           </div>
           <div className="container footer pt-2 pb-2">
             <hr className="hr-line-dashed"></hr>

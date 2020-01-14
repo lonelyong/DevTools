@@ -29,6 +29,11 @@ namespace DevTools.Client
 		public App()
 		{
 			InitializeComponent();
+            if(Resources == null)
+            {
+                Resources = new ResourceDictionary();
+            }
+            Resources.MergeCurrentAssemblyResources();
             Theme = new Theme() {
                 BorderBrush = Brushes.Green,
                 Background = Brushes.WhiteSmoke,

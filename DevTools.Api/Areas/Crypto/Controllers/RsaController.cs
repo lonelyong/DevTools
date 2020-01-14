@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Utilities.Security;
 
 namespace DevTools.Api.Controllers.Crypto
 {
@@ -18,7 +19,7 @@ namespace DevTools.Api.Controllers.Crypto
 		[AllowAnonymous]
 		public ActionResult<string> Encrypt([FromBody]RsaEncryptInputViewModel input)
 		{
-			return Json(TResponse<string>.Ok(NgNet.Security.RsaHelper.Encrypt(input.PublicKey, input.Text)));
+			return Json(TResponse<string>.Ok(RsaHelper.Encrypt(input.PublicKey, input.Text)));
 		}
 
 		[HttpPost]
@@ -26,7 +27,7 @@ namespace DevTools.Api.Controllers.Crypto
 		[AllowAnonymous]
 		public ActionResult<string> Decrypt([FromBody]RsaDecryptInputViewModel input)
 		{
-			return Json(TResponse<string>.Ok(NgNet.Security.RsaHelper.Decrypt(input.PrivateKey, input.Text)));
+			return Json(TResponse<string>.Ok(RsaHelper.Decrypt(input.PrivateKey, input.Text)));
 		}
 
 		[HttpGet]
@@ -34,7 +35,7 @@ namespace DevTools.Api.Controllers.Crypto
 		[AllowAnonymous]
 		public ActionResult<string> GenerateKey([FromQuery]int keySize)
 		{
-			var rsaHelper = new NgNet.Security.RsaHelper(keySize);
+			var rsaHelper = new RsaHelper(keySize);
 			return Json(TResponse<string>.Ok(rsaHelper.ToXmlString(true)));
 		}
 	}

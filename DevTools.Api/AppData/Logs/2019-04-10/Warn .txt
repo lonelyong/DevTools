@@ -1,2 +1,0 @@
-2019-04-10 20:11:29.0014 | The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
-2019-04-10 20:24:13.3225 | The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 

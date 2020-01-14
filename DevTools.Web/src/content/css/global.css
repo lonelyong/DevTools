@@ -36,3 +36,20 @@ html, body{
 .topper a:not([href]):not([tabindex]){
     color: white
 }
+
+.success{
+    color: green;
+}
+
+.error{
+    color:red;
+}
+.input-wrap
+{
+    border:1px black dashed;
+}
+.input-wrap input{
+    outline: none;
+    border:none;
+    background-color: transparent;
+}

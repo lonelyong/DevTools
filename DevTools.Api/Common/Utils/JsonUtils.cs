@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Utilities.Json;
 
 namespace DevTools.Api.Common.Utils
 {
@@ -17,7 +18,7 @@ namespace DevTools.Api.Common.Utils
 		/// </summary>
         public static readonly JsonSerializerSettings LowerCaseSerializerSettings = new JsonSerializerSettings()
         {
-            ContractResolver = new NgNet.Json.JsonContractResolver() {  PropertyNameFormat = NgNet.Json.PropertyNameFormat.LowerCase }
+            ContractResolver = new JsonContractResolver() {  PropertyNameFormat = PropertyNameFormat.LowerCase }
         };
     }
 }
