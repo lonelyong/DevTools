@@ -13,7 +13,6 @@ using DevTools.Api.Exceptions;
 using Microsoft.Extensions.Options;
 using DevTools.Api.Models.Configuration;
 using Microsoft.Extensions.Caching;
-using Microsoft.Extensions.Caching.Redis;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text;
 using Microsoft.Extensions.Logging;

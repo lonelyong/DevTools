@@ -92,6 +92,7 @@ namespace DevTools.GuiComm.Wpf.Components
             switch (ButtonKind)
             {
                 case TitleBarButtonKind.Minimize:
+                    wnd.WindowState = WindowState.Minimized;
                     break;
                 case TitleBarButtonKind.Maximize:
                     if (wnd.WindowState == WindowState.Maximized)

@@ -10,18 +10,23 @@ using Microsoft.Extensions.Logging;
 using System.Reflection;
 using Microsoft.Extensions;
 using NLog.Web;
+using Microsoft.Extensions.Hosting;
 
 namespace DevTools.Api
 {
     public class Program
-    {
-        public static void Main(string[] args)
-        {
-			NLogBuilder.ConfigureNLog("nlog.config");
-			var webHost = BuildWebHost(args);
-            webHost.Run();
-        }
+	{
+		public static void Main(string[] args)
+		{
+			CreateHostBuilder(args).Build().Run();
+		}
 
+		public static IHostBuilder CreateHostBuilder(string[] args) =>
+			Host.CreateDefaultBuilder(args)
+				.ConfigureWebHostDefaults(webBuilder =>
+				{
+					webBuilder.UseStartup<Startup>();
+				});
 		public static IWebHost BuildWebHost(string[] args) =>
 			WebHost.CreateDefaultBuilder(args)
 				.UseIISIntegration()
@@ -37,7 +42,7 @@ namespace DevTools.Api
 				.ConfigureAppConfiguration(options=> {
 					
 				})
-				.UseNLog()
+				//.UseNLog()
                 .Build();
     }
 }

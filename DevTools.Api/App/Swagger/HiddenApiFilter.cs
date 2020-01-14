@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
@@ -11,7 +12,7 @@ namespace DevTools.Api.App.Swagger
 {
 	public class HiddenApiFilter : IDocumentFilter
 	{
-		public void Apply(SwaggerDocument swaggerDoc, DocumentFilterContext context)
+		public void Apply(OpenApiDocument swaggerDoc, DocumentFilterContext context)
 		{
 			foreach (var api in context.ApiDescriptions)
 			{

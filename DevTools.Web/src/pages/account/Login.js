@@ -1,3 +1,4 @@
+'esversion: 6';
 import React from 'react';
 import AccountInfo from '../../content/js/AccountInfo';
 import Apis from '../../content/js/Apis';

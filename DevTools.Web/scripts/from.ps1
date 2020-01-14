@@ -17,7 +17,6 @@ $form.add_DoubleClick([EventHandler]{
 $form.add_SizeChanged([System.EventHandler]{
     $dgv.Height = $form.Height - 22;
 });
-$form.max
 $txt=New-Object -TypeName "System.Windows.Forms.TextBox"
 #$txt.Parent=$form
 $txt.Dock = [System.Windows.Forms.DockStyle]::Bottom
@@ -32,9 +31,10 @@ $dgv=New-Object -TypeName "System.Windows.Forms.DataGridView"
 $dgv.Dock='Bottom'
 $dgv.Height=380
 $dgv.Parent=$form
+$dgv.Dock = [System.Windows.Forms.DockStyle]::Fill
 
 $sql="select * from tb_short_url";
-$con=New-Object -TypeName "System.Data.SqlClient.SqlConnection" -ArgumentList "server=wetest.fun;database=sharing;user=utest;pwd=123456"
+$con=New-Object -TypeName "System.Data.SqlClient.SqlConnection" -ArgumentList "server=wetest.fun;database=sharing;user=sa;pwd=Lucky_2017"
 $sqlcmd=New-Object -TypeName "System.Data.SqlClient.SqlCommand" -ArgumentList $sql,$con
 $sqldataAdapter = New-Object -TypeName "System.Data.SqlClient.SqlDataAdapter" -ArgumentList $sqlcmd
 $datatable = New-Object -TypeName "System.Data.DataTable"

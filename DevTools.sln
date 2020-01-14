@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTools.Setup.Client", "De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTools.GuiComm", "DevTools.GuiComm\DevTools.GuiComm.csproj", "{694EBCC2-EFBB-4D53-9D4C-A03D23F0CB0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTools.Api1", "DevTools.Api1\DevTools.Api1.csproj", "{CA67CC82-57EC-45A2-B7B7-77EE70C8F34A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{694EBCC2-EFBB-4D53-9D4C-A03D23F0CB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{694EBCC2-EFBB-4D53-9D4C-A03D23F0CB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{694EBCC2-EFBB-4D53-9D4C-A03D23F0CB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA67CC82-57EC-45A2-B7B7-77EE70C8F34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA67CC82-57EC-45A2-B7B7-77EE70C8F34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA67CC82-57EC-45A2-B7B7-77EE70C8F34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA67CC82-57EC-45A2-B7B7-77EE70C8F34A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
